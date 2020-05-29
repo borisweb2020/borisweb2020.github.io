@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Boris Web">
+	<meta name="description" content="This site show some ...">
+
+	<!-- Favicons ***change a path at site.webmanifest !!! -->
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+	<link rel="manifest" href="img/favicons/site.webmanifest">
+	<link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-capable" content="yes">
+	<meta name="MobileOptimized" content="width">
+	<meta name="HandheldFriendly" content="true">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Service</title>
+
+	<link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+<!-- ***Sprite*** -->
+<svg style="display: none;">
+	<symbol id="facebook" viewBox="0 0 24 24">
+		<g>
+			<path d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-6.932 0-5.046 7.85-5.322 9h-3.487v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877c.188-2.824-.761-5.016 2.051-5.016z"></path>
+		</g>
+	</symbol>
+	<symbol id="google" viewBox="0 -91 512 512">
+		<g>
+			<path d="m166 60c34.667969 0 66.027344 17.789062 84 42.300781l42.597656-42.902343c-25.476562-33.128907-74.511718-59.398438-126.597656-59.398438-91.199219 0-166 73.800781-166 165s74.800781 165 166 165c75.601562 0 139.199219-50.699219 158.699219-120 4.199219-14.402344 6.300781-29.402344 6.300781-45v-15h-150v59.988281h79.5c-16.5 35.402344-52.800781 60.011719-94.5 60.011719-57.898438 0-106-47.101562-106-105s48.101562-105 106-105zm0 0"></path>
+			<path d="m466 90h-60v45h-45v60h45v45h60v-45h46v-60h-46zm0 0"></path>
+		</g>
+	</symbol>
+	<symbol id="twitter" viewBox="0 0 543.684 543.684">
+		<g>
+			<path d="M527.657,106.697c-2.681,0.783-5.361,1.512-8.041,2.191c-16.384,4.137-17.89-1.322-6.028-13.366
+			c5.312-5.397,10.006-11.267,14.082-17.607c9.137-14.217,1.212-20.417-14.333-13.776c-5.545,2.369-11.182,4.517-16.897,6.432
+			c-16.017,5.379-38.746-2.735-53.018-11.787c-18.018-11.426-38.495-17.136-61.438-17.136c-32.137,0-59.529,11.334-82.192,33.984
+			c-22.656,22.662-33.99,50.062-33.99,82.191c0,4.394,0.251,8.855,0.747,13.378c0.814,7.362-11.585,12.699-28.317,10.336
+			c-36.194-5.11-70.582-16.077-103.171-32.889c-32.32-16.671-60.845-37.65-85.57-62.938C37.672,73.624,21.687,74.665,17.274,90.98
+			c-2.644,9.78-3.959,19.951-3.959,30.515c0,19.908,4.675,38.372,14.027,55.392c4.651,8.47,10.098,16.138,16.353,22.999
+			c10.521,11.549,8.911,18.25-5.734,14.144c-14.639-4.106-25.367-10.202-25.367-9.804s0,0.722,0,0.722
+			c0,28.048,8.807,52.693,26.432,73.911c10.857,13.072,23.47,23.17,37.834,30.282c15.147,7.503,22.203,11.688,13.733,12.784
+			c-5.11,0.661-10.251,0.991-15.422,0.991c-3.5,0-7.172-0.159-11.003-0.483c-6.059-0.514-7.148,12.111,2.038,26.298
+			c7.301,11.273,16.646,21.193,28.03,29.762c11.579,8.721,24.058,14.981,37.417,18.794c16.255,4.633,19.517,13.073,5.024,21.763
+			c-35.863,21.519-75.551,32.277-119.058,32.277c-4.902,0-9.578-0.11-14.045-0.324c-7.754-0.373-2.552,6.456,12.417,14.296
+			c46.775,24.499,97.43,36.738,151.972,36.738c41.237,0,79.964-6.529,116.176-19.596c36.199-13.066,67.136-30.576,92.791-52.516
+			c25.655-21.94,47.779-47.173,66.365-75.711c18.581-28.537,32.424-58.33,41.543-89.376c9.106-31.053,13.666-62.167,13.666-93.342
+			c0-2.809-0.024-5.331-0.067-7.552c-0.086-4.174,10.955-15.472,23.28-27.032c5.563-5.22,10.869-10.698,15.937-16.444
+			C548.833,107.78,543.882,101.966,527.657,106.697z"></path>
+		</g>
+	</symbol>
+	<symbol id="basketball" viewBox="0 0 512 512">
+		<g>
+			<path d="m256 512c140.960938 0 256-115.050781 256-256 0-140.960938-115.050781-256-256-256-140.960938 0-256 115.050781-256 256 0 140.960938 115.050781 256 256 256zm-205.535156-162.070312c20.464844-20.621094 36.835937-44.460938 48.71875-71.027344 1.078125-2.40625 2.097656-4.828125 3.089844-7.261719 17.636718 11.597656 35.117187 20.949219 52.738281 28.691406-2.664063 19.957031-4.011719 40.195313-4.011719 60.667969 0 34.1875 3.730469 67.882812 11.078125 100.539062-49.242187-22.59375-89.019531-62.367187-111.613281-111.609374zm-20.464844-93.929688c0-14.511719 1.390625-28.699219 4.015625-42.453125 13.203125 14.410156 27.617187 27.769531 43.015625 39.898437-8.710938 23.664063-21.640625 45.71875-38.261719 64.960938-5.707031-19.832031-8.769531-40.765625-8.769531-62.40625zm60-75c0 13.824219-1.394531 27.523438-4.070312 40.914062-15.34375-12.992187-29.535157-27.421874-42.328126-43.160156 8.511719-23.328125 20.769532-44.867187 36.03125-63.898437 6.808594 21.09375 10.367188 43.570312 10.367188 66.144531zm106.085938 292.921875c-9.878907-35.992187-15.085938-74.851563-15.085938-112.921875 0-16.640625.976562-33.144531 2.875-49.445312 28.847656 9.816406 58.980469 16.015624 89.421875 18.367187-1.519531 10.203125-2.296875 20.585937-2.296875 31.078125 0 41.316406 11.972656 81.609375 34.050781 115.621094-15.796875 3.511718-32.210937 5.378906-49.050781 5.378906-20.738281 0-40.824219-2.820312-59.914062-8.078125zm139.179687-6.28125c-22.15625-30.625-34.265625-68.09375-34.265625-106.640625 0-10.222656.882812-20.25 2.554688-30.023438 62.75-.429687 123.234374-16.640624 176.734374-47.179687-10.417968 84.558594-67.722656 154.796875-145.023437 183.84375zm-23.765625-166.816406c23.695312-65.773438 84.988281-114.304688 157.851562-119.375 7.3125 20.875 11.644532 43.140625 12.480469 66.28125-50.660156 32.984375-109.183593 51.222656-170.332031 53.09375zm145.363281-148.332031c-85.078125 10.070312-153.476562 70.53125-176.914062 147.820312-31.390625-2.027344-62.179688-8.546875-91.421875-19.101562 17.695312-92.804688 66.042968-177.214844 138.683594-239.707032 56.257812 18.726563 102.753906 59 129.652343 110.988282zm-164.839843-119.609376c-67.175782 63.6875-113.304688 146.589844-131.796876 236.625-16.738281-7.832031-32.816406-17.035156-48.042968-27.519531 5.1875-19.761719 7.816406-40.160156 7.816406-60.988281 0-31.261719-6.003906-62.410156-17.402344-90.800781 40.328125-37.339844 94.242188-60.199219 153.402344-60.199219 12.257812 0 24.289062.996094 36.023438 2.882812zm0 0"></path>
+		</g>
+	</symbol>
+	<symbol id="behance" viewBox="0 0 24 24">
+		<g>
+			<path d="m12.363 14.947c0-1.848-.879-3.214-2.695-3.726 1.325-.631 2.016-1.587 2.016-3.074 0-2.932-2.192-3.647-4.721-3.647h-6.963v14.721h7.158c2.684 0 5.205-1.283 5.205-4.274zm-9.117-7.934h3.046c1.171 0 2.225.328 2.225 1.682 0 1.25-.82 1.753-1.98 1.753h-3.291zm-.001 9.708v-4.054h3.538c1.429 0 2.333.594 2.333 2.102 0 1.487-1.079 1.952-2.4 1.952z"></path>
+			<path d="m18.796 19.5c2.554 0 4.208-1.147 5.004-3.585h-2.592c-.279.91-1.429 1.391-2.321 1.391-1.721 0-2.625-1.005-2.625-2.713h7.713c.244-3.418-1.66-6.331-5.18-6.331-3.259 0-5.471 2.442-5.471 5.641 0 3.32 2.096 5.597 5.472 5.597zm-.092-9.026c1.475 0 2.217.864 2.341 2.277h-4.779c.097-1.401 1.03-2.277 2.438-2.277z"></path>
+			<path d="m15.667 5.273h5.988v1.45h-5.988z"></path>
+		</g>
+	</symbol>
+	<symbol id="instagram" viewBox="0 0 24 24">
+		<g>
+			<path d="m12.004 5.838c-3.403 0-6.158 2.758-6.158 6.158 0 3.403 2.758 6.158 6.158 6.158 3.403 0 6.158-2.758 6.158-6.158 0-3.403-2.758-6.158-6.158-6.158zm0 10.155c-2.209 0-3.997-1.789-3.997-3.997s1.789-3.997 3.997-3.997 3.997 1.789 3.997 3.997c.001 2.208-1.788 3.997-3.997 3.997z"></path>
+			<path d="m16.948.076c-2.208-.103-7.677-.098-9.887 0-1.942.091-3.655.56-5.036 1.941-2.308 2.308-2.013 5.418-2.013 9.979 0 4.668-.26 7.706 2.013 9.979 2.317 2.316 5.472 2.013 9.979 2.013 4.624 0 6.22.003 7.855-.63 2.223-.863 3.901-2.85 4.065-6.419.104-2.209.098-7.677 0-9.887-.198-4.213-2.459-6.768-6.976-6.976zm3.495 20.372c-1.513 1.513-3.612 1.378-8.468 1.378-5 0-7.005.074-8.468-1.393-1.685-1.677-1.38-4.37-1.38-8.453 0-5.525-.567-9.504 4.978-9.788 1.274-.045 1.649-.06 4.856-.06l.045.03c5.329 0 9.51-.558 9.761 4.986.057 1.265.07 1.645.07 4.847-.001 4.942.093 6.959-1.394 8.453z"></path>
+			<circle cx="18.406" cy="5.595" r="1.439"></circle>
+		</g>
+	</symbol>
+	<symbol id="line-left" viewBox="0 0 500 140">
+		<g>
+			<line x1="38" y1="88" x2="352" y2="88" class="line_thin"></line>
+			
+			<line x1="278" y1="88" x2="352" y2="88" class="line_thick"></line>
+			
+		</g>
+	</symbol>
+	<symbol id="line-right" viewBox="0 0 500 140">
+		<g>
+			
+			<line x1="148" y1="88" x2="462" y2="88" class="line_thin"></line>
+			
+			<line x1="148" y1="88" x2="222" y2="88" class="line_thick"></line>
+		</g>
+	</symbol>
+</svg>
+
+
+<!-- ***header*** -->
+<div class="container">
+	<header class="header" id="header">
+		<h2 class="header_logo">lo<span class="header_red">go</span></h2>
+		<div class="header_nav" id="nav">
+			<a href="#" class="header_link" data-scroll="#intro">Home</a>
+			<a href="#" class="header_link" data-scroll="#about">About</a>
+			<a href="#" class="header_link" data-scroll="#service">Services</a>
+			<a href="#" class="header_link" data-scroll="#feedback">Portfolio</a>
+			<a href="#" class="header_link" data-scroll="#clients">Shop</a>
+			<a href="#" class="header_link" data-scroll="#contact">Contact</a>
+			<a href="#" class="header_link" data-scroll="#contact">Pages</a>
+		</div>
+		<div class="header_social">
+			<a href="#" class="social social--header" target="_blank">
+				<svg class="social_icon social_icon--header">
+					<use xlink:href="#facebook"></use>
+				</svg>
+			</a>
+			<a href="#" class="social social--header" target="_blank">
+				<svg class="social_icon social_icon--header">
+					<use xlink:href="#twitter"></use>
+				</svg>
+			</a>
+			<a href="#" class="social social--header" target="_blank">
+				<svg class="social_icon social_icon--header">
+					<use xlink:href="#google"></use>
+				</svg>
+			</a>
+		</div>
+		<button class="button button_burger" type="button" id="navToggle"><span class="button_burger--item">Menu</span></button>
+	</header>
+</div>
+
+<!-- ***intro** -->
+<div class="container">
+	<div class="intro" id="intro">
+		<h1 class="intro_title">the best services</h1>
+		<div class="intro_description">We provide the best services in the world We provide the best services in the world We provide the best services in the world</div>
+		<button class="button button--intro" type="button">hire us</button>
+	</div>
+</div>
+
+<!-- ***about** -->
+<div class="container">
+	<div class="about" id="about">
+		<div class="about_photo">
+			<img src="img/about/about.jpg" alt="logo" class="about_image">
+		</div>
+		<div class="about_content">
+			<h2 class="about_title">a little about us</h2>
+			<p class="about_text">We are  a company based in india with the motto “Digitalally Designed India”. We are a company based in india with the motto “Digitalally Designed India”. We are  a company based in India with the motto “Digitalally Designed India”.</p>
+			<p class="about_text">We are  a company based in india with the motto “Digitalally Designed India”. We are a company based in india with the motto “Digitalally Designed India”. We are  a company based in India with the motto “Digitalally Designed India”.</p>
+			<a href="#" class="about_button" target="_blank">read more details</a>
+		</div>
+	</div>
+</div>
+
+<!-- ***service** -->
+<div class="container">
+	<div class="service" id="service">
+		<div class="service_head">
+			<svg class="line line_left line--service">
+				<use xlink:href="#line-left"></use>
+			</svg>
+			<svg class="line line_right line--service">
+				<use xlink:href="#line-right"></use>
+			</svg>
+			<h1 class="service_title">our services</h1>
+		</div>
+		<div class="service_slider" id="serviceSlider">
+
+			<div class="slick-item">
+				
+
+					<div class="service_item">
+						<div class="service_logo">
+							<img src="img/services/services.png" alt="icon" class="service_icon">
+						</div>
+						<h2 class="service_subtitle">web development</h2>
+						<p class="service_text">We provide the best world class web development service. We provide the best world class web development service.</p>
+						<a href="#" class="service_button">more details</a>
+					</div>
+				
+			</div>
+			<div class="slick-item">
+
+					<div class="service_item">
+						<div class="service_logos"></div>
+						<h2 class="service_subtitle">web development</h2>
+						<p class="service_text">We provide the best world class web development service. We provide the best world class web development service</p>
+						<a href="#" class="service_button">more details</a>
+					</div>
+				
+			</div>
+			<div class="slick-item">
+				
+					<div class="service_item">
+						<div class="service_logo">
+							<img src="img/services/services.png" alt="icon" class="service_icon">
+						</div>
+						<h2 class="service_subtitle">web development</h2>
+						<p class="service_text">We provide the best world class web development service. We provide the best world class web development service</p>
+						<a href="#" class="service_button">more details</a>
+					</div>
+			</div>
+				
+			
+
+			<div class="slick-item">
+				
+
+					<div class="service_item">
+						<div class="service_logo">
+							<img src="img/services/services.png" alt="icon" class="service_icon">
+						</div>
+						<h2 class="service_subtitle">web development</h2>
+						<p class="service_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque vitae consequatur, cupiditate inventore impedit sint velit corrupti debitis ducimus architecto culpa sunt amet, quis, reprehenderit tempore voluptate sapiente? Consequuntur, aperiam?</p>
+						<a href="#" class="service_button">more details</a>
+					</div>
+			</div>
+
+			<div class="slick-item">
+				
+					<div class="service_item">
+						<div class="service_logos"></div>
+						<h2 class="service_subtitle">web development</h2>
+						<p class="service_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque deleniti perferendis adipisci doloremque architecto itaque at suscipit, veritatis voluptatibus quasi, quos eum! Odit tempora a, alias ad consectetur, voluptas quia.</p>
+						<a href="#" class="service_button">more details</a>
+					</div>
+			</div>
+
+			<div class="slick-item">	
+
+				
+					<div class="service_item">
+						<div class="service_logo">
+							<img src="img/services/services.png" alt="icon" class="service_icon">
+						</div>
+						<h2 class="service_subtitle">web development</h2>
+						<p class="service_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius ex, esse, laudantium iusto officiis ullam repellendus libero voluptates nulla quaerat, quis unde temporibus fugiat illo, aliquid quidem deserunt ab cupiditate.</p>
+						<a href="#" class="service_button">more details</a>
+					</div>
+
+				
+			</div><!-- /.slick-item -->
+
+		</div><!-- /.service_slider -->
+	</div><!-- /.service -->
+</div><!-- /.container -->
+
+<!-- ***feedback** -->
+<div class="container">
+	<div class="feedback" id="feedback">
+		<div class="feedback_head">
+			<svg class="line line_left line--feedback">
+				<use xlink:href="#line-left"></use>
+			</svg>
+			<svg class="line line_right line--feedback">
+				<use xlink:href="#line-right"></use>
+			</svg>
+			<h1 class="feedback_title">feedback</h1>
+		</div>
+
+		<div class="feedback_inner">
+
+			<div class="counter">
+				<div class="counter_slider" id="counterSlider">
+
+					<div class="slick-counter">
+						<div class="counter_item">
+							<p class="counter_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, culpa fugit doloribus deserunt. Deserunt in consectetur dicta officia accusamus neque pariatur iusto ratione dolorum repudiandae autem laboriosam, fugiat tenetur possimus!</p>
+						</div>
+					</div>
+
+					<div class="slick-counter">
+						<div class="counter_item">
+							<p class="counter_text">It was always a pleasure doing bussiness with them. I love the quality of work.</p>
+						</div>
+					</div>
+
+					<div class="slick-counter">
+						<div class="counter_item">
+							<p class="counter_text">It was always a pleasure doing bussiness with them. I love the quality of work.</p>
+						</div>
+					</div>
+
+					<div class="slick-counter">
+						<div class="counter_item">
+							<p class="counter_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem commodi dolore, cum eius perferendis, ducimus adipisci. Optio harum obcaecati incidunt id esse odio nemo deserunt, rerum distinctio ipsam repellendus, nesciunt.</p>
+						</div>
+					</div>
+
+					<div class="slick-counter">
+						<div class="counter_item">
+							<p class="counter_text">It was always a pleasure doing bussiness with them. I love the quality of work.</p>
+						</div>
+					</div>
+
+				</div><!-- /.counter_slider -->
+
+				<div class="counter_bar">
+					<span class="counter_current"></span> / <span class="counter_total"></span>
+				</div>
+			</div><!-- /.counter -->
+
+			<div class="feedback_slider" id="feedbackSlider">
+
+				<div class="slick-feedback">
+					<div class="feedback_item">
+						<div class="feedback_frame">
+							<img src="img/feedback/Model-1.jpg" alt="" class="feedback_image">
+							<div class="feedback_prof">
+								<p class="feedback_name">Imram Khan</p>
+								<p class="feedback_text">CEO, Vesso</p>
+							</div>
+						</div>	
+					</div>
+				</div>
+
+				<div class="slik-feedback">
+					<div class="feedback_item">
+						<div class="feedback_frame">
+							<img src="img/feedback/Model-2.jpg" alt="" class="feedback_image">
+							<div class="feedback_prof">
+								<p class="feedback_name">Imram Khan</p>
+								<p class="feedback_text">CEO, Vesso</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="slik-feedback">
+					<div class="feedback_item">
+						<div class="feedback_frame">
+							<img src="img/feedback/Model-3.jpg" alt="" class="feedback_image">
+							<div class="feedback_prof">
+								<p class="feedback_name">Imram Khan</p>
+								<p class="feedback_text">CEO, Vesso</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="slik-feedback">
+					<div class="feedback_item">
+						<div class="feedback_frame">
+							<img src="img/feedback/Model-4.jpg" alt="" class="feedback_image">
+							<div class="feedback_prof">
+								<p class="feedback_name">Imram Khan</p>
+								<p class="feedback_text">CEO, Vesso</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="slik-feedback">
+					<div class="feedback_item">
+						<div class="feedback_frame">
+							<img src="img/feedback/Model-5.jpg" alt="" class="feedback_image">
+							<div class="feedback_prof">
+								<p class="feedback_name">Imram Khan</p>
+								<p class="feedback_text">CEO, Vesso</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div><!-- /.feedback_slider -->
+
+		</div><!-- /.feedback_inner -->
+
+	</div><!-- /.feedback -->
+</div><!-- /.container -->
+
+<!-- ***clients** -->
+<div class="container">
+	<div class="clients" id="clients">
+		<div class="clients_head">
+			<svg class="line line_left line--clients">
+				<use xlink:href="#line-left"></use>
+			</svg>
+			<svg class="line line_right line--clients">
+				<use xlink:href="#line-right"></use>
+			</svg>
+			<h1 class="clients_title">clients</h1>
+		</div>
+
+		<div class="clients_inner">
+			<a href="#" class="clients_items" target="_blank">
+				<img src="img/clients/adobe.png" alt="" class="clients_logo">
+			</a>
+			<a href="#" class="clients_items" target="_blank">
+				<img src="img/clients/hcl.png" alt="" class="clients_logo">
+			</a>
+			<a href="#" class="clients_items" target="_blank">
+				<img src="img/clients/ifosys.png" alt="" class="clients_logo">
+			</a>
+			<a href="#" class="clients_items" target="_blank">
+				<img src="img/clients/invision.png" alt="" class="clients_logo">
+			</a>
+			<a href="#" class="clients_items" target="_blank">
+				<img src="img/clients/cisco.png" alt="" class="clients_logo">
+			</a>
+			<a href="#" class="clients_items" target="_blank">
+				<img src="img/clients/be.png" alt="" class="clients_logo">
+			</a>
+			<a href="#" class="clients_items" target="_blank">
+				<img src="img/clients/canva.png" alt="" class="clients_logo">
+			</a>
+			<a href="#" class="clients_items" target="_blank">
+				<img src="img/clients/instagram.png" alt="" class="clients_logo">
+			</a>
+		</div>
+	</div><!-- /.clients_inner -->
+</div><!-- /.container -->
+
+<!-- ***query** -->
+<div class="container">
+	<div class="query">
+		<div class="query_description">
+			<h2 class="query_title"><span class="query_title--item">Any Queries</span> <span class="query_title--item">Get a quote</span></h2>
+			<p class="query_text">If you have any questions or queries regarding our service or pricing don’t worry<br> Our experts will call you.</p>
+		</div>
+		<form action="" class="query_form">
+			<input type="text" class="input input--query" maxlength="20" placeholder="Your name">
+			<input type="tel" class="input input--query" maxlength="20" placeholder="Your number">
+			<button class="button button--query">Get a call</button>
+		</form>
+	</div>
+</div>
+
+<!-- ***footer** -->
+<div class="container">
+	<footer class="footer" id="contact">
+		<div class="footer_item">
+
+			<div class="footer_colmn">
+				<h3 class="footer_title">product</h3>
+				<ul class="footer_list">
+					<li><a href="#" class="footer_link" target="_blank">Cost &amp; Governance</a></li>
+					<li><a href="#" class="footer_link" target="_blank">Security &amp; Complaince</a></li>
+					<li><a href="#" class="footer_link" target="_blank">Product N Lorem ipsum dolor sit amet, consectetur adipisicing.</a></li>
+					<li><a href="#" class="footer_link" target="_blank">Pricing &amp; Plans</a></li>
+				</ul>
+			</div>
+
+			<div class="footer_colmn">
+				<h3 class="footer_title">learn</h3>
+				<ul class="footer_list">
+					<li><a href="#" class="footer_link" target="_blank">Articles</a> </li>
+					<li><a href="#" class="footer_link" target="_blank">Registre a demo</a></li>
+					<li><a href="#" class="footer_link" target="_blank">Webinars</a></li>
+					<li><a href="#" class="footer_link" target="_blank">FAQs</a></li>
+				</ul>
+			</div>
+
+			<div class="footer_colmn">
+				<h3 class="footer_title">company</h3>
+				<ul class="footer_list">
+					<li><a href="#" class="footer_link" target="_blank">About</a></li>
+					<li><a href="#" class="footer_link" target="_blank">Careers</a></li>
+					<li><a href="#" class="footer_link" target="_blank">Partners</a></li>
+					<li><a href="#" class="footer_link" target="_blank">Contact</a></li>
+				</ul>
+			</div>
+		</div><!-- /.footer_item -->
+
+		<div class="footer_item footer_item--form">
+			<form action="" class="footer_form">
+				<input type="text" class="input input--footer" placeholder="Your email">
+				<button class="button button--footer">Subscribe</button>
+			</form>
+			<div class="footer_social">
+				<a href="#" target="_blank" class="footer_icon">
+					<svg class="footer_svg">
+						<use xlink:href="#facebook"></use>
+					</svg>
+				</a>
+				<a href="#" target="_blank" class="footer_icon">
+					<svg class="footer_svg">
+						<use xlink:href="#twitter"></use>
+					</svg>
+				</a>
+				<a href="#" target="_blank" class="footer_icon">
+					<svg class="footer_svg">
+						<use xlink:href="#google"></use>
+					</svg>
+				</a>
+				<a href="#" target="_blank" class="footer_icon">
+					<svg class="footer_svg">
+						<use xlink:href="#basketball"></use>
+					</svg>
+				</a>
+				<a href="#" target="_blank" class="footer_icon">
+					<svg class="footer_svg">
+						<use xlink:href="#behance"></use>
+					</svg>
+				</a>
+				<a href="#" target="_blank" class="footer_icon">
+					<svg class="footer_svg">
+						<use xlink:href="#instagram"></use>
+					</svg>
+				</a>
+			</div>
+		</div><!-- /.footer_item -->
+	</footer>
+</div><!-- /.container -->
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="script/libs.js"></script>
+<script src="script/main.js"></script>
+
+</body>
+</html>

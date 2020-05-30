@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Boris Web">
+	<meta name="description" content="This page has been created like a portfolio page presenting developer skills in HTML, CSS, jQuery">
+
+	<!-- Favicons-->
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+	<link rel="manifest" href="img/favicons/site.webmanifest">
+	<link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-capable" content="yes">
+	<meta name="MobileOptimized" content="width">
+	<meta name="HandheldFriendly" content="true">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+	<title>Creativia</title>
+
+	<link rel="stylesheet" href="style/style.css">
+	
+</head>
+<body>
+
+<!-- ** Sprite ** -->
+<svg style="display: none;">
+	<symbol id="line-logo" viewBox="0 0 251 112">
+		<g>
+			<polyline points="1,0 0,50 65,111 186,111 250,50 250,0"></polyline>
+		</g>
+	</symbol>
+	<symbol id="arrow-prev" viewBox="0 0 492 492">
+		<g>
+			<path d="M198.608,246.104L382.664,62.04c5.068-5.056,7.856-11.816,7.856-19.024c0-7.212-2.788-13.968-7.856-19.032l-16.128-16.12
+			C361.476,2.792,354.712,0,347.504,0s-13.964,2.792-19.028,7.864L109.328,227.008c-5.084,5.08-7.868,11.868-7.848,19.084
+			c-0.02,7.248,2.76,14.028,7.848,19.112l218.944,218.932c5.064,5.072,11.82,7.864,19.032,7.864c7.208,0,13.964-2.792,19.032-7.864
+			l16.124-16.12c10.492-10.492,10.492-27.572,0-38.06L198.608,246.104z"></path>
+		</g>
+	</symbol>
+	<symbol id="arrow-next" viewBox="0 0 492.004 492.004">
+		<g>
+			<path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12
+			c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028
+			c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265
+			c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z"></path>
+		</g>
+	</symbol>
+	<symbol id="hexagon" viewBox="0 0 416 360">
+		<g>
+			<polygon points="104,0 312,0 413.5,180 312,360 104,360 2.5,180"></polygon>
+		</g>
+	</symbol>
+	<symbol id="smallHexagon" viewBox="0 0 90 78">
+		<g>
+			<polygon points="22.25,1 66.75,1 89,38.5 66.75,77 22.25,77 1,38.5"></polygon>
+		</g>
+	</symbol>
+	<symbol id="scrollBar" viewBox="0 0 516 20">
+		<g>
+			<line x1="0" y1="10" x2="516" y2="10"></line>
+			<polygon points="253,0 263,0 268,10 263,20 253,20 248,10"></polygon>
+		</g>
+	</symbol>
+	<symbol id="coding" viewBox="0 0 417.698 417.698">
+		<g>
+			<path d="M305.763,326.782c-3.657,0-7.837-1.567-10.971-4.18c-6.269-5.747-6.792-15.673-0.522-21.943 l86.727-91.951l-86.727-91.429c-5.747-6.269-5.747-16.196,0.522-21.943s16.196-5.747,21.943,0.522l96.653,102.4 c5.747,6.269,5.747,15.673,0,21.42l-96.131,102.4C314.122,325.214,309.943,326.782,305.763,326.782z"></path>
+			<path d="M112.457,326.782c-4.18,0-8.359-1.567-11.494-4.702L4.31,219.68c-5.747-6.269-5.747-15.673,0-21.42 l96.653-102.4c5.747-6.269,15.673-6.792,21.943-0.522c6.269,5.747,6.792,15.673,0.522,21.943l-86.204,91.429l86.727,91.429 c5.747,6.269,5.747,16.196-0.522,21.943C120.294,325.214,116.114,326.782,112.457,326.782z"></path>
+			<path d="M186.122,374.847c-1.045,0-1.567,0-2.612,0c-8.359-1.045-14.629-9.404-13.061-17.763l45.975-300.931 c1.045-8.359,9.404-14.629,17.763-13.061c8.359,1.567,14.629,9.404,13.061,17.763l-45.976,300.931 C200.229,369.1,193.959,374.847,186.122,374.847z"></path>
+		</g>
+	</symbol>
+	<symbol id="wordpress" viewBox="0 0 24 24">
+		<g>
+			<path d="m12 0c-6.615 0-12 5.381-12 12 0 6.615 5.385 12 12 12s12-5.385 12-12c0-6.62-5.385-12-12-12zm-10.79 11.999c0-1.563.333-3.048.934-4.389l5.148 14.1c-3.601-1.751-6.082-5.442-6.082-9.711zm10.79 10.791c-1.06 0-2.081-.155-3.048-.441l3.237-9.406 3.315 9.087c.024.054.049.101.077.15-1.118.392-2.323.61-3.581.61zm1.485-15.845v-.001c.648-.034 1.233-.101 1.233-.101.581-.068.513-.924-.068-.891 0 0-1.747.135-2.874.135-1.06 0-2.841-.135-2.841-.135-.58-.034-.647.857-.067.891 0 0 .551.068 1.132.101l1.679 4.606-2.361 7.079-3.928-11.685c.649-.034 1.234-.101 1.234-.101.581-.068.513-.924-.068-.891 0 0-1.747.135-2.874.135-.203 0-.441-.005-.697-.014 1.931-2.928 5.245-4.863 9.015-4.863 2.807 0 5.366 1.075 7.287 2.83-.049-.005-.092-.009-.14-.009-1.06 0-1.81.924-1.81 1.916 0 .89.513 1.64 1.06 2.531.411.716.891 1.64.891 2.976 0 .924-.353 1.993-.823 3.489l-1.075 3.595zm7.985-.122c.842 1.539 1.321 3.3 1.321 5.178 0 3.982-2.158 7.456-5.366 9.324l-.001-.001 3.295-9.528c.614-1.539.823-2.767.823-3.866 0-.396-.024-.764-.072-1.107z"></path>
+		</g>
+	</symbol>
+	<symbol id="pencil" viewBox="0 0 469.336 469.336">
+		<g>
+			<path d="M347.878,151.357c-4-4.003-11.083-4.003-15.083,0L129.909,354.414c-2.427,2.429-3.531,5.87-2.99,9.258	c0.552,3.388,2.698,6.307,5.76,7.84l16.656,8.34v28.049l-51.031,14.602l-51.51-51.554l14.59-51.075h28.025l8.333,16.67 c1.531,3.065,4.448,5.213,7.833,5.765c0.573,0.094,1.146,0.135,1.708,0.135c2.802,0,5.531-1.105,7.542-3.128L317.711,136.26 c2-2.002,3.125-4.712,3.125-7.548c0-2.836-1.125-5.546-3.125-7.548l-39.229-39.263c-2-2.002-4.708-3.128-7.542-3.128h-0.021 c-2.844,0.01-5.563,1.147-7.552,3.159L45.763,301.682c-0.105,0.107-0.1,0.27-0.201,0.379c-1.095,1.183-2.009,2.549-2.487,4.208 l-18.521,64.857L0.409,455.73c-1.063,3.722-0.021,7.736,2.719,10.478c2.031,2.033,4.75,3.128,7.542,3.128 c0.979,0,1.958-0.136,2.927-0.407l84.531-24.166l64.802-18.537c0.195-0.056,0.329-0.203,0.52-0.27 c0.673-0.232,1.262-0.61,1.881-0.976c0.608-0.361,1.216-0.682,1.73-1.146c0.138-0.122,0.319-0.167,0.452-0.298l219.563-217.789 c2.01-1.991,3.146-4.712,3.156-7.558c0.01-2.836-1.115-5.557-3.125-7.569L347.878,151.357z"></path>
+			<path d="M456.836,76.168l-64-64.054c-16.125-16.139-44.177-16.17-60.365,0.031l-39.073,39.461	c-4.135,4.181-4.125,10.905,0.031,15.065l108.896,108.988c2.083,2.085,4.813,3.128,7.542,3.128c2.719,0,5.427-1.032,7.51-3.096 l39.458-39.137c8.063-8.069,12.5-18.787,12.5-30.192S464.899,84.237,456.836,76.168z"></path>
+		</g>
+	</symbol>
+	<symbol id="html" viewBox="0 0 531.443 531.443">
+		<g>
+			<path d="M79.94,480.176l179.224,50.575c3.256,0.918,8.531,0.924,11.781,0.013l180.553-50.601c3.256-0.912,6.132-4.382,6.438-7.748 L499.441,6.096C499.742,2.729,497.238,0,493.861,0H37.578c-3.378,0-5.875,2.729-5.575,6.096l41.506,466.319 C73.808,475.781,76.685,479.258,79.94,480.176z M124.757,97.828h281.918c3.378,0,5.869,2.729,5.563,6.096l-4.211,46.041
+			c-0.306,3.366-3.299,6.095-6.677,6.095H189.317c-3.378,0-5.894,2.729-5.612,6.102l3.978,48.036	c0.282,3.366,3.244,6.102,6.628,6.102H396.37c3.378,0,5.869,2.729,5.562,6.096l-15.521,168.826	c-0.312,3.366-3.2,6.824-6.463,7.724l-107.662,29.694c-3.257,0.899-5.901,1.701-5.901,1.787s-0.3,0.165-0.667,0.165	s-3.305-0.728-6.566-1.628l-108.661-30.019c-3.256-0.899-6.114-4.363-6.383-7.729l-6.353-80.312 c-0.263-3.372,2.258-6.102,5.637-6.102h45.992c3.378,0,6.377,2.729,6.689,6.096l3.195,34.4c0.312,3.366,3.213,6.812,6.475,7.692 l53.403,14.443c3.262,0.881,8.556,0.888,11.818,0.006l53.733-14.455c3.262-0.875,6.175-4.314,6.5-7.681l6.145-63.679 c0.324-3.366-2.154-6.089-5.533-6.089H140.4c-3.378,0-6.359-2.729-6.659-6.096L119.176,103.93 C118.882,100.558,121.379,97.828,124.757,97.828z"></path>
+		</g>
+	</symbol>
+	<symbol id="tablet" viewBox="0 0 562 562">
+		<g>
+			<path d="m456.625 0h-351.25c-19.398 0-35.125 15.727-35.125 35.125v491.75c0 19.398 15.727 35.125 35.125 35.125h351.25c19.398 0 35.125-15.727 35.125-35.125v-491.75c0-19.398-15.728-35.125-35.125-35.125zm-175.625 526.875c-19.4 0-35.125-15.727-35.125-35.125 0-19.4 15.725-35.125 35.125-35.125s35.125 15.725 35.125 35.125c0 19.397-15.725 35.125-35.125 35.125zm140.5-105.375h-281v-351.25h281z"></path>
+		</g>
+	</symbol>
+	<symbol id="laptop" viewBox="0 0 512 512">
+		<g>
+			<path d="M39.104,362.667h163.563c7.808,0,15.317,2.837,21.163,8c1.941,1.728,4.459,2.667,7.061,2.667h50.219 c2.603,0,5.099-0.939,7.061-2.667c5.845-5.163,13.355-8,21.163-8h163.776c6.379-0.171,10.88-4.693,10.88-10.667 c0-3.179-1.387-6.037-3.605-8l-11.051-16.555V106.667c0-23.531-19.136-42.667-42.667-42.667H85.333 c-23.531,0-42.667,19.136-42.667,42.667v220.779l-12.437,18.645c-2.197,3.264-2.389,7.488-0.533,10.944 C31.552,360.491,35.179,362.667,39.104,362.667z M64,106.667c0-11.755,9.579-21.333,21.333-21.333h341.333 c11.755,0,21.333,9.579,21.333,21.333V320H64V106.667z"></path>
+			<path d="M501.333,384h-192c-2.837,0-5.547,1.131-7.552,3.115l-7.552,7.552h-76.501l-7.552-7.552 c-1.963-1.984-4.672-3.115-7.509-3.115h-192C4.779,384,0,388.779,0,394.667v10.667C0,428.864,19.136,448,42.667,448h426.667 C492.864,448,512,428.864,512,405.333v-10.667C512,388.779,507.221,384,501.333,384z"></path>
+		</g>
+	</symbol>
+	<symbol id="twitter" viewBox="0 0 543.684 543.684">
+		<g>
+			<path d="M527.657,106.697c-2.681,0.783-5.361,1.512-8.041,2.191c-16.384,4.137-17.89-1.322-6.028-13.366
+			c5.312-5.397,10.006-11.267,14.082-17.607c9.137-14.217,1.212-20.417-14.333-13.776c-5.545,2.369-11.182,4.517-16.897,6.432
+			c-16.017,5.379-38.746-2.735-53.018-11.787c-18.018-11.426-38.495-17.136-61.438-17.136c-32.137,0-59.529,11.334-82.192,33.984
+			c-22.656,22.662-33.99,50.062-33.99,82.191c0,4.394,0.251,8.855,0.747,13.378c0.814,7.362-11.585,12.699-28.317,10.336
+			c-36.194-5.11-70.582-16.077-103.171-32.889c-32.32-16.671-60.845-37.65-85.57-62.938C37.672,73.624,21.687,74.665,17.274,90.98
+			c-2.644,9.78-3.959,19.951-3.959,30.515c0,19.908,4.675,38.372,14.027,55.392c4.651,8.47,10.098,16.138,16.353,22.999
+			c10.521,11.549,8.911,18.25-5.734,14.144c-14.639-4.106-25.367-10.202-25.367-9.804s0,0.722,0,0.722
+			c0,28.048,8.807,52.693,26.432,73.911c10.857,13.072,23.47,23.17,37.834,30.282c15.147,7.503,22.203,11.688,13.733,12.784
+			c-5.11,0.661-10.251,0.991-15.422,0.991c-3.5,0-7.172-0.159-11.003-0.483c-6.059-0.514-7.148,12.111,2.038,26.298
+			c7.301,11.273,16.646,21.193,28.03,29.762c11.579,8.721,24.058,14.981,37.417,18.794c16.255,4.633,19.517,13.073,5.024,21.763
+			c-35.863,21.519-75.551,32.277-119.058,32.277c-4.902,0-9.578-0.11-14.045-0.324c-7.754-0.373-2.552,6.456,12.417,14.296
+			c46.775,24.499,97.43,36.738,151.972,36.738c41.237,0,79.964-6.529,116.176-19.596c36.199-13.066,67.136-30.576,92.791-52.516
+			c25.655-21.94,47.779-47.173,66.365-75.711c18.581-28.537,32.424-58.33,41.543-89.376c9.106-31.053,13.666-62.167,13.666-93.342
+			c0-2.809-0.024-5.331-0.067-7.552c-0.086-4.174,10.955-15.472,23.28-27.032c5.563-5.22,10.869-10.698,15.937-16.444
+			C548.833,107.78,543.882,101.966,527.657,106.697z"></path>
+		</g>
+	</symbol>
+	<symbol id="facebook" viewBox="0 0 546.773 546.773">
+		<g>
+			<path d="M382.1,0h-56.953c-43.574,0-74.872,10.343-93.893,31.022c-19.027,20.686-28.532,51.151-28.532,91.408v38.373 c0,10.141-8.219,18.36-18.36,18.36H164.68c-10.141,0-18.36,8.219-18.36,18.36v57.503c0,10.141,8.219,18.36,18.36,18.36h19.682 c10.141,0,18.36,8.219,18.36,18.36v236.666c0,10.141,8.219,18.36,18.36,18.36h76.414c10.141,0,18.36-8.22,18.36-18.36V291.747 c0-10.142,8.22-18.36,18.36-18.36h38.592c10.142,0,19.224-8.176,20.289-18.256l6.095-57.712 c1.065-10.085-6.291-18.256-16.433-18.256h-48.549c-10.141,0-18.36-8.219-18.36-18.36v-28.752c0-7.075,0.331-12.552,0.997-16.426 c0.661-3.868,2.154-7.681,4.48-11.445c2.319-3.757,6.083-6.358,11.279-7.797c5.195-1.438,12.111-2.16,20.734-2.16h28.752
+			c10.141,0,18.359-8.219,18.359-18.36V18.36C400.459,8.219,392.24,0,382.1,0z"></path>
+		</g>
+	</symbol>
+	<symbol id="pinterest" viewBox="0 0 24 24">
+		<g>
+			<path d="m12.326 0c-11.309.001-12.268 12.107-6.978 14.445.544.245.472-.054.94-1.844.037-.149.018-.278-.102-.417-2.726-3.153-.532-9.635 5.751-9.635 9.093 0 7.394 12.582 1.582 12.582-1.498 0-2.614-1.176-2.261-2.631.428-1.733 1.266-3.596 1.266-4.845 0-3.148-4.69-2.681-4.69 1.49 0 1.289.456 2.159.456 2.159s-1.509 6.096-1.789 7.235c-.322 1.308-.164 6.129.399 5.391.149-.195 1.973-2.797 2.484-4.678.186-.685.949-3.465.949-3.465.503.908 1.953 1.668 3.498 1.668 4.596 0 7.918-4.04 7.918-9.053-.016-4.806-4.129-8.402-9.423-8.402z"></path>
+		</g>
+	</symbol>
+	<symbol id="google" viewBox="0 0 555.562 555.562">
+		<g>
+			<path d="M543.312,85.472H482.32c-6.762,0-12.24-5.477-12.24-12.24V12.24c0-6.763-5.477-12.24-12.24-12.24h-18.256 c-6.762,0-12.238,5.478-12.238,12.24v60.992c0,6.763-5.479,12.24-12.24,12.24h-60.992c-6.764,0-12.24,5.478-12.24,12.24v18.256 c0,6.763,5.477,12.24,12.24,12.24h60.992c6.762,0,12.24,5.478,12.24,12.24v60.992c0,6.763,5.477,12.24,12.238,12.24h18.256 c6.764,0,12.24-5.477,12.24-12.24v-60.992c0-6.762,5.479-12.24,12.24-12.24h60.992c6.764,0,12.24-5.478,12.24-12.24V97.712 C555.552,90.949,550.076,85.472,543.312,85.472z"></path>
+			<path d="M35.719,521.669c10.459,7.681,22.534,14.131,36.225,19.37c13.69,5.22,27.265,8.953,40.729,11.181 c13.464,2.222,26.763,3.342,39.896,3.342c59.646,0,106.39-14.578,140.228-43.733c31.156-27.161,46.744-58.538,46.744-94.15 c0-12.681-1.836-24.541-5.508-35.558c-3.672-11.016-8.465-20.478-14.357-28.378c-5.9-7.895-12.412-15.239-19.529-22.032 c-7.123-6.787-14.246-12.962-21.365-18.525c-7.124-5.562-13.635-10.899-19.529-16.028c-5.9-5.116-10.686-10.459-14.357-16.028 c-3.672-5.557-5.508-11.236-5.508-17.025c0-8.017,2.559-15.526,7.681-22.534c5.117-7.008,11.353-13.801,18.697-20.368 c7.344-6.561,14.688-13.739,22.038-21.53c7.344-7.791,13.574-18.084,18.697-30.881c5.115-12.803,7.68-27.436,7.68-43.905
+			c0-19.584-4.338-38.397-13.023-56.426c-6.775-14.07-15.715-25.698-26.824-34.884c-5.208-4.309-4.418-7.185,2.338-7.185h20.593 c6.764,0,16.971-2.767,22.805-6.182l23.947-14.015c5.832-3.415,5.086-6.181-1.678-6.181H208.677 c-20.698,0-41.518,2.228-62.436,6.677c-30.943,6.897-56.978,22.656-78.122,47.247c-21.15,24.596-31.72,52.473-31.72,83.63 c0,32.944,11.854,60.325,35.557,82.136c23.703,21.812,52.136,32.718,85.301,32.718c3.586,0,7.484-0.159,11.708-0.478 c6.457-0.489,11.236,0.447,10.581,2.43c-0.355,1.071-0.777,2.258-1.261,3.562c-1.114,3.005-2.001,5.398-2.668,7.179 s-1.224,3.954-1.671,6.505c-0.453,2.564-0.667,5.177-0.667,7.846c0,12.001,4.749,25.263,14.26,39.792 c3.702,5.655,1.627,10.086-5.117,10.465c-12.748,0.729-25.361,2.057-37.852,3.997c-16.475,2.563-33.721,6.572-51.75,12.025 c-18.03,5.453-34.168,13.354-48.409,23.703c-14.248,10.349-24.933,22.649-32.051,36.892c-8.237,16.48-12.35,31.499-12.35,45.067 c0,14.92,3.342,28.434,10.019,40.569C16.692,504.086,25.254,513.988,35.719,521.669z M158.584,223.692 c-10.239-5.784-18.923-13.299-26.041-22.534c-7.124-9.235-13.354-19.639-18.697-31.218c-5.343-11.573-9.296-23.152-11.854-34.725 c-2.559-11.567-3.837-22.589-3.837-33.054c0-21.371,5.679-39.731,17.026-55.086C126.534,31.72,142.556,24.04,163.26,24.04
+			c14.688,0,27.987,4.565,39.896,13.696c11.903,9.131,21.249,20.698,28.042,34.719c6.787,14.027,12.02,28.55,15.692,43.575 c3.672,15.024,5.508,29.21,5.508,42.57c0,16.879-2.785,31.225-8.348,43.042c-2.876,6.114-9.29,15.184-14.572,19.395 c-9.492,7.564-22.332,11.346-38.513,11.346C179.619,232.376,168.817,229.488,158.584,223.692z M70.775,400.315 c6.01-10.459,13.69-18.807,23.036-25.043c9.345-6.23,20.251-11.353,32.717-15.355c12.46-4.009,24.48-6.787,36.059-8.348 c11.573-1.561,23.373-2.344,35.392-2.344c3.109,0,5.894,0.043,8.36,0.122c4.615,0.153,10.625,2.1,13.434,4.039 c1.426,0.985,3.121,2.161,5.085,3.52c5.453,3.788,9.125,6.347,11.016,7.675c1.885,1.334,5.343,3.898,10.349,7.681 c5.006,3.788,8.568,6.628,10.686,8.519c2.111,1.892,5.177,4.73,9.18,8.513c4.009,3.788,6.953,7.068,8.85,9.854 c1.885,2.784,4.224,6.175,7.013,10.178c2.779,4.009,4.725,7.846,5.846,11.523c1.107,3.672,2.172,7.675,3.17,12.02 c1.004,4.34,1.506,8.85,1.506,13.514c0,14.026-3.066,26.267-9.18,36.726c-6.126,10.459-14.413,18.642-24.873,24.548 c-10.465,5.894-21.646,10.232-33.556,13.017c-11.91,2.785-24.431,4.174-37.559,4.174c-14.247,0-28.378-1.671-42.399-5.006 c-14.021-3.342-27.436-8.396-40.227-15.189c-12.803-6.794-23.152-16.139-31.053-28.048c-7.901-11.91-11.854-25.423-11.854-40.563
+			C61.76,422.678,64.765,410.78,70.775,400.315z"></path>
+		</g>
+	</symbol>
+</svg>
+
+<!-- ** Header ** -->
+<header class="header" id="header">
+	<div class="container">
+		<div class="header_inner">
+			<div class="header_logo">
+				<img src="img/header/logo.png" alt="logo" class="header_img">
+			</div>
+			<svg class="header_line">
+				<use xlink:href="#line-logo"></use>
+			</svg>
+			<nav class="header_nav" id="headerNav">
+				<a href="#" class="header_link" data-scroll="#header">home</a>
+				<a href="#" class="header_link" data-scroll="#about">about us</a>
+				<a href="#" class="header_link" data-scroll="#portfolio">portfolio</a>
+				<a href="#" class="header_link" data-scroll="#client">clients</a>
+				<a href="#" class="header_link" data-scroll="#team">team</a>
+				<a href="#" class="header_link" data-scroll="#service">services</a>
+				<a href="#" class="header_link" data-scroll="#blog">blog</a>
+				<a href="#" class="header_link" data-scroll="#contact">contact</a>
+			</nav>
+			<button class="header_burger" id="navToggle" type="button"></button>
+		</div>
+	</div>
+</header>
+
+<!-- ** Intro ** -->
+<div class="intro">
+	<div class="intro_inner">
+		<div class="container">
+			<div class="intro_content">
+				<div class="intro_slider" id="introSlider">
+				
+					<div class="intro_item">
+						<h2 class="intro_title">why <span class="color">creativia ?</span> </h2>
+						<p class="intro_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque eaque odit doloribus adipisci ullam provident ea officiis, quos quidem. Mollitia in dolorem, adipisci. Quia magni fugit repellendus, similique, eaque accusamus!</p>
+					</div>
+
+					<div class="intro_item">
+						<h2 class="intro_title">about <span class="color">creativia</span> </h2>
+						<p class="intro_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, consectetur debitis maiores similique praesentium saepe ea numquam illo facilis autem dolores cumque, dicta nam, molestiae corporis quis molestias sed. Voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi error beatae, rerum deleniti illo ducimus quisquam dolore. Inventore optio obcaecati explicabo at autem, expedita, accusantium nihil aut non placeat fugit?</p>
+					</div>
+
+					<div class="intro_item">
+						<h2 class="intro_title">our <span class="color">product features</span></h2>
+						<p class="intro_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita quo amet deserunt exercitationem rem temporibus tempora facilis et, maxime nihil, id doloremque ab molestias veniam sint nisi suscipit eaque ipsa.</p>
+					</div>
+
+					<div class="intro_item">
+						<h2 class="intro_title">our <span class="color">clients</span></h2>
+						<p class="intro_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi cumque a officia dignissimos ipsum. Quam doloremque commodi quibusdam reprehenderit maxime eos in qui tempora, eum tenetur ipsum, expedita autem! Harum.</p>
+					</div> 
+					
+				</div><!-- /.intro_slider -->
+				<form class="intro_form">
+					<button class="intro_button" type="button">features</button>
+					<button class="intro_button" type="button">free psd</button>
+				</form>
+			</div> <!-- /.intro_content -->
+		</div><!-- /.container -->
+	</div><!-- /.intro_inner -->
+</div> <!-- /.intro -->
+
+<!-- ** About us ** -->
+<section class="about" id="about">
+	<div class="container">
+		<div class="about_inner">
+			<h2 class="about_title">about <span class="color">creativia</span></h2>
+			<p class="about_description">Lorem ipsum dolor sit amet, consectetur <span class="color">adipiscing elit.</span> Integer sed magna vel velit dignissim luctus eu in urna. Dapibus egestas turpis.</p>
+
+			<div class="about_content">
+
+				<div class="about_creativia" id="aboutCreativia">
+					<p class="about_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et dolor justo. Phasellus eu ligula ac nisl volutpat tincidunt. Vestibulum vitae rhoncus odio Fusce sed enim erat. Mauris dictum lorem eu tortor porta placerat. Suspendisse ac vestibulum eros. Nulla mi ipsum, consequat commodo condimentum vitae.</p>
+
+					<div class="about_button">
+						<div class="about_iconbox">
+							<img src="img/about/plus.svg" alt="toggle">
+						</div>
+						<h3 class="about_subtitle">Who is creativia</h3>
+					</div>
+					<div class="about_stext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et dolor justo. Phasellus eu ligula ac nisl volutpat tincidunt. Vestibulum vitae rhoncus odio Fusce sed enim erat. Mauris dictum lorem eu tortor porta placerat. Suspendisse ac vestibulum eros.
+					</div>
+
+					<div class="about_button">
+						<div class="about_iconbox">
+							<img src="img/about/plus.svg" alt="toggle">
+						</div>
+						<h3 class="about_subtitle">Experience</h3>
+					</div>
+					<div class="about_stext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et dolor justo. Phasellus eu ligula ac nisl volutpat tincidunt. Vestibulum vitae rhoncus odio Fusce sed enim erat. Mauris dictum lorem eu tortor porta placerat. Suspendisse ac vestibulum eros.
+					</div>
+
+					<div class="about_button">
+						<div class="about_iconbox">
+							<img src="img/about/plus.svg" alt="toggle">
+						</div>
+						<h3 class="about_subtitle">Learn more</h3>
+					</div>
+					<div class="about_stext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et dolor justo. Phasellus eu ligula ac nisl volutpat tincidunt. Vestibulum vitae rhoncus odio Fusce sed enim erat. Mauris dictum lorem eu tortor porta placerat. Suspendisse ac vestibulum eros.
+					</div>
+				</div><!--/.about_creativia #aboutCreativia-->
+
+				<div class="about_creativia" id="aboutSlider">
+					<div class="about_wrap about_wrap--center">
+						<img src="img/about/active-1.jpg" alt="photo" class="about_photo">
+					</div>
+					<svg class="about_hexagon about_hexagon--center">
+						<use xlink:href="#hexagon"></use>
+					</svg>
+					<div class="about_wrap about_wrap--right">
+						<img src="img/about/active-2.jpg" alt="photo" class="about_photo">
+					</div>
+					<svg class="about_hexagon about_hexagon--right">
+						<use xlink:href="#hexagon"></use>
+					</svg>
+					<div class="about_wrap about_wrap--left">
+						<img src="img/about/active-3.jpg" alt="photo" class="about_photo">
+					</div>
+					<svg class="about_hexagon about_hexagon--left">
+						<use xlink:href="#hexagon"></use>
+					</svg>
+				</div><!--/.about_creativia #aboutSlider -->
+
+			</div> <!--/.about_content -->
+
+			<div class="about_features">
+
+				<div class="about_item">
+					<div class="about_icon">
+						<svg class="about_icon--hexagon">
+							<use xlink:href="#smallHexagon"></use>
+						</svg>
+						<img src="img/about/heart.svg" alt="heart" class="about_icon--logo">
+					</div>
+					<h3 class="about_subtitle">flat design</h3>
+					<div class="about_text">
+						<p>Lorem ipsum dolor sit amet cras vitae sodales ac nec prellentesque vivamus eget mauris fusce sit amet</p>
+					</div>
+				</div>
+				<div class="about_item">
+					<div class="about_icon">
+						<svg class="about_icon--hexagon">
+							<use xlink:href="#smallHexagon"></use>
+						</svg>
+						<img src="img/about/checkmark.svg" alt="check" class="about_icon--logo">
+					</div>
+					<h3 class="about_subtitle">retina ready</h3>
+					<div class="about_text">
+						<p>Lorem ipsum dolor sit amet cras vitae sodales ac nec prellentesque vivamus eget mauris fusce sit amet</p>
+					</div>
+				</div>
+				<div class="about_item">
+					<div class="about_icon">
+						<svg class="about_icon--hexagon">
+							<use xlink:href="#smallHexagon"></use>
+						</svg>
+						<img src="img/about/tablet.svg" alt="tablet" class="about_icon--logo">
+					</div>
+					<h3 class="about_subtitle">responsive</h3>
+					<div class="about_text">
+						<p>Lorem ipsum dolor sit amet cras vitae sodales ac nec prellentesque vivamus eget mauris fusce sit amet</p>
+					</div>
+				</div>
+				<div class="about_item">
+					<div class="about_icon">
+						<svg class="about_icon--hexagon">
+							<use xlink:href="#smallHexagon"></use>
+						</svg>
+						<img src="img/about/fire.svg" alt="fire" class="about_icon--logo">
+					</div>
+					<h3 class="about_subtitle">clean &amp; usefull</h3>
+					<div class="about_text">
+						<p>Lorem ipsum dolor sit amet cras vitae sodales ac nec prellentesque vivamus eget mauris fusce sit amet</p>
+					</div>
+				</div>
+				
+					<svg class="scrollBar">
+						<use xlink:href="#scrollBar"></use>
+					</svg>
+				
+			</div><!--/.about_features -->
+		</div><!--/.about_inner -->
+	</div><!--/.container -->
+</section>
+
+<!-- ** Portfolio ** -->
+<section class="portfolio" id="portfolio">
+	<h2 class="portfolio_title">portfolio</h2>
+	<nav class="portfolio_nav">
+		<a href="#" class="portfolio_link">all</a>
+		<a href="#" class="portfolio_link">illustration</a>
+		<a href="#" class="portfolio_link">digital art</a>
+		<a href="#" class="portfolio_link">web design</a>
+	</nav>
+	<div class="portfolio_list">
+		<div class="portfolio_item">
+			<img src="img/portfolio/port1.jpg" alt="artphoto" class="portfolio_photo">
+			<div class="portfolio_cover">
+				<div class="portfolio_icon">
+					<img src="img/portfolio/plus-icon.png" alt="icon">
+					<p class="portfolio_text">design name</p>
+				</div>
+			</div>
+		</div>
+		<div class="portfolio_item">
+			<img src="img/portfolio/port2.jpg" alt="artphoto" class="portfolio_photo">
+			<div class="portfolio_cover">
+				<div class="portfolio_icon">
+					<img src="img/portfolio/plus-icon.png" alt="icon">
+					<p class="portfolio_text">design name</p>
+				</div>
+			</div>
+		</div>
+		<div class="portfolio_item">
+			<img src="img/portfolio/port3.jpg" alt="artphoto" class="portfolio_photo">
+			<div class="portfolio_cover">
+				<div class="portfolio_icon">
+					<img src="img/portfolio/plus-icon.png" alt="icon">
+					<p class="portfolio_text">design name</p>
+				</div>
+			</div>
+		</div>
+		<div class="portfolio_item">
+			<img src="img/portfolio/port4.jpg" alt="artphoto" class="portfolio_photo">
+			<div class="portfolio_cover">
+				<div class="portfolio_icon">
+					<img src="img/portfolio/plus-icon.png" alt="icon">
+					<p class="portfolio_text">design name</p>
+				</div>
+			</div>
+		</div>
+	</div><!--/.portfolio_list -->
+
+	<div class="portfolio_list">
+		<div class="portfolio_item">
+			<img src="img/portfolio/port8.jpg" alt="artphoto" class="portfolio_photo">
+			<div class="portfolio_cover">
+				<div class="portfolio_icon">
+					<img src="img/portfolio/plus-icon.png" alt="icon">
+					<p class="portfolio_text">design name</p>
+				</div>
+			</div>
+		</div>
+		<div class="portfolio_item">
+			<img src="img/portfolio/port7.jpg" alt="artphoto" class="portfolio_photo">
+			<div class="portfolio_cover">
+				<div class="portfolio_icon">
+					<img src="img/portfolio/plus-icon.png" alt="icon">
+					<p class="portfolio_text">design name</p>
+				</div>
+			</div>
+		</div>
+		<div class="portfolio_item">
+			<img src="img/portfolio/port6.jpg" alt="artphoto" class="portfolio_photo">
+			<div class="portfolio_cover">
+				<div class="portfolio_icon">
+					<img src="img/portfolio/plus-icon.png" alt="icon">
+					<p class="portfolio_text">design name</p>
+				</div>
+			</div>
+		</div>
+		<div class="portfolio_item">
+			<img src="img/portfolio/port5.jpg" alt="artphoto" class="portfolio_photo">
+			<div class="portfolio_cover">
+				<div class="portfolio_icon">
+					<img src="img/portfolio/plus-icon.png" alt="icon">
+					<p class="portfolio_text">design name</p>
+				</div>
+			</div>
+		</div>
+	</div><!--/.portfolio_list -->
+</section>
+
+<!-- ** Product ** -->
+<section class="product">
+	<div class="container">
+		<h2 class="product_title">our <span class="color">product features</span></h2>
+		<div class="product_description">
+			<p>Lorem ipsum dolor sit amet, consectetur <span class="color">adipiscing elit.</span> Integer sed magna vel velit dignissim luctus eu in urna. Dapibus egestas turpis.</p>
+		</div>
+		<div class="product_inner">
+
+			<div class="product_item">
+				<form class="product_form" id="productFormLeft">
+					<div class="product_input">
+						<input type="checkbox" name="product" id="productColorL" class="product_checkbox">
+						<label for="productColorL">unlimited color options</label>
+					</div>
+					<div class="product_input">
+						<input type="checkbox" name="product" id="productSupportL" class="product_checkbox">
+						<label for="productSupportL">outstanding support</label>
+					</div>
+					<div class="product_input">
+						<input type="checkbox" name="product" id="productRetinaL" class="product_checkbox">
+						<label for="productRetinaL">retina ready</label>
+					</div>
+				</form>
+			</div>
+
+			<div class="product_mainitem">
+				<div class="product_tablet">
+					<img src="img/product/photo.jpg" alt="photo" class="product_photo">
+					<div class="product_camera"><span class="notice">shape of camera</span></div>
+				</div>
+				<svg class="product_hexagon">
+					<use xlink:href="#hexagon"></use>
+				</svg>
+				<div class="product_halfhexagon"><span class="notice">shape of half-hexagon</span></div>
+				<button class="product_button" type="button">free psd</button>
+			</div>
+
+			<div class="product_item">
+				<form class="product_form" id="productFormRight">
+					<div class="product_input">
+						<input type="checkbox" name="product" id="productColorR" class="product_checkbox">
+						<label for="productColorR">unlimited color options</label>
+					</div>
+					<div class="product_input">
+						<input type="checkbox" name="product" id="productSupportR" class="product_checkbox">
+						<label for="productSupportR">outstanding support</label>
+					</div>
+					<div class="product_input">
+						<input type="checkbox" name="product" id="productRetinaR" class="product_checkbox">
+						<label for="productRetinaR">retina ready</label>
+					</div>
+				</form>
+			</div>
+
+		</div><!--/.product_inner -->
+	</div><!--/.container -->
+	<svg class="scrollBar scrollBar--red">
+		<use xlink:href="#scrollBar"></use>
+	</svg>
+</section>
+
+<!-- ** Client ** -->
+<section class="client" id="client">
+	<div class="client_cover">
+		<div class="container">
+			<h2 class="client_title">our <span class="color">clients</span></h2>
+			<div class="client_description">
+				<p>Lorem ipsum dolor sit amet, consectetur <span class="color">adipiscing elit.</span> Integer sed magna vel velit dignissim luctus eu in urna. Dapibus egestas turpis.</p>
+			</div>
+			<div class="client_inner">
+
+				<div class="client_item">
+					<h3 class="client_subtitle">happy clients say</h3>
+					<div class="client_slider" id="clientSlider">
+
+						<div class="client_slick">
+							<div class="client_text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed magna vel velit dignissim luctus eu in urna. Dapibus egestas turpis.</p>
+							</div>
+							<div class="client_frame">
+								<img src="img/client/photo.jpg" alt="photo" class="client_photo">
+							</div>
+							<div class="client_name">amr srour</div>
+						</div>
+
+						<div class="client_slick">
+							<div class="client_text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed magna vel velit dignissim luctus eu in urna. Dapibus egestas turpis.</p>
+							</div>
+							<div class="client_frame">
+								<img src="img/client/photo.jpg" alt="photo" class="client_photo">
+							</div>
+							<div class="client_name">amr srour</div>
+						</div>
+
+						<div class="client_slick">
+							<div class="client_text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed magna vel velit dignissim luctus eu in urna. Dapibus egestas turpis.</p>
+							</div>
+							<div class="client_frame">
+								<img src="img/client/photo.jpg" alt="photo" class="client_photo">
+							</div>
+							<div class="client_name">amr srour</div>
+						</div>
+
+					</div>
+				</div><!--/.client_item -->
+
+				<div class="client_item">
+					<div class="client_grid">
+						<div class="client_prof">
+							<div class="client_logo">
+								<img src="img/client/graphicriver-light.png" alt="logo" class="client_icon">
+							</div>
+						</div>
+						<div class="client_prof">
+							<div class="client_logo">
+								<img src="img/client/videohive-light.png" alt="logo" class="client_icon">
+							</div>
+						</div>
+						<div class="client_prof">
+							<div class="client_logo">
+								<img src="img/client/photodune-light.png" alt="logo" class="client_icon">
+							</div>
+						</div>
+						<div class="client_prof">
+							<div class="client_logo">
+								<img src="img/client/codecanyon-light.png" alt="logo" class="client_icon">
+							</div>
+						</div>
+					</div>
+				</div><!--/.client_item -->
+
+			</div><!--/.client_inner -->
+		</div><!--/.container -->
+	</div><!--/.client_cover -->
+</section>
+
+<!-- ** Team ** -->
+<section class="team" id="team">
+	<div class="container">
+		<h2 class="team_title">our <span class="color">teamwork</span></h2>
+		<div class="team_description"> 
+			<p>Lorem ipsum dolor sit amet, consectetur <span class="color">adipiscing elit.</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam animi, provident eum porro, exercitationem dolor laudantium repellendus ab id distinctio error natus eaque libero ducimus perspiciatis. Adipisci nisi qui numquam.</p> 
+		</div>
+		<div class="team_inner">
+			<div class="team_item">
+				<div class="team_photo">
+					<img src="img/team/img.jpg" alt="employee" class="team_img">
+					<div class="team_cover">
+						<div class="team_social">
+							<a href="#" class="team_link"><img src="img/team/facebook.png" alt="icon" class="team_icon"></a>
+							<a href="#" class="team_link"><img src="img/team/tweeter.png" alt="icon" class="team_icon"></a>
+							<a href="#" class="team_link"><img src="img/team/google.png" alt="icon" class="team_icon"></a>
+						</div>
+					</div>
+				</div>
+				<div class="team_wrap">
+					<h3 class="team_name">bruce wayne</h3>
+					<div class="team_prof">Webdesigner</div>
+				</div>
+			</div>
+
+			<div class="team_item">
+				<div class="team_photo">
+					<img src="img/team/amr.jpg" alt="employee" class="team_img">
+					<div class="team_cover">
+						<div class="team_social">
+							<a href="#" class="team_link"><img src="img/team/facebook.png" alt="icon" class="team_icon"></a>
+							<a href="#" class="team_link"><img src="img/team/tweeter.png" alt="icon" class="team_icon"></a>
+							<a href="#" class="team_link"><img src="img/team/google.png" alt="icon" class="team_icon"></a>
+						</div>
+					</div>
+				</div>
+				<div class="team_wrap">
+					<h3 class="team_name">amr srour</h3>
+					<div class="team_prof">Webdesigner</div>
+				</div>
+			</div>
+
+			<div class="team_item">
+				<div class="team_photo">
+					<img src="img/team/sarah.jpg" alt="employee" class="team_img">
+					<div class="team_cover">
+						<div class="team_social">
+							<a href="#" class="team_link"><img src="img/team/facebook.png" alt="icon" class="team_icon"></a>
+							<a href="#" class="team_link"><img src="img/team/tweeter.png" alt="icon" class="team_icon"></a>
+							<a href="#" class="team_link"><img src="img/team/google.png" alt="icon" class="team_icon"></a>
+						</div>
+					</div>
+				</div>
+				<div class="team_wrap">
+					<h3 class="team_name">sarah doe</h3>
+					<div class="team_prof">Webdesigner</div>
+				</div>
+			</div>
+
+			<div class="team_item">
+				<div class="team_photo">
+					<img src="img/team/johan.jpg" alt="employee" class="team_img">
+					<div class="team_cover">
+						<div class="team_social">
+							<a href="#" class="team_link"><img src="img/team/facebook.png" alt="icon" class="team_icon"></a>
+							<a href="#" class="team_link"><img src="img/team/tweeter.png" alt="icon" class="team_icon"></a>
+							<a href="#" class="team_link"><img src="img/team/google.png" alt="icon" class="team_icon"></a>
+						</div>
+					</div>
+				</div>
+				<div class="team_wrap">
+					<h3 class="team_name">johan de</h3>
+					<div class="team_prof">Webdesigner</div>
+				</div>
+			</div>
+		</div><!--/.team_inner -->
+	</div><!--/.container -->
+	<svg class="scrollBar scrollBar--red">
+		<use xlink:href="#scrollBar"></use>
+	</svg>
+</section>
+
+<!-- ** Skills ** -->
+<section class="skill">
+	<div class="container">
+		<h2 class="skill_title">our <span class="color">skills</span></h2>
+		<div class="skill_description">
+			<p>Lorem ipsum dolor sit amet, consectetur <span class="color">adipiscing elit.</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam animi, provident eum porro, exercitationem dolor laudantium repellendus ab id distinctio error natus eaque libero ducimus perspiciatis. Adipisci nisi qui numquam.</p>
+		</div>
+		<div class="skill_inner">
+			<div class="skill_item">
+				<div class="skill_value">
+					<svg class="circle" viewBox="0 0 146 146">
+						<circle cx="73" cy="73" r="70" class="circle_photo circle_photo--red"></circle>
+						<circle cx="73" cy="73" r="70" class="circle_photo circle_photo--gray"></circle>
+					</svg>
+					<div class="skill_percent"><span class="color">90</span> &percnt;</div>
+				</div>
+				<h3 class="skill_name">photoshop</h3>
+				<div class="skill_text">Donec luctus tortor in placerat faucibus </div>
+			</div>
+			<div class="skill_item">
+				<div class="skill_value">
+					<svg class="circle" viewBox="0 0 146 146">
+						<circle cx="73" cy="73" r="70" class="circle_html circle_html--red"></circle>
+						<circle cx="73" cy="73" r="70" class="circle_html circle_html--gray"></circle>
+					</svg>
+					<div class="skill_percent"><span class="color">80</span> &percnt;</div>
+				</div>
+				<h3 class="skill_name">html</h3>
+				<div class="skill_text">Donec luctus tortor in placerat faucibus</div>
+			</div>
+			<div class="skill_item">
+				<div class="skill_value">
+					<svg class="circle" viewBox="0 0 146 146">
+						<circle cx="73" cy="73" r="70" class="circle_php circle_php--red"></circle>
+						<circle cx="73" cy="73" r="70" class="circle_php circle_php--gray"></circle>
+					</svg>
+					<div class="skill_percent"><span class="color">70</span> &percnt;</div>
+				</div>
+				<h3 class="skill_name">php</h3>
+				<div class="skill_text">Donec luctus tortor in placerat faucibus</div>
+			</div>
+			<div class="skill_item">
+				<div class="skill_value">
+					<svg class="circle" viewBox="0 0 146 146">
+						<circle cx="73" cy="73" r="70" class="circle_word circle_word--red"></circle>
+						<circle cx="73" cy="73" r="70" class="circle_word circle_word--gray"></circle>
+					</svg>
+					<div class="skill_percent"><span class="color">90</span> &percnt;</div>
+				</div>
+				<h3 class="skill_name">wordpress</h3>
+				<div class="skill_text">Donec luctus tortor in placerat faucibus</div>
+			</div>
+		</div><!--/.skill_inner -->
+	</div><!--/.container -->
+	<svg class="scrollBar">
+		<use xlink:href="#scrollBar"></use>
+	</svg>
+</section>
+
+<!-- ** Service ** -->
+<section class="service" id="service">
+	<div class="container">
+		<h2 class="service_title">our <span class="color">services</span></h2>
+		<div class="service_description">
+			<p>Lorem ipsum dolor sit amet, consectetur <span class="color">adipisicing elit.</span> Dicta in rerum cupiditate, culpa deleniti, ullam quo consequatur, perspiciatis earum blanditiis voluptatem laboriosam quia officiis. Consequuntur ea quod, cupiditate tempora expedita!</p>
+		</div>
+		<div class="service_inner" id="serviceAccordion">
+
+			<div class="service_item">
+				<div class="service_button">
+					<div class="service_iconbox">
+						<svg class="service_icon">
+							<use xlink:href="#coding"></use>
+						</svg>
+					</div>
+					<h3 class="service_subtitle">development</h3>
+				</div>
+				<div class="service_text">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid deserunt fuga magnam! Magni mollitia beatae deserunt ad accusantium commodi omnis natus voluptatem dolorem doloribus, ullam aperiam, corporis nemo aspernatur dignissimos.</p>
+				</div>
+				<div class="service_button">
+					<div class="service_iconbox">
+						<svg class="service_icon">
+							<use xlink:href="#wordpress"></use>
+						</svg>
+					</div>
+					<h3 class="service_subtitle">wordpress</h3>
+				</div>
+				<div class="service_text">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid deserunt fuga magnam! Magni mollitia beatae deserunt ad accusantium commodi omnis natus voluptatem dolorem doloribus, ullam aperiam, corporis nemo aspernatur dignissimos.</p>
+				</div>
+				<div class="service_button">
+					<div class="service_iconbox">
+						<svg class="service_icon">
+							<use xlink:href="#pencil"></use>
+						</svg>
+					</div>
+					<h3 class="service_subtitle">ui &sol; ux design</h3>
+				</div>
+				<div class="service_text">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid deserunt fuga magnam! Magni mollitia beatae deserunt ad accusantium commodi omnis natus voluptatem dolorem doloribus, ullam aperiam, corporis nemo aspernatur dignissimos.</p>
+				</div>
+			</div><!--/.service_item -->
+
+			<div class="service_item">
+				<div class="service_button">
+					<div class="service_iconbox">
+						<svg class="service_icon">
+							<use xlink:href="#html"></use>
+						</svg>
+					</div>
+					<h3 class="service_subtitle">html &sol; css</h3>
+				</div>
+				<div class="service_text">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae necessitatibus iure commodi nihil sit, a. Unde nesciunt magni, vitae officia nihil vero modi, placeat expedita recusandae saepe dolor error dignissimos.</p>
+				</div>
+				<div class="service_button">
+					<div class="service_iconbox">
+						<svg class="service_icon">
+							<use xlink:href="#tablet"></use>
+						</svg>
+					</div>
+					<h3 class="service_subtitle">applications</h3>
+				</div>
+				<div class="service_text">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae necessitatibus iure commodi nihil sit, a. Unde nesciunt magni, vitae officia nihil vero modi, placeat expedita recusandae saepe dolor error dignissimos.</p>
+				</div>
+				<div class="service_button">
+					<div class="service_iconbox">
+						<svg class="service_icon">
+							<use xlink:href="#laptop"></use>
+						</svg>
+					</div>
+					<h3 class="service_subtitle">responsive layout</h3>
+				</div>
+				<div class="service_text">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae necessitatibus iure commodi nihil sit, a. Unde nesciunt magni, vitae officia nihil vero modi, placeat expedita recusandae saepe dolor error dignissimos.</p>
+				</div>
+			</div><!--/.service_item -->
+
+		</div><!--/.service_inner -->
+	</div><!--/.container -->
+</section>
+
+<!-- ** Reseller ** -->
+<section class="reseller">
+	<div class="container">
+		<h2 class="reseller_title">plans <span class="color">reseller</span></h2>
+		<div class="reseller_description">
+			<p>Lorem ipsum dolor sit amet, consectetur <span class="color">adipisicing elit.</span> Praesentium autem sint, placeat perspiciatis minima quos debitis ex error, atque reprehenderit quasi asperiores. Voluptatibus tempore quia, maiores minima et delectus quibusdam.</p>
+		</div>
+		<div class="reseller_inner">
+
+			<div class="reseller_item">
+				<h3 class="reseller_subtitle">reseller</h3>
+				<ul class="reseller_list">
+					<li>199 &#36; <span class="sub">year</span></li>
+					<li>CPU E3-1230 3.3GHz 8MB-V2</li>
+					<li>HARD 500GB SATA 7200 RPM</li>
+					<li>RAM 8GB DDR3 1333MHZ ECC</li>
+					<li>Traffic 10 T</li>
+					<li>Connection 100 MB</li>
+					<li>5 IP</li>
+					<li>
+						<button class="reseller_button" type="button">order now</button>
+					</li>
+				</ul>
+			</div>
+
+			<div class="reseller_item">
+				<h3 class="reseller_subtitle">reseller</h3>
+				<ul class="reseller_list">
+					<li>199 &#36; <span class="sub">year</span></li>
+					<li>CPU E3-1230 3.3GHz 8MB-V2</li>
+					<li>HARD 500GB SATA 7200 RPM</li>
+					<li>RAM 8GB DDR3 1333MHZ ECC</li>
+					<li>Traffic 10 TB</li>
+					<li>Connection 100 MB</li>
+					<li>5 IP</li>
+					<li>
+						<button class="reseller_button" type="button">order now</button>
+					</li>
+				</ul>
+			</div>
+
+			<div class="reseller_item">
+				<h3 class="reseller_subtitle">reseller</h3>
+				<ul class="reseller_list">
+					<li>199 &#36; <span class="sub">year</span></li>
+					<li>CPU E3-1230 3.3GHz 8MB-V2</li>
+					<li>HARD 500GB SATA 7200 RPM</li>
+					<li>RAM 8GB DDR3 1333MHZ ECC</li>
+					<li>Traffic 10 TB</li>
+					<li>Connection 100 MB</li>
+					<li>5 IP</li>
+					<li>
+						<button class="reseller_button" type="button">order now</button>
+					</li>
+				</ul>
+			</div>
+
+			<div class="reseller_item">
+				<h3 class="reseller_subtitle">reseller</h3>
+				<ul class="reseller_list">
+					<li>199 &#36; <span class="sub">year</span></li>
+					<li>CPU E3-1230 3.3GHz 8MB-V2</li>
+					<li>HARD 500GB SATA 7200 RPM</li>
+					<li>RAM 8GB DDR3 1333MHZ ECC</li>
+					<li>Traffic 10 TB</li>
+					<li>Connection 100 MB</li>
+					<li>5 IP</li>
+					<li>
+						<button class="reseller_button" type="button">order now</button>
+					</li>
+				</ul>
+			</div>
+
+		</div><!--/.reseller_inner -->
+	</div><!--/.container -->
+	<svg class="scrollBar scrollBar--red">
+		<use xlink:href="#scrollBar"></use>
+	</svg>
+</section>
+
+<!-- ** Twitter ** -->
+<article class="twitter">
+	<div class="twitter_logo">
+		<svg class="twitter_icon">
+			<use xlink:href="#twitter"></use>
+		</svg>
+	</div>
+	<div class="twitter_text">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum labore reprehenderit iure accusamus qui. Amet incidunt in praesentium enim provident dignissimos rerum ab corporis, exercitationem impedit perferendis sapiente distinctio quod.</p>
+		<p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui distinctio veritatis numquam quos nisi, commodi perspiciatis sint? Enim esse quisquam eos, placeat, iste est, quaerat repudiandae ullam necessitatibus fugit maxime!</span><span>Iure mollitia error ducimus possimus asperiores. Aperiam culpa praesentium consectetur voluptate reiciendis hic a iusto modi quibusdam dolor. Accusantium, soluta, tempore! Veritatis, nobis deserunt molestiae aut laudantium numquam corporis minima.</span></p>
+	</div>
+	<div class="twitter_sign">
+		<svg class="twitter_icon twitter_icon--sign">
+			<use xlink:href="#twitter"></use>
+		</svg>
+	</div>
+</article>
+
+<!-- ** Blog ** -->
+<article class="blog" id="blog">
+	<div class="container">
+		<h2 class="blog_title">our <span class="color">blog</span></h2>
+		<div class="blog_description">
+			<p>Lorem ipsum dolor sit amet, consectetur <span class="color">adipisicing elit.</span> Non hic ipsa laborum omnis labore mollitia eligendi! Laborum omnis inventore praesentium provident corporis itaque, aliquam, repudiandae veniam tempore veritatis obcaecati asperiores!</p>
+		</div>
+		<div class="blog_visible">
+
+			<div class="blog_item">
+				<a href="#" class="blog_imgbox">
+					<img src="img/blog/one.jpg" alt="blog" class="blog_img">
+				</a>
+				<div class="blog_content">
+					<h3 class="blog_subtitle">Lorem ipsum dolor sit amet.</h3>
+					<div class="metadata">
+						<a href="#" class="metadata_item" target="_blank">
+							<img src="img/blog/user.png" alt="icon" class="metadata_img">admin
+						</a>
+						<a href="#" class="metadata_item" target="_blank">
+							<img src="img/blog/comment.png" alt="icon" class="metadata_img">coment
+						</a>
+						<a href="#" class="metadata_item" target="_blank">
+							<img src="img/blog/view.png" alt="icon" class="metadata_img">view
+						</a>
+					</div>
+					<div class="blog_text">
+						<p>Integer ornare libero nisi. Duis ac magna urna. Nulla facilisi. Phasellus at ante magna. Quisque nec porta nulla. Suspendisse nec orci vel elit aliquet blandit in non orci. Vivamus posuere dui eget lacinia rutrum. Cum sociis natoque penatibus</p>
+					</div>
+					<button class="blog_button" type="button">view more</button>
+				</div> 
+			</div>
+
+			<div class="blog_item">
+				<div class="blog_imgbox">
+					<img src="img/blog/two.jpg" alt="blog" class="blog_img">
+				</div>
+				<div class="blog_content">
+					<h3 class="blog_subtitle">Lorem ipsum dolor sit amet.</h3>
+					<div class="metadata">
+						<a href="#" class="metadata_item" target="_blank">
+							<img src="img/blog/user.png" alt="icon" class="metadata_img">admin
+						</a>
+						<a href="#" class="metadata_item" target="_blank">
+							<img src="img/blog/comment.png" alt="icon" class="metadata_img">coment
+						</a>
+						<a href="#" class="metadata_item" target="_blank">
+							<img src="img/blog/view.png" alt="icon" class="metadata_img">view
+						</a>
+					</div>
+					<div class="blog_text">
+						<p>Integer ornare libero nisi. Duis ac magna urna. Nulla facilisi. Phasellus at ante magna. Quisque nec porta nulla. Suspendisse nec orci vel elit aliquet blandit in non orci. Vivamus posuere dui eget lacinia rutrum. Cum sociis natoque penatibus...</p>
+					</div>
+					<button class="blog_button" type="button">view more</button>
+				</div>
+			</div>
+
+		</div><!--/.blog_visible -->
+
+		<div class="blog_invisible" id="blogInvisible">
+
+			<div class="blog_item">
+				<div class="blog_imgbox">
+					<img src="img/blog/one.jpg" alt="blog" class="blog_img">
+				</div>
+				<div class="blog_content">
+					<h3 class="blog_subtitle">Lorem ipsum dolor sit amet.</h3>
+					<div class="metadata">
+						<a href="#" class="metadata_item" target="_blank">
+							<img src="img/blog/user.png" alt="icon" class="metadata_img">admin
+						</a>
+						<a href="#" class="metadata_item" target="_blank">
+							<img src="img/blog/comment.png" alt="icon" class="metadata_img">coment
+						</a>
+						<a href="#" class="metadata_item" target="_blank">
+							<img src="img/blog/view.png" alt="icon" class="metadata_img">view
+						</a>
+					</div>
+					<div class="blog_text">
+						<p>Integer ornare libero nisi. Duis ac magna urna. Nulla facilisi. Phasellus at ante magna. Quisque nec porta nulla. Suspendisse nec orci vel elit aliquet blandit in non orci. Vivamus posuere dui eget lacinia rutrum. Cum sociis natoque penatibus...</p>
+					</div>
+					<button class="blog_button" type="button">view more</button>
+				</div>
+			</div>
+
+			<div class="blog_item">
+				<div class="blog_imgbox">
+					<img src="img/blog/two.jpg" alt="blog" class="blog_img">
+				</div>
+				<div class="blog_content">
+					<h3 class="blog_subtitle">Lorem ipsum dolor sit amet.</h3>
+					<div class="metadata">
+						<a href="#" class="metadata_item" target="_blank">
+							<img src="img/blog/user.png" alt="icon" class="metadata_img">admin
+						</a>
+						<a href="#" class="metadata_item" target="_blank">
+							<img src="img/blog/comment.png" alt="icon" class="metadata_img">coment
+						</a>
+						<a href="#" class="metadata_item" target="_blank">
+							<img src="img/blog/view.png" alt="icon" class="metadata_img">view
+						</a>
+					</div>
+					<div class="blog_text">
+						<p>Integer ornare libero nisi. Duis ac magna urna. Nulla facilisi. Phasellus at ante magna. Quisque nec porta nulla. Suspendisse nec orci vel elit aliquet blandit in non orci. Vivamus posuere dui eget lacinia rutrum. Cum sociis natoque penatibus...</p>
+					</div>
+					<button class="blog_button" type="button">view more</button>
+				</div>
+			</div>
+
+		</div><!--/.blog_invisible -->
+		<button class="blog_review" id="blogReview" type="button">
+			<svg class="blog_arrow">
+				<use xlink:href="#arrow-prev"></use>
+			</svg>
+		</button>
+	</div><!--/.container -->
+	<svg class="scrollBar scrollBar--red">
+		<use xlink:href="#scrollBar"></use>
+	</svg>
+</article>
+
+<!-- ** Follow ** -->
+<section class="follow">
+	<div class="follow_cover">
+		<h2 class="follow_title">follow <span class="color">creativia</span></h2>
+		<div class="follow_inner">
+			<div class="follow_item">
+				<a class="follow_link" href="#" target="_blank">
+					<svg class="follow_iconbox">
+						<use xlink:href="#smallHexagon"></use>
+					</svg>
+					<svg class="follow_icon">
+						<use xlink:href="#facebook"></use>
+					</svg>
+				</a>
+				<div class="follow_counter">20000</div>
+			</div>
+			<div class="follow_item">
+				<a class="follow_link" href="#" target="_blank">
+					<svg class="follow_iconbox">
+						<use xlink:href="#smallHexagon"></use>
+					</svg>
+					<svg class="follow_icon">
+						<use xlink:href="#twitter"></use>
+					</svg>
+				</a>
+				<div class="follow_counter">99900</div>
+			</div>
+			<div class="follow_item">
+				<a class="follow_link" href="#" target="_blank">
+					<svg class="follow_iconbox">
+						<use xlink:href="#smallHexagon"></use>
+					</svg>
+					<svg class="follow_icon">
+						<use xlink:href="#pinterest"></use>
+					</svg>
+				</a>
+				<div class="follow_counter">5000</div>
+			</div>
+			<div class="follow_item">
+				<a class="follow_link" href="#" target="_blank">
+					<svg class="follow_iconbox">
+						<use xlink:href="#smallHexagon"></use>
+					</svg>
+					<svg class="follow_icon">
+						<use xlink:href="#google"></use>
+					</svg>
+				</a>
+				<div class="follow_counter">500</div>
+			</div>
+		</div><!--/.follow_inner -->
+	</div><!--/.follow_cover -->
+</section>
+
+<!-- ** Contact ** -->
+<section class="contact" id="contact">
+	<div class="container">
+		<h2 class="contact_title">find us <span class="color">here</span></h2>
+		<div class="contact_description">
+			<p>Lorem ipsum dolor sit amet, consectetur <span class="color">adipisicing elit.</span> Repudiandae numquam, soluta explicabo molestiae voluptatibus dolore ratione itaque nesciunt reiciendis est qui dicta, tempore quae aliquid atque eos doloribus veritatis ducimus.</p>
+		</div>
+	</div>
+	<div class="contact_wrapper">
+	    <iframe class="contact_map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20684.33703030028!2d-122.04682153100822!3d36.9674147890722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808e441b7c36d549%3A0x52ca104b2ad7f985!2z0KHQsNC90YLQsC3QmtGA0YPQtywg0JrQsNC70LjRhNC-0YDQvdC40Y8sINCh0KjQkA!5e0!3m2!1sru!2sru!4v1590049533009!5m2!1sru!2sru"></iframe>
+
+	    <div class="contact_inner">
+	    	<div class="contact_address">
+	    		<div class="contact_clip">
+	    			<ul class="contact_list">
+	    				<li>Creativia</li>
+	    				<li>Address: Lorem ipsum</li>
+	    				<li>Phone: +75212365456</li>
+	    				<li>Email: djskdjc@mdkdsi.dks</li>
+	    			</ul>
+	    		</div>
+	    	</div>
+	    	<form class="contact_form" action="#">
+	    		<h3 class="contact_subtitle">send message</h3>
+	    		<input class="contact_input" type="text" placeholder="Name" autocomplete="off">
+	    		<input class="contact_input" type="email" placeholder="Email" autocomplete="off">
+	    		<input class="contact_input" type="password" placeholder="Password" autocomplete="off">
+	    		<textarea class="contact_textarea" placeholder="Type text"></textarea>
+	    		<button class="contact_button" type="button">submit</button>
+	    	</form>
+	    </div>
+
+	</div>
+</section>
+
+<!-- ** Footer ** -->
+<footer class="footer">
+	<div class="footer_logo">
+		<img src="img/header/logo.png" alt="Creativia" class="footer_icon">
+	</div>
+	<address class="footer_maker">
+		<p>	Created by Boris Kharchenko <br>
+			Email: boriskharchenko@yahoo.com <br>
+			Cell phone: +7888777-77-44
+		</p>
+	</address>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="script/libs.min.js"></script>
+
+<script src="script/main.js"></script>
+	
+</body>
+</html>
+	

@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Boris Web">
+	<meta name="description" content="Сайт-портофолио на позицию верстальщика без опыта работы. Верстка сайтов, front-end разработка, html, css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-capable" content="yes">
+	<meta name="MobileOptimized" content="width">
+	<meta name="HandheldFriendly" content="true">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Борис Харченко</title>
+
+	<link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+<!-- == Sprite == -->	
+<svg style="display: none;">
+	<symbol id="arrow" viewBox="0 0 256 256">
+		<g>
+			<path d="M225.81 48.9L128 146.73 30.19 48.91 0 79.09l128 128 128-128z"></path>
+		</g>
+	</symbol>
+</svg>
+
+<div class="scroll" id="scroll">
+	<svg class="scroll_arrow">
+		<use xlink:href="#arrow"></use>
+	</svg>
+</div>
+
+<!-- == Intro == -->
+<section class="intro" id="intro">
+	<div class="video">
+		<video class="video_content" src="video/finger_across_a_map.mp4" autoplay muted loop></video>
+	</div>
+	<div class="intro_inner">
+		<div class="intro_logo">
+			<img src="img/intro/logo.png" alt="" class="intro_icon">
+		</div>
+		<div class="intro_represent">
+			<p>тернистый, и в то же время увлекательный, путь из "города" геодезистов, изыскателей и топографов - Геодезестан, в мировую "столицу" верстальщиков, разработчиков и программистов - Нью-Девелоперовск</p>
+		</div>
+	</div>
+</section>
+
+<!-- == Nav == -->
+<nav class="nav" id="nav">
+	<div class="container">
+		<div class="nav_inner">
+			<a href="#" class="nav_link" data-scroll="#education">образование</a>
+			<a href="#" class="nav_link" data-scroll="#job">опыт работы</a>
+			<a href="#" class="nav_link" data-scroll="#skill">навыки</a>
+			<a href="#" class="nav_link" data-scroll="#portfolio">портфолио</a>
+			<a href="#" class="nav_link" data-scroll="#contact">контакты</a>
+		</div>
+	</div>
+</nav>
+
+<!-- == About == -->
+<section class="about">
+	<div class="container">
+		<div class="about_inner">
+			<div class="about_person">
+				<h1 class="title">Борис Харченко</h1>
+				<div class="about_status">
+					<p><b>сейчас делаю:</b> геодезия в строительстве</p>
+					<p><b>хочу делать:</b> верстка для веб</p>
+				</div>
+				
+				<div class="social social--about">
+					<a class="social_link" href="https://www.facebook.com/profile.php?id=100000589042161" target="_blank">	
+						<img src="img/about/facebook.svg" alt="facebook" class="social_icon">
+					</a>
+					<a class="social_link" href="https://www.instagram.com/boryanich_kz/?hl=ru" target="_blank">
+						<img src="img/about/instagram.svg" alt="instagram" class="social_icon">
+					</a>
+					<a class="social_link" href="https://www.linkedin.com/in/boris-kharchenko-634813bb/" target="_blank">
+						<img src="img/about/linkedin.svg" alt="linkedin" class="social_icon">
+					</a>
+				</div>
+			</div>
+			<div class="about_content">
+
+				<div class="about_item" id="photoSlider">
+					<div class="about_photobox"><img src="img/about/photo-8.jpg" alt="surveyor" class="about_img"></div>
+					<div class="about_photobox"><img src="img/about/photo-7.jpg" alt="surveyor" class="about_img"></div>
+					<div class="about_photobox"><img src="img/about/photo-11.jpg" alt="surveyor" class="about_img"></div>
+					<div class="about_photobox"><img src="img/about/photo-6.jpg" alt="surveyor" class="about_img"></div>
+					<div class="about_photobox"><img src="img/about/photo-9.jpg" alt="surveyor" class="about_img"></div>
+					<div class="about_photobox"><img src="img/about/photo-1.jpg" alt="surveyor" class="about_img"></div>
+					<div class="about_photobox"><img src="img/about/photo-10.jpg" alt="surveyor" class="about_img"></div>
+					<div class="about_photobox"><img src="img/about/photo-5.jpg" alt="surveyor" class="about_img"></div>
+					<div class="about_photobox"><img src="img/about/photo-4.jpg" alt="surveyor" class="about_img"></div>
+					<div class="about_photobox"><img src="img/about/photo-2.jpg" alt="surveyor" class="about_img"></div>
+				</div>  <!-- /.about_item -->
+
+				<div class="about_item">
+					<h2 class="title_sub">немного обо мне</h2>
+					<div class="about_buttonbox"></div>
+					<div class="about_sliderbox">
+						<div class="about_slider" id="aboutSlider">
+							<div class="about_text">
+								<p>Без вредных привычек. В меру седой и безмерно воспитанный. Неконфликтный, уравновешенный характер, поддерживаю дружеские отношения в коллективе. Отличная трудоспособность и высокая культура безопасного выполнения работ. Стрессоустойчив. Корпоративные нормы, должностные инструкции и регламенты - не пустой звук.</p>
+								<p>В прошлом году начал изучать языки разметки HTML и CSS для общего развития. Но неожиданно для себя стал замечать все больший интерес к верстке и стилизации, которые заставляют расширять знания и навыки в новых технологиях. И как результат - желание сделать хобби профессией.</p>
+								<p>В заключении, чуть-чуть о нынешнем ремесле...</p>
+							</div>
+							<div class="about_text">
+								<p>Работа в инженерных изысканиях - это различные климатические условия, порой с температурными перепадами в сорок градусов за один рабочий сезон. Например, в ноябре - декабре работы ведутся в теплом субтропическом климате, где-то в окрестностях Сочи (запах моря, шашлыка, идут теплые дожди), и вдруг в январе срываешься и мчишься на Север куда-то в ХМАО, где уже стабильно ниже тридцати градусов и чай в термосе остывает до обеда - потому и приходится пить его во время выполнения работ, пока он еще является горячем чаем.</p>
+								<p>Основная масса проектов, как правило, находится в труднодоступных, малообжитых районах, а потому условия труда и быт оставляют желать лучшего.</p>
+							</div>
+							<div class="about_text">
+								<p>Трудиться на строительных площадках немного проще - работаешь и отдыхаешь строго по графику, в общем производственный процесс и быт налажены. Хотя иногда все-равно приходится работать и в снег, и в дождь, и в крепкий мороз, потому как простой строительства - мероприятие не из дешевых. Сам комплекс работ более однообразный и при наличии определенных навыков и грамотной систематизации часть производственного процесса можно автоматизировать. </p>
+								<p>Иногда возникают задачи, которые требуют инженерных решений, творческого подхода и принятия ответственности за эти решения. В такие моменты будто открывается второе дыхание, работа становится яркой, погода ясной. Проходит немного времени и задача решена. </p>
+							</div>
+							<div class="about_text">
+								<p>Геодезия - большая и очень важная наука. Наука об измерениях на земной поверхности. Наука, которая позволяет посредством этих измерений определять фигуру и размеры Земли, ее гравитационного поля, параметры вращения и много другого интересного и нужного для деятельности человека.</p>
+								<p>Заниматься научной деятельностью в сфере геодезии очень увлекательно и занимательно. Но, к сожалению, сегодня эта деятельность не так высоко востребована, как хотелось бы - предложения превышают спрос.</p>
+								
+							</div>
+							<div class="about_text">
+								<p>Здесь могла бы быть Ваша реклама</p>
+								
+							</div>
+							<div class="about_text">
+								<p>Здесь могла бы быть Ваша реклама</p>
+							</div>
+							<div class="about_text">
+								<p>Здесь могла бы быть Ваша реклама</p>
+							</div>
+							<div class="about_text">
+								<p>Здесь могла бы быть Ваша реклама</p>
+							</div>
+							<div class="about_text">
+								<p>Здесь могла бы быть Ваша реклама</p>
+							</div>
+							<div class="about_text">
+								<p>Здесь могла бы быть Ваша реклама</p>
+							</div>
+						</div>
+					</div> <!-- /.about_sliderbox-->
+				</div> <!-- /.about_item -->
+
+			</div> <!-- /.about_content -->
+		</div> <!-- /.about_inner -->
+	</div> <!-- /.container -->
+</section>
+
+<!-- == Education == -->
+<section class="education" id="education">
+	<div class="container">
+		
+		<h1 class="title title--center">образование</h1>
+
+		<div class="education_item">
+			<div class="education_left">
+				2013 - 2016
+			</div>
+			<div class="education_center">
+				<h2 class="title_sub">сибирский государственный университет геосистем и технологий ( <span class="italic">бывший <abbr title="Сибирская государственная геодезическая академия">СГГА</abbr></span> )</h2>
+				<div class="education_text">Аспирантура, Геодезия</div>
+			</div>
+			<div class="education_right"><span class="notice">empty block for background </span> </div>
+		</div>
+		<div class="education_item">
+			<div class="education_left"><span class="notice">empty block for background </span></div>
+			<div class="education_center">
+				<h2 class="title_sub">сибирская государственная геодезическая академия</h2>
+				<div class="education_text">Инженер, Космическая геодезия</div>
+			</div>
+			<div class="education_right">2007 - 2013</div>
+		</div>
+		<div class="education_item">
+			<div class="education_left">2000 - 2002</div>
+			<div class="education_center">
+				<h2 class="title_sub">алтайский государственный экономический колледж</h2>
+				<div class="education_text">Техник, Финансы и налоги</div>
+			</div>
+			<div class="education_right"><span class="notice">empty block for background </span></div>
+		</div>
+		
+	</div> <!-- /.container -->
+</section>
+
+<!-- == Job == -->
+<section class="job" id="job">
+	<div class="container">
+		<h1 class="title title--center">опыт работы</h1>
+		<div class="job_dotsbox"><span class="notice">dots for jobSlider</span></div>
+		<div class="job_wrapper">
+			<div class="job_slider" id="jobSlider">
+				
+				<div class="job_item">
+					<div class="job_title">
+						<h2 class="title_sub">инженер-геодезист</h2>
+						<h2 class="title_sub title_sub--lower">07/2017 - наст.время</h2>
+					</div>
+					<div class="job_description">
+						<h2 class="title_sub title_sub--lower">ООО Геостройизыскания</h2>
+						<div class="job_content">
+							<div class="job_logo">
+								<img src="img/job/logo-gsi.png" alt="GSI" class="job_icon">
+							</div>
+							<div class="job_text">
+								<p>Выполнение комплекса работ по геодезическому сопровождению строительства на инвестиционных нефтегазовых проектах Сахалин-1 компании Эксон Нефтегаз Лимитед</p>
+								<ul>
+									<li>вынос точек, линий, главных осей и подземных коммуникаций на местность</li>
+									<li>контроль вертикальности колонн  и металлических конструкций</li>
+									<li>исполнительная съемка</li>
+									<li>подсчет объемов выемки/отсыпки грунта</li>
+									<li>обработка геодезических измерений</li>
+									<li>составление исполнительных схем и чертежей</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="job_item">
+					<div class="job_title">
+						<h2 class="title_sub">инженер-изыскатель</h2>
+						<h2 class="title_sub title_sub--lower">11/2015 - 04/2016</h2>
+					</div>
+					<div class="job_description">
+						<h2 class="title_sub title_sub--lower">ОАО Сибгипротранс</h2>
+						<div class="job_content">
+							<div class="job_logo">
+								<img src="img/job/sibgiprotrans-logo.png" alt="SGT" class="job_icon">
+							</div>
+							<div class="job_text">
+								<p>Выполнение инженерно-геодезических работ в составе изыскательской партии на основании технических заданий и программ инженерно-геодезических изысканий для разработки проектной документации</p>
+								<ul>
+									<li>крупномасштабная топографическая съемка</li>
+									<li>сгущение государственных и съемочных геодезических сетей</li>
+									<li>нивелировка III - IV классов точности</li>
+									<li>камеральная обработка результатов геодезических измерений</li>
+									<li>составление технических отчетов по результатам изысканий</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="job_item">
+					<div class="job_title">
+						<h2 class="title_sub">инженер научно-исследовательского сектора</h2>
+						<h2 class="title_sub title_sub--lower">03/2015 - 10/2015</h2>
+					</div>
+					<div class="job_description">
+						<h2 class="title_sub title_sub--lower">Сибирский Государственный Университет Геосистем и Технологий</h2>
+						<div class="job_content">
+							<div class="job_logo">
+								<img src="img/job/sgugit-removebg.png" alt="SGUGIT" class="job_icon">
+							</div>
+							<div class="job_text">
+								<p>Участие в создание математической модели локального квазигеоида (сбор и обработка исходной информации), участие в научных конференциях и публикация результатов научных исследований</p>
+								<ul>
+									<li><a class="job_link" href="https://elibrary.ru/item.asp?id=21456764" target="_blank" title="Интерэкспо ГЕО-Сибирь 2014">Анализ значений аномалий силы тяжести с использованием данных, полученных из наземных измерений и современных моделей глобального гравитационного  поля Земли</a></li>
+									<li><a class="job_link" href="https://elibrary.ru/item.asp?id=23574459" target="_blank" title="Интерэкспо ГЕО-Сибирь 2015">Анализ и прогнозирование деформаций сооружений по геодезическим данным на основе программного комплекса Mathcad-2015</a></li>
+									<li><a class="job_link" href="https://elibrary.ru/item.asp?id=23574490" target="_blank" title="Интерэкспо ГЕО-Сибирь 2015">Определение глобальных изменений силы тяжести по гармоническим коэффициентам геопотенциала</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="job_item">
+					<div class="job_title">
+						<h2 class="title_sub">инженер отдела подготовки ЗУ к торгам</h2>
+						<h2 class="title_sub title_sub--lower">12/2013 - 02/2015</h2>
+					</div>
+					<div class="job_description">
+						<h2 class="title_sub title_sub--lower">МКУ Земельное бюро</h2>
+						<div class="job_content">
+							<div class="job_logo">
+								<img src="img/job/flag-of-novosib-region.png" alt="Land Office" class="job_icon">
+							</div>
+							<div class="job_text">
+								<p>Выполнение должностных обязанностей по предоставлению ряда муниципальных услуг, предоставляемых администрацией Новосибирского района Новосибирской области</p>
+								<ul>
+									<li>составление межведомственных запросов</li>
+									<li>ведение базы данных земельных участков</li>
+									<li>подготовка земельных участков к торгам</li>
+									<li>подготовка и ведение открытых торгов по продаже земельных участков</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="job_item">
+					<div class="job_title">
+						<h2 class="title_sub">инженер-геодезист</h2>
+						<h2 class="title_sub title_sub--lower">05/2012 - 10/2012</h2>
+					</div>
+					<div class="job_description">
+						<h2 class="title_sub title_sub--lower">ГСИ-Севернефтегазстрой</h2>
+						<div class="job_content">
+							<div class="job_logo">
+								<img src="img/job/neftegasstroy.jpg" alt="NGS" class="job_icon">
+							</div>
+							<div class="job_text">
+								<p>Выполнение комплекса работ по геодезическому сопровождению строительно-монтажных работ нефтегазодобывающих месторождений ТПП Когалымнефтегаз</p>
+								<ul>
+									<li>исполнительная съемка построенных трубопроводов</li>
+									<li>вынос точек и главных осей на местность</li>
+									<li>подсчет объемов выемки/отсыпки грунта</li>
+									<li>составление исполнительных схем</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div> <!-- /.job_slider -->
+		</div> <!-- /.job_wrapper -->
+	</div> <!-- /.container -->
+</section>
+
+<!-- == Skills == -->
+<section class="skill" id="skill">
+	<div class="container">
+		<h1 class="title title--center">навыки</h1>
+		<div class="skill_inner" id="skillInner">
+
+			<div class="skill_item">
+				<h2 class="title_sub">профессиональные</h2>
+				<div class="skill_chart">
+					<div class="skill_content">
+						<div class="skill_wrapper">
+							<h3 class="title_small">Autocad Civil 3D</h3>
+							<h3 class="title_small">80%</h3>
+						</div>
+						<div class="skill_barbox"> <!--value of skills -->
+							<div class="skill_bar"></div> 
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"><span class="notice">transparent background</span></div>
+							<div class="skill_bar"><span class="notice">transparent background</span></div>
+						</div>
+					</div>
+					<div class="skill_content">
+						<div class="skill_wrapper">
+							<h3 class="title_small">Credo Dat</h3>
+							<h3 class="title_small">70%</h3>
+						</div>
+						<div class="skill_barbox"> <!--value of skills -->
+							<div class="skill_bar"></div> 
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"><span class="notice">transparent background</span></div>
+							<div class="skill_bar"><span class="notice">transparent background</span></div>
+							<div class="skill_bar"><span class="notice">transparent background</span></div>
+						</div>
+					</div>
+					<div class="skill_content">
+						<div class="skill_wrapper">
+							<h3 class="title_small">Mathcad</h3>
+							<h3 class="title_small">90%</h3>
+						</div>
+						<div class="skill_barbox"> <!--value of skills -->
+							<div class="skill_bar"></div> 
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"><span class="notice">transparent background</span></div>
+						</div>
+					</div>
+					<div class="skill_content">
+						<div class="skill_wrapper">
+							<h3 class="title_small">Тахеометры Leica/Sokkia</h3>
+							<h3 class="title_small">90%</h3>
+						</div>
+						<div class="skill_barbox"> <!--value of skills -->
+							<div class="skill_bar"></div> 
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"><span class="notice">transparent background</span></div>
+						</div>
+					</div>
+					<div class="skill_content">
+						<div class="skill_wrapper">
+							<h3 class="title_small">ГНСС-оборудование Topcon/Trimble</h3>
+							<h3 class="title_small">75%</h3>
+						</div>
+						<div class="skill_barbox"> <!--value of skills -->
+							<div class="skill_bar"></div> 
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar skill_bar--half"></div>
+							<div class="skill_bar skill_bar-indent skill_bar--half"><span class="notice">transparent background</span></div>
+							<div class="skill_bar"><span class="notice">transparent background</span></div>
+							<div class="skill_bar"><span class="notice">transparent background</span></div>
+						</div>
+					</div>
+					<div class="skill_content">
+						<div class="skill_wrapper">
+							<h3 class="title_small">Тrimble Business Center</h3>
+							<h3 class="title_small">60%</h3>
+						</div>
+						<div class="skill_barbox"> <!--value of skills -->
+							<div class="skill_bar"></div> 
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"><span class="notice">transparent background</span></div>
+							<div class="skill_bar"><span class="notice">transparent background</span></div>
+							<div class="skill_bar"><span class="notice">transparent background</span></div>
+							<div class="skill_bar"><span class="notice">transparent background</span></div>
+						</div>
+					</div>					
+				</div> <!-- /.skill_chart -->
+			</div> <!-- /.skill_item -->
+
+			<div class="skill_item">
+				<h2 class="title_sub">любительские</h2>
+				<div class="skill_chart">
+					<div class="skill_content">
+						<div class="skill_wrapper">
+							<h3 class="title_small">HTML5</h3>
+							<h3 class="title_small">80%</h3>
+						</div>
+						<div class="skill_barbox"> <!--value of skills -->
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"><span class="notice">transparent background</span></div>
+							<div class="skill_bar"><span class="notice">transparent background</span></div>
+						</div>
+					</div>
+					<div class="skill_content">
+						<div class="skill_wrapper">
+							<h3 class="title_small">CSS3</h3>
+							<h3 class="title_small">80%</h3>
+						</div>
+						<div class="skill_barbox"> <!--value of skills -->
+							<div class="skill_bar"></div> 
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"><span class="notice">transparent background</span></div>
+							<div class="skill_bar"><span class="notice">transparent background</span></div>
+						</div>
+					</div>
+					<div class="skill_content">
+						<div class="skill_wrapper">
+							<h3 class="title_small">SCSS/Sass</h3>
+							<h3 class="title_small">70%</h3>
+						</div>
+						<div class="skill_barbox"> <!--value of skills -->
+							<div class="skill_bar"></div> 
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"><span class="notice">transparent background</span></div>
+							<div class="skill_bar"><span class="notice">transparent background</span></div>
+							<div class="skill_bar"><span class="notice">transparent background</span></div>
+						</div>
+					</div>
+					<div class="skill_content">
+						<div class="skill_wrapper">
+							<h3 class="title_small">jQuery</h3>
+							<h3 class="title_small">55%</h3>
+						</div>
+						<div class="skill_barbox"> <!--value of skills -->
+							<div class="skill_bar"></div> 
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar skill_bar--half"></div>
+							<div class="skill_bar skill_bar-indent skill_bar--half"><span class="notice">transparent background</span></div>
+							<div class="skill_bar"><span class="notice">transparent background</span></div>
+							<div class="skill_bar"><span class="notice">transparent background</span></div>
+							<div class="skill_bar"><span class="notice">transparent background</span></div>
+							<div class="skill_bar"><span class="notice">transparent background</span></div>
+						</div>
+					</div>
+					<div class="skill_content">
+						<div class="skill_wrapper">
+							<h3 class="title_small">Gulp4</h3>
+							<h3 class="title_small">50%</h3>
+						</div>
+						<div class="skill_barbox"> <!--value of skills -->
+							<div class="skill_bar"></div> 
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"><span class="notice">transparent background</span></div>
+							<div class="skill_bar"><span class="notice">transparent background</span></div>
+							<div class="skill_bar"><span class="notice">transparent background</span></div>
+							<div class="skill_bar"><span class="notice">transparent background</span></div>
+							<div class="skill_bar"><span class="notice">transparent background</span></div>
+						</div>
+					</div>
+					<div class="skill_content">
+						<div class="skill_wrapper">
+							<h3 class="title_small">GitHub</h3>
+							<h3 class="title_small">30%</h3>
+						</div>
+						<div class="skill_barbox"> <!--value of skills -->
+							<div class="skill_bar"></div> 
+							<div class="skill_bar"></div>
+							<div class="skill_bar"></div>
+							<div class="skill_bar"><span class="notice">transparent background</span></div>
+							<div class="skill_bar"><span class="notice">transparent background</span></div>
+							<div class="skill_bar"><span class="notice">transparent background</span></div>
+							<div class="skill_bar"><span class="notice">transparent background</span></div>
+							<div class="skill_bar"><span class="notice">transparent background</span></div>
+							<div class="skill_bar"><span class="notice">transparent background</span></div>
+							<div class="skill_bar"><span class="notice">transparent background</span></div>
+						</div>
+					</div>
+				</div> <!-- /.skill_chart -->
+			</div> <!-- /.skill_item -->
+
+		</div> <!-- /.skill_inner -->
+	</div> <!-- /.container -->
+</section>
+
+<!-- == Portfolio == -->
+<section class="portfolio" id="portfolio">
+	<div class="container">
+		<h1 class="title title--center">портфолио</h1>
+		<div class="portfolio_description">
+			<p> <a class="portfolio_link" href="https://borisweb2020.github.io/creativia/" target="_blank" title="Creativia - Макет для портфолио">Здесь</a> представлена первая более-менее показательная работа, на верстку которой ушла не одна неделя. В процессе верстки этого лендинга познакомился с такими технологиями как препроцессор SCSS, CSS-анимация, SVG-графика, сборка Gulp4, jQuery, AdobeXD, Figma и GitHub. Все перечисленные технологии оказались очень интересными и захватывающими, а потому более глубокое их изучение <i>in progress</i>. Также на очереди знакомство с фреймворком Bootstrap, какой-нибудь CMS  и нативным JS.</p>
+			<p>PSD-макет был найден на просторах интернета для наработки навыков верстки и закрепления полученных теоретических знаний на практике. Имя дизайнера этого шаблона осталось для меня неизвестным, но благодарность моя к нему велика, потому как этот макет послужил хорошим подспорьем.</p>
+			<p>Теперь, конечно, очень хочется попробовать свои силы в работе над оригинальным макетом, который можно будет указать в портфолио, уже как реально рабочий проект.</p>
+		</div>
+		<div class="portfolio_inner">
+			<div class="portfolio_imgbox">
+				<a href="https://borisweb2020.github.io/creativia/" target="_blank">
+					<img class="portfolio_img" src="img/portfolio/creativia.jpg" alt="scann of portfolio">
+				</a>
+			</div>
+			<div class="portfolio_content">
+				<h2 class="title_sub">Технологии</h2>
+				<div class="portfolio_item">
+					<p> <strong>Gulp4 сборка:</strong> <br>
+					 gulp-sass; <br>
+					 gulp-concat; <br>
+					 gulp-uglify; <br>
+					 gulp-rename; <br>
+					 gulp-autoprefixer <br>
+					</p>
+				</div>
+				<div class="portfolio_item">
+					<p> <strong>Создание фигур</strong> (гексагон): <br>
+					 с помощью SVG-спрайты <br>
+					 с помощью clip-path свойства:
+					 </p>
+					 <ul>
+					    <li> через базовые фигуры CSS </li>
+					    <li> ссылкой на инлайновый SVG</li>
+					</ul>
+				</div>
+				<div class="portfolio_item">
+					<p> <strong>jQuery:</strong> <br>
+					 полключение slck-slider;<br>
+					 плавный скролл; <br>
+					 аккордеон; <br>
+					 стилизация чек-боксов
+					</p>
+				</div>
+			</div>
+		</div> <!-- /.portfolio_inner -->
+	</div> <!-- /.container -->
+</section>
+
+<!-- == Contact == -->
+<section class="contact" id="contact">
+	<div class="container">
+		<h1 class="title title--center">контактные данные</h1>
+		<div class="contact_inner">
+			<div class="contact_data">
+				<ul>
+					<li><b>Адрес проживания:</b> НСО, р.п.Кольцово</li>
+					<li><b>Телефон:</b> <a class="contact_link" href="tel:+79231799894">+7(923)179-98-94</a></li>
+					<li><b>Телефон (доп.):</b> <a class="contact_link" href="tel:+79140933842">+7(914)093-38-42</a></li>
+					<li><b>Эл.почта:</b> borkhar33@gmail.com</li>
+					<li><b>Эл.почта (доп.):</b> boriskharchenko@yahoo.com</li>
+				</ul>
+			</div>
+			<div class="contact_form">
+				<h3 class="contact_title">Резюме Борис Харченко</h3>
+				<a class="contact_download" href="files/CV Boris Kharchenko.pdf" download="CV Boris Kharchenko">download</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- == Footer == -->
+<footer class="footer">
+	<div class="container">
+		<div class="footer_inner">
+			<div class="footer_title">curriculum vitae</div>
+			<address class="footer_address">
+				created by Boris Kharchenko<br>
+				Email: boriskharchenko@yahoo.com<br>
+				Cell phone: +7(923)179-98-94
+			</address>
+		</div>
+	</div>
+</footer>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="script/libs.min.js"></script>
+<script src="script/main.js"></script>
+
+</body>
+</html>

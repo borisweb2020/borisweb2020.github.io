@@ -111,30 +111,48 @@ $('[data-scroll]').on('click', function(event) {
 
 let $scroll = $('#scroll');
 
-function checkScroll() {
-let introH = $('#intro').innerHeight();
-let navH = $('#nav').innerHeight();
+function appearScroll() {
+	let introH = $('#intro').innerHeight();
+	let navH = $('#nav').innerHeight();
+	
+	let showScroll = introH + navH;
 
-let showScroll = introH + navH;
+	let scrollPos = $(window).scrollTop();
 
-let scrollPos = $(window).scrollTop();
-
-if(scrollPos > showScroll) {
-		$scroll.addClass('fixed');
-} else {
-		$scroll.removeClass('fixed');
+		if(scrollPos > showScroll) {
+				$scroll.addClass('fixed');
+		} else {
+				$scroll.removeClass('fixed');
+		}
 }
 
-}
-
-checkScroll();
+appearScroll();
 
 $(window).on('scroll resize', function() {
 
-	checkScroll();
+	appearScroll();
 });
 
+function disappearScroll() {
+	let footerPos = $('#footer').offset().top;
+	let footerHeight = $('#footer').height();
 
+	let windowHeight = $(window).height();
+	
+	let scrollPos = $(window).scrollTop();
+	let hidePos = scrollPos + windowHeight - footerHeight;
+
+		if(hidePos > footerPos) {
+				$scroll.removeClass('fixed');
+		} 
+}
+
+disappearScroll();
+
+$(window).on('scroll resize', function() {
+
+	disappearScroll();
+});
 
 
 $scroll.on('click', function(event) {

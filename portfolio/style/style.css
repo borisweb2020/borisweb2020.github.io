@@ -587,6 +587,10 @@ body {
   .title_small {
     font-size: 1.3rem; } }
 
+@media (max-width: 813px) {
+  html, body {
+    font-size: 12px; } }
+
 @media (max-width: 668px) {
   .title_small {
     font-size: 1.1rem; } }
@@ -646,9 +650,6 @@ body {
     height: auto; }
 
 @media (min-width: 2000px) {
-  .intro_inner {
-    width: 45%;
-    padding-top: 9rem; }
   .intro_represent {
     max-width: 100%;
     font-size: 4rem; }

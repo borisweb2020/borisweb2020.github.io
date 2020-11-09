@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Boris Web">
+	<meta name="description" content="mobile first">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-capable" content="yes">
+	<meta name="MobileOptimized" content="width">
+	<meta name="HandheldFriendly" content="true">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+		
+	<title>SALATIK-Регистрация</title>
+
+	<link rel="stylesheet" href="style/style.min.css">
+</head>
+<body>
+
+<!-- == Header == -->	
+<header class="header">
+	<div class="container">
+		<div class="header_inner center">
+			<a class="header_link" href="index.html">
+				<picture class="header_logo">
+					<source srcset="images/logo-tablet.png" media="(min-width: 768px) and (max-width: 1439.98px)">
+					<source srcset="images/logo-descktop.png" media="(min-width: 1440px)">
+					<img src="images/logo-mobile.png" alt="logo">
+				</picture>
+			</a>
+			<a href="entry.html" class="header_miniform-entry text text--small">Вход</a>
+		</div>
+	</div>
+</header>
+
+<main class="registry">
+	<form class="registry_form">
+		<h3 class="registry_form-title title">Зарегистрируйся и делись своими лучшими рецептами</h3>
+		<p class="registry_form-subtitle">Логин</p>
+		<input class="registry_form-login" type="text" placeholder="Никнейм или логин">
+		<p class="registry_form-subtitle">Электронная почта</p>
+		<input class="registry_form-mail" type="text" placeholder="email@example.com">
+		<p class="registry_form-subtitle">Имя</p>
+		<input class="registry_form-name" type="text" placeholder="Укажите Ваше реальное имя">
+		<p class="entry_form-subtitle">Пароль</p>
+		<input class="registry_form-password" type="password" placeholder="Не менее 8 символов">
+		<input class="registry_form-password" type="password" placeholder="Повторите пароль">
+		<div class="registry_form-captcha">
+			<span> Капча </span>
+		</div>
+		<input class="registry_form-submit" type="submit" value="Создать аккаунт">
+		<a class="registry_form-entry" href="entry.html">Войти</a>
+		<div class="registry_form-linebox">
+			<svg class="registry_form-line" viewbox="0 0 124 14">
+				<line x1="0" y1="7" x2="124" y2="7"></line>
+			</svg>
+			<p>Или</p>
+			<svg class="registry_form-line" viewbox="0 0 124 14">
+				<line x1="0" y1="7" x2="124" y2="7"></line>
+			</svg>
+		</div>
+		<div class="registry_form-social">
+			<div class="footer_menu-iconbox">
+				<a class="footer_menu-wrap" href="#" target="_blank">
+					<img class="footer_menu-icon" src="images/icon-vk.svg" alt="vk icon">
+				</a>
+				<a class="footer_menu-wrap" href="#" target="_blank">
+					<img class="footer_menu-icon" src="images/icon-facebook.svg" alt="facebook icon ">
+				</a>
+				<a class="footer_menu-wrap" href="#" target="_blank">
+					<img class="footer_menu-icon" src="images/icon-instagram.svg" alt="instagram icon">
+				</a>
+				<a class="footer_menu-wrap" href="#" target="_blank">
+					<img class="footer_menu-icon" src="images/icon-google-plus.svg" alt="google plus icon">
+				</a>
+				<a class="footer_menu-wrap" href="#" target="_blank">
+					<img class="footer_menu-icon" src="images/icon-whatsapp.svg" alt="whatsapp icon">
+				</a>
+				<a class="footer_menu-wrap" href="#" target="_blank">
+					<img class="footer_menu-icon" src="images/icon-viber.svg" alt="viber icon">
+				</a>
+				<a class="footer_menu-wrap" href="#" target="_blank">
+					<img class="footer_menu-icon" src="images/icon-telegram.svg" alt="telegram icon">
+				</a>
+				<a class="footer_menu-wrap" href="#" target="_blank">
+					<img class="footer_menu-icon" src="images/icon-odnoklassniki.svg" alt="odnoklassniki icon">
+				</a>
+			</div>
+		</div>
+	</form>
+</main>
+
+</body>
+</html>

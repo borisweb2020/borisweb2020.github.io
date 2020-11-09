@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Boris Web">
+	<meta name="description" content="mobile first">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-capable" content="yes">
+	<meta name="MobileOptimized" content="width">
+	<meta name="HandheldFriendly" content="true">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+		
+	<title>SALATIK-Вход</title>
+
+	<link rel="stylesheet" href="style/style.min.css">
+</head>
+<body>
+
+<!-- == Header == -->	
+<header class="header">
+	<div class="container">
+		<div class="header_inner center">
+			<a class="header_link" href="index.html">
+				<picture class="header_logo">
+					<source srcset="images/logo-tablet.png" media="(min-width: 768px) and (max-width: 1439.98px)">
+					<source srcset="images/logo-descktop.png" media="(min-width: 1440px)">
+					<img src="images/logo-mobile.png" alt="logo">
+				</picture>
+			</a>
+			<a href="registry.html" class="header_miniform-entry text text--small">Регистрация</a>
+		</div>
+	</div>
+</header>
+
+<main class="entry">
+	<form class="entry_form" action="profile.html">
+		<h3 class="entry_form-title title">Вход</h3>
+		<p class="entry_form-subtitle">Логин</p>
+		<input class="entry_form-name" type="text" placeholder="Никнейм или логин">
+		<p class="entry_form-subtitle">Пароль</p>
+		<input class="entry_form-password" type="password" placeholder="Не менее 8 символов">
+		<div class="entry_form-wrap">
+			<input  class="entry_form-checkbox" id="entryFormCheckbox" type="checkbox">
+			<label for="entryFormCheckbox">Запомнить меня</label>
+		</div>
+		<input class="entry_form-submit" type="submit" value="Вход">
+		<a class="entry_form-registry" href="registry.html">Регистрация</a>
+		<div class="entry_form-linebox">
+			<svg class="entry_form-line" viewbox="0 0 124 14">
+				<line x1="0" y1="7" x2="124" y2="7"></line>
+			</svg>
+			<p>Или</p>
+			<svg class="entry_form-line" viewbox="0 0 124 14">
+				<line x1="0" y1="7" x2="124" y2="7"></line>
+			</svg>
+		</div>
+		<div class="entry_form-social">
+			<div class="footer_menu-iconbox">
+				<a class="footer_menu-wrap" href="#" target="_blank">
+					<img class="footer_menu-icon" src="images/icon-vk.svg" alt="vk icon">
+				</a>
+				<a class="footer_menu-wrap" href="#" target="_blank">
+					<img class="footer_menu-icon" src="images/icon-facebook.svg" alt="facebook icon ">
+				</a>
+				<a class="footer_menu-wrap" href="#" target="_blank">
+					<img class="footer_menu-icon" src="images/icon-instagram.svg" alt="instagram icon">
+				</a>
+				<a class="footer_menu-wrap" href="#" target="_blank">
+					<img class="footer_menu-icon" src="images/icon-google-plus.svg" alt="google plus icon">
+				</a>
+				<a class="footer_menu-wrap" href="#" target="_blank">
+					<img class="footer_menu-icon" src="images/icon-whatsapp.svg" alt="whatsapp icon">
+				</a>
+				<a class="footer_menu-wrap" href="#" target="_blank">
+					<img class="footer_menu-icon" src="images/icon-viber.svg" alt="viber icon">
+				</a>
+				<a class="footer_menu-wrap" href="#" target="_blank">
+					<img class="footer_menu-icon" src="images/icon-telegram.svg" alt="telegram icon">
+				</a>
+				<a class="footer_menu-wrap" href="#" target="_blank">
+					<img class="footer_menu-icon" src="images/icon-odnoklassniki.svg" alt="odnoklassniki icon">
+				</a>
+			</div>
+		</div>
+		<a class="entry_form-link" href="#">Забыли пароль?</a>
+	</form>
+</main>
+
+</body>
+</html>

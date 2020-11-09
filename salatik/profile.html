@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Boris Web">
+	<meta name="description" content="mobile first">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-capable" content="yes">
+	<meta name="MobileOptimized" content="width">
+	<meta name="HandheldFriendly" content="true">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+		
+	<title>SALATIK-Профиль</title>
+
+	<link rel="stylesheet" href="style/style.min.css">
+</head>
+<body>
+<!-- == Sprites == -->
+<svg style="display: none;">
+	<symbol id="arrow" viewBox="0 0 11 6">
+		<g>
+			<path d="M10 1L5.5 5L1 1"></path>
+		</g>
+	</symbol>
+	<symbol id="arrowSlider" viewBox="0 0 40 40">
+		<g>
+			<path d="M23.3333 29.1667L15 20L23.3333 10.8333"></path>
+		</g>
+	</symbol>
+</svg>
+
+<!-- == Fixed button up == -->
+<button class="button_up" id="buttonUp" type="button">
+	<svg class="button_up-arrow">
+		<use xlink:href="#arrowSlider"></use>
+	</svg>
+</button>
+
+
+<!-- == Header == -->	
+<header class="header" id="header">
+	<div class="container">
+		<div class="header_inner">
+			<button class="burger" id="burger" type="button">
+				<div class="burger_line">Menu</div>
+			</button>
+			<a class="header_link" href="index.html">
+				<picture class="header_logo">
+					<source srcset="images/logo-tablet.png" media="(min-width: 768px) and (max-width: 1439.98px)">
+					<source srcset="images/logo-descktop.png" media="(min-width: 1440px)">
+					<img src="images/logo-mobile.png" alt="logo">
+				</picture>
+			</a>
+			<form class="header_form text text--small" id="headerForm">
+				<div class="header_form-wrap">
+					<img class="header_form-icon" src="images/icon-search.png" alt="search">
+				</div>
+				<input class="header_form-search" type="search">
+			</form>
+			<nav class="header_nav" id="headerNav">
+				<ul class="header_nav-list description description--large">
+					<li><a href="index.html">Главная</a></li>
+					<li><a href="category.html">Рецепты</a></li>
+					<li><a href="#">О блоге</a></li>
+					<li><a href="#">Реклама</a></li>
+					<li><a href="contact.html">Контакты</a></li>
+				</ul>
+			</nav>
+			<div class="header_miniform">
+				<div class="header_miniform-wrap">
+					<img class="header_miniform-icon" src="images/icon-profile.png" alt="icon-profile">
+				</div>
+				<div class="header_miniform-wrap">
+					<img class="header_miniform-icon" src="images/icon-search.png" alt="icon-search">
+				</div>
+			</div>
+			<div class="header_profile">
+				<div class="header_profile-wrap">
+					<img class="header_profile-icon" src="images/icon-profile.png" alt="icon-profile">
+				</div>
+				<div class="header_profile-name">Админ</div>
+				<button class="header_profile-btn" type="button">
+					<svg class="header_profile-arrow">
+						<use xlink:href="#arrow"></use>
+					</svg>
+				</button>
+				<ul class="header_profile-menu">
+					<li><a href="#">Профиль</a></li>
+					<li><a href="#">Настройки</a></li>
+					<li><a href="#">Выйти</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</header>
+
+<!-- == Nav == -->
+<nav class="menu" id="menu">
+	<div class="container">
+		<ul class="menu_list description" id="menuList">
+			<li class="menu_list-item">
+				<div class="menu_list-wrap">
+					<a href="#" target="_blank">Салаты</a>
+					<svg class="menu_list-icon">
+						<use xlink:href="#arrow"></use>
+					</svg>
+				</div>
+				<div class="menu_sublist decription description--small">
+					<ul class="menu_sublist-item">
+						<li><a href="#" target="_blank">Мясные</a></li>
+						<li><a href="#" target="_blank">Овощные</a></li>
+						<li><a href="#" target="_blank">Рыбные</a></li>
+						<li><a href="#" target="_blank">Морепродукты</a></li>
+						<li><a href="#" target="_blank">Фруктовые</a></li>
+					</ul>
+					<ul class="menu_sublist-item">
+						<li><a href="#" target="_blank">Ассорти</a></li>
+						<li><a href="#" target="_blank">Сладкие</a></li>
+						<li><a href="#" target="_blank">Постные</a></li>
+						<li><a href="#" target="_blank">Птица</a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="menu_list-item">
+				<div class="menu_list-wrap">
+					<a href="#" target="_blank">Бутерброды</a>
+					<svg class="menu_list-icon">
+						<use xlink:href="#arrow"></use>
+					</svg>
+				</div>
+				<div class="menu_sublist decription description--small">
+					<ul class="menu_sublist-item">
+						<li><a href="#" target="_blank">Овощи и зелень</a></li>
+						<li><a href="#" target="_blank">Грибные</a></li>
+						<li><a href="#" target="_blank">С сыром</a></li>
+						<li><a href="#" target="_blank">Рыба</a></li>
+						<li><a href="#" target="_blank">Морепродукты</a></li>
+					</ul>
+					<ul class="menu_sublist-item">
+						<li><a href="#" target="_blank">С колбасой</a></li>
+						<li><a href="#" target="_blank">Мясные</a></li>
+						<li><a href="#" target="_blank">Двойные сендвичи</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="#" target="_blank">Канапе</a></li>
+			<li><a href="#" target="_blank">Гренки</a></li>
+			<li><a href="#" target="_blank">Тосты</a></li>
+			<li><a href="#" target="_blank">Тартинки</a></li>
+			<li><a href="#" target="_blank">Закуски</a></li>
+			<li><a href="#" target="_blank">Заправки</a></li>
+		</ul>
+	</div> <!-- /.container -->
+</nav>
+
+
+<div class="container">
+	<main class="main" id="pointAppearing">
+		<section class="profile">
+			<div class="profile_intro">
+				<div class="profile_intro-photo">
+					<div class="profile_intro-wrap">
+						<span class="note">for profile photo</span>
+					</div>
+					<input class="profile_intro-upload" id="uploadFile" type="file" accept="image/*">
+					<label for="uploadFile">Загрузить</label>
+				</div>
+				<div class="profile_intro-info">
+					<div class="profile_intro-item">
+						<p class="profile_intro-login">Админ</p>
+						<a href="#"><img src="images/icon-for-edit.png" width="14" alt="icon for edit"></a>
+					</div>
+					<div class="profile_intro-item">
+						<p class="profile_intro-name">Имя Фамилия</p>
+						<a href="#"><img src="images/icon-for-edit.png" width="14" alt="icon for edit"></a>
+					</div>
+					<div class="profile_intro-item">
+						<p class="profile_intro-email">email@example.com</p>
+						<a href="#"><img src="images/icon-for-edit.png" width="14" alt="icon for edit"></a>
+					</div>
+					<div class="profile_intro-item">
+						<p class="profile_intro-status"> Статус: <span class="profile_intro-status-meaning">Автор</span></p>
+					</div>
+				</div>
+				<a class="profile_intro-exit" href="#">Выйти</a>
+			</div> <!-- /.profile_intro -->
+
+			<div class="profile_meta">
+				<div class="profile_meta-item">
+					<div class="profile_meta-count">10</div>
+					<p class="profile_meta-subtitle">Рецептов добавлено</p>
+				</div>
+				<div class="profile_meta-item">
+					<div class="profile_meta-count">10</div>
+					<p class="profile_meta-subtitle">Комментариев</p>
+				</div>
+				<div class="profile_meta-item">
+					<div class="profile_meta-count">10</div>
+					<p class="profile_meta-subtitle">Оценок</p>
+				</div>
+			</div>
+
+			<div class="profile_myrecipe">
+				<h4 class="profile_myrecipe-subtitle">Мои рецепты</h4>
+				<button class="profile_myrecipe-btn" id="addButton" type="button">Добавить рецепт</button>
+			</div>
+
+			<form class="profile_form" id="profileForm">
+				<!-- <h6 class="profile_form-subtitle">Добавление рецепта</h6>
+				<div class="profile_form-select">
+					<select>
+						<option value="category choice">Выберите категорию</option>
+						<option value="salad">Салаты</option>
+						<option value="sandwich">Бутерброды</option>
+					</select>
+				</div>
+				<input class="profile_form-text" type="text" placeholder="Название рецепта">
+				<h6 class="profile_form-subtitle">Выберите фото и добавьте описание</h6>
+				<div class="profile_form-wrap">
+					<input class="profile_form-upload" id="uploadFormImage" type="file" accept="image/*">
+					<label for="uploadFormImage"></label>
+					<div class="profile_form-imagebox">
+						<span class="note">for-images-added</span>
+					</div>
+					<div class="profile_form-imagebox">
+						<span class="note">for-images-added</span>
+					</div>
+					<div class="profile_form-imagebox">
+						<span class="note">for-images-added</span>
+					</div>
+				</div>
+				<textarea class="profile_form-textarea" placeholder="Описание рецепта"></textarea>
+				<input class="profile_form-submit" type="submit" value="Добавить"> -->
+			</form>
+
+			<div class="profile_ownrecipe">
+				<!-- <div class="profile_recipe-item">
+					<div class="profile_recipe-content">
+						<h5 class="profile_recipe-title title">Бутерброд с сыром c ujdzlbyjq fdf</h5>
+						<div class="profile_recipe-description">
+							Приготовь себе и близким интересный перекус Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum dolorum, cum blanditiis maxime optio, possimus quasi commodi reprehenderit. Iste fugit tenetur veniam quibusdam, expedita nam quisquam maxime animi tempora minus.
+						</div>
+						<div class="profile_recipe-meta">
+							<div class="meta">
+								<a class="meta_like" href="#">
+									<img class="meta_like-image" src="images/icon-like.png" alt="Like">
+									<span class="meta_like-value">100</span>
+								</a>
+								<a class="meta_comment" href="#">
+									<img class="meta_comment-image" src="images/icon-comment.png" alt="Comments">
+									<span class="meta_comment-value">10</span>
+								</a>
+								<a class="meta_view" href="#">
+									<img class="meta_view-image" src="images/icon-view.png" alt="View">
+									<span class="meta_view-value">100</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="profile_recipe-wrap">
+						<img class="profile_recipe-image" src="images/sandwich-descktop.jpg" alt="Recipe Photo">
+					</div>
+				</div>
+				<div class="profile_recipe-item">
+					<div class="profile_recipe-content">
+						<h5 class="profile_recipe-title title">Салат с рукколой</h5>
+						<div class="profile_recipe-description">
+							Приготовь себе и близким интересный перекус
+						</div>
+						<div class="profile_recipe-meta">
+							<div class="meta">
+								<a class="meta_like" href="#">
+									<img class="meta_like-image" src="images/icon-like.png" alt="Like">
+									<span class="meta_like-value">100</span>
+								</a>
+								<a class="meta_comment" href="#">
+									<img class="meta_comment-image" src="images/icon-comment.png" alt="Comments">
+									<span class="meta_comment-value">10</span>
+								</a>
+								<a class="meta_view" href="#">
+									<img class="meta_view-image" src="images/icon-view.png" alt="View">
+									<span class="meta_view-value">10</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="profile_recipe-wrap">
+						<img class="profile_recipe-image" src="images/salad-descktop.jpg" alt="Recipe Photo">
+					</div>
+				</div>
+				<div class="profile_recipe-item">
+					<div class="profile_recipe-content">
+						<h5 class="profile_recipe-title title">Бутерброд с сыром</h5>
+						<div class="profile_recipe-description">
+							Приготовь себе и близким интересный перекус
+						</div>
+						<div class="profile_recipe-meta">
+							<div class="meta">
+								<a class="meta_like" href="#">
+									<img class="meta_like-image" src="images/icon-like.png" alt="Like">
+									<span class="meta_like-value">100</span>
+								</a>
+								<a class="meta_comment" href="#">
+									<img class="meta_comment-image" src="images/icon-comment.png" alt="Comments">
+									<span class="meta_comment-value">10</span>
+								</a>
+								<a class="meta_view" href="#">
+									<img class="meta_view-image" src="images/icon-view.png" alt="View">
+									<span class="meta_view-value">200</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="profile_recipe-wrap">
+						<img class="profile_recipe-image" src="images/sandwich-descktop.jpg" alt="Recipe Photo">
+					</div>
+				</div>
+				<div class="profile_recipe-item">
+					<div class="profile_recipe-content">
+						<h5 class="profile_recipe-title title">Салат с рукколой</h5>
+						<div class="profile_recipe-description">
+							Приготовь себе и близким интересный перекус
+						</div>
+						<div class="profile_recipe-meta">
+							<div class="meta">
+								<a class="meta_like" href="#">
+									<img class="meta_like-image" src="images/icon-like.png" alt="Like">
+									<span class="meta_like-value">100</span>
+								</a>
+								<a class="meta_comment" href="#">
+									<img class="meta_comment-image" src="images/icon-comment.png" alt="Comments">
+									<span class="meta_comment-value">10</span>
+								</a>
+								<a class="meta_view" href="#">
+									<img class="meta_view-image" src="images/icon-view.png" alt="View">
+									<span class="meta_view-value">100</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="profile_recipe-wrap">
+						<img class="profile_recipe-image" src="images/salad-descktop.jpg" alt="Recipe Photo">
+					</div>
+				</div> -->
+			</div> <!-- /.profile_ownrecipe -->
+
+			<h4 class="profile_subtitle-bookmarks">Закладки</h4>
+
+			<div class="profile_bookmarks">
+				<div class="profile_recipe-item">
+					<div class="profile_recipe-content">
+						<h5 class="profile_recipe-title title">Салат с рукколой</h5>
+						<div class="profile_recipe-description">
+							Приготовь себе и близким интересный перекус
+						</div>
+						<div class="profile_recipe-meta">
+							<div class="meta">
+								<a class="meta_like" href="#">
+									<img class="meta_like-image" src="images/icon-like.png" alt="Like">
+									<span class="meta_like-value">100</span>
+								</a>
+								<a class="meta_comment" href="#">
+									<img class="meta_comment-image" src="images/icon-comment.png" alt="Comments">
+									<span class="meta_comment-value">10</span>
+								</a>
+								<a class="meta_view" href="#">
+									<img class="meta_view-image" src="images/icon-view.png" alt="View">
+									<span class="meta_view-value">100</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="profile_recipe-wrap">
+						<img class="profile_recipe-image" src="images/salad-descktop.jpg" alt="Recipe Photo">
+					</div>
+				</div>
+				<div class="profile_recipe-item">
+					<div class="profile_recipe-content">
+						<h5 class="profile_recipe-title title">Салат с рукколой</h5>
+						<div class="profile_recipe-description">
+							Приготовь себе и близким интересный перекус
+						</div>
+						<div class="profile_recipe-meta">
+							<div class="meta">
+								<a class="meta_like" href="#">
+									<img class="meta_like-image" src="images/icon-like.png" alt="Like">
+									<span class="meta_like-value">100</span>
+								</a>
+								<a class="meta_comment" href="#">
+									<img class="meta_comment-image" src="images/icon-comment.png" alt="Comments">
+									<span class="meta_comment-value">10</span>
+								</a>
+								<a class="meta_view" href="#">
+									<img class="meta_view-image" src="images/icon-view.png" alt="View">
+									<span class="meta_view-value">100</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="profile_recipe-wrap">
+						<img class="profile_recipe-image" src="images/salad-descktop.jpg" alt="Recipe Photo">
+					</div>
+				</div>
+				<div class="profile_recipe-item">
+					<div class="profile_recipe-content">
+						<h5 class="profile_recipe-title title">Салат с рукколой</h5>
+						<div class="profile_recipe-description">
+							Приготовь себе и близким интересный перекус
+						</div>
+						<div class="profile_recipe-meta">
+							<div class="meta">
+								<a class="meta_like" href="#">
+									<img class="meta_like-image" src="images/icon-like.png" alt="Like">
+									<span class="meta_like-value">100</span>
+								</a>
+								<a class="meta_comment" href="#">
+									<img class="meta_comment-image" src="images/icon-comment.png" alt="Comments">
+									<span class="meta_comment-value">10</span>
+								</a>
+								<a class="meta_view" href="#">
+									<img class="meta_view-image" src="images/icon-view.png" alt="View">
+									<span class="meta_view-value">100</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="profile_recipe-wrap">
+						<img class="profile_recipe-image" src="images/salad-descktop.jpg" alt="Recipe Photo">
+					</div>
+				</div>
+
+			</div> <!-- /.profile_bookmarks -->
+
+		</section>
+
+		<aside class="aside">
+			<form class="aside_form">
+				<div class="aside_form-description">Подпишись на обновления</div>
+				<input class="aside_form-input" type="text" placeholder="Введите ваш e-mail">
+				<input class="aside_form-submit" type="submit" value="Подписаться">
+			</form>
+			<section class="aside_recipes">
+				<div class="aside_recipes-title">Популярные рецепты</div>
+				<div class="aside_recipes-inner">
+					<div class="aside_recipes-item">
+						<div class="aside_recipes-content">
+							<div class="aside_content-title">Бутерброд с сыром</div>
+							<div class="aside_content-count">
+								<a class="aside_content-like" href="#">
+									<img class="aside_like-image" src="images/icon-like.png" alt="time">
+									<span class="aside_like-value">100</span>
+								</a>
+								<a class="aside_content-comment" href="#">
+									<img class="aside_comment-image" src="images/icon-comment.png" alt="time">
+									<span class="aside_comment-value">10</span>
+								</a>
+								<a class="aside_content-view" href="#">
+									<img class="aside_view-image" src="images/icon-view.png" alt="time">
+									<span class="aside_view-value">10</span>
+								</a>
+							</div>
+						</div>
+						<div class="aside_recipes-wrap">
+							<img class="aside_recipes-image" src="images/aside-sandwich.png" alt="recipes">
+						</div>
+					</div>
+					<div class="aside_recipes-item">
+						<div class="aside_recipes-content">
+							<div class="aside_content-title">Бутерброд с сыром</div>
+							<div class="aside_content-count">
+								<a class="aside_content-like" href="#">
+									<img class="aside_like-image" src="images/icon-like.png" alt="time">
+									<span class="aside_like-value">100</span>
+								</a>
+								<a class="aside_content-comment" href="#">
+									<img class="aside_comment-image" src="images/icon-comment.png" alt="time">
+									<span class="aside_comment-value">10</span>
+								</a>
+								<a class="aside_content-view" href="#">
+									<img class="aside_view-image" src="images/icon-view.png" alt="time">
+									<span class="aside_view-value">10</span>
+								</a>
+							</div>
+						</div>
+						<div class="aside_recipes-wrap">
+							<img class="aside_recipes-image" src="images/aside-sandwich.png" alt="recipes">
+						</div>
+					</div>
+					<div class="aside_recipes-item">
+						<div class="aside_recipes-content">
+							<div class="aside_content-title">Бутерброд с сыром</div>
+							<div class="aside_content-count">
+								<a class="aside_content-like" href="#">
+									<img class="aside_like-image" src="images/icon-like.png" alt="time">
+									<span class="aside_like-value">100</span>
+								</a>
+								<a class="aside_content-comment" href="#">
+									<img class="aside_comment-image" src="images/icon-comment.png" alt="time">
+									<span class="aside_comment-value">10</span>
+								</a>
+								<a class="aside_content-view" href="#">
+									<img class="aside_view-image" src="images/icon-view.png" alt="time">
+									<span class="aside_view-value">10</span>
+								</a>
+							</div>
+						</div>
+						<div class="aside_recipes-wrap">
+							<img class="aside_recipes-image" src="images/aside-sandwich.png" alt="recipes">
+						</div>
+					</div>
+				</div> <!-- /.aside_recipes-inner -->
+			</section> <!-- /.aside_recipes -->
+			<section class="aside_ad">
+				<div class="aside_ad-title">Реклама</div>
+				<div class="aside_ad-inner">
+					<div class="aside_ad-item">
+						<p class="aside_ad-note">Блок с рекламой</p>
+					</div>
+				</div>
+			</section>
+			<section class="aside_addition">
+				<div class="aside_addition-title">Дополнительный блок</div>
+				<div class="aside_addition-inner"></div>
+			</section>
+		</aside>
+	</main>
+</div> <!-- /.container -->
+
+
+<!-- == Footer == -->
+<footer class="footer">
+	<div class="footer_dark">
+		<div class="container">
+			<div class="footer_dark-inner">
+				<form class="footer_dark-form">
+					<div class="footer_form-title">
+						<p>Подписывайтесь на обновления и получайте новые рецепты каждый день!</p>
+					</div>
+					<input class="footer_form-input" type="text" placeholder="Введите ваш e-mail">
+					<input class="footer_form-submit" type="submit" value="Подписаться">
+					<div class="footer_form-wrap">
+						<input class="footer_form-checkbox" id="footerCheckbox" type="checkbox">
+						<label class="footer_form-label" for="footerCheckbox">Согласие на обработку персональных данных</label>
+					</div>
+				</form>
+				<div class="footer_dark-about">
+					<div class="footer_about-wrap">
+						<img class="footer_about-logo" src="images/logo-mobile.png" alt="logo">
+					</div>
+					<div class="footer_about-text">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dolor sapien, tincidunt rutrum fringilla nec, dictum eu ligula. Interdum et malesuada fames ac ante ipsum primis in</p>
+					</div>
+				</div>
+				<div class="footer_dark-menu">
+					<ul class="footer_menu-nav">
+						<li><a href="index.html">Главная</a></li>
+						<li><a href="category.html">Рецепты</a></li>
+						<li><a href="#">О блоге</a></li>
+						<li><a href="#">Реклама</a></li>
+						<li><a href="contact.html">Контакты</a></li>
+					</ul>
+					<div class="footer_menu-social">
+						<div class="footer_menu-title">Мы в социальных сетях</div>
+						<div class="footer_menu-iconbox">
+							<a class="footer_menu-wrap" href="#" target="_blank">
+								<img class="footer_menu-icon" src="images/icon-vk.svg" alt="vk icon">
+							</a>
+							<a class="footer_menu-wrap" href="#" target="_blank">
+								<img class="footer_menu-icon" src="images/icon-facebook.svg" alt="facebook icon ">
+							</a>
+							<a class="footer_menu-wrap" href="#" target="_blank">
+								<img class="footer_menu-icon" src="images/icon-instagram.svg" alt="instagram icon">
+							</a>
+							<a class="footer_menu-wrap" href="#" target="_blank">
+								<img class="footer_menu-icon" src="images/icon-google-plus.svg" alt="google plus icon">
+							</a>
+							<a class="footer_menu-wrap" href="#" target="_blank">
+								<img class="footer_menu-icon" src="images/icon-whatsapp.svg" alt="whatsapp icon">
+							</a>
+							<a class="footer_menu-wrap" href="#" target="_blank">
+								<img class="footer_menu-icon" src="images/icon-viber.svg" alt="viber icon">
+							</a>
+							<a class="footer_menu-wrap" href="#" target="_blank">
+								<img class="footer_menu-icon" src="images/icon-telegram.svg" alt="telegram icon">
+							</a>
+							<a class="footer_menu-wrap" href="#" target="_blank">
+								<img class="footer_menu-icon" src="images/icon-odnoklassniki.svg" alt="odnoklassniki icon">
+							</a>
+						</div>
+					</div> <!-- /.footer_menu-social -->
+				</div> <!-- /.footer_dark-menu -->
+			</div> <!-- /.footer_dark-inner -->
+		</div> <!-- /.container -->
+	</div> <!-- /.footer_dark -->
+	<div class="footer_light">
+		<div class="container">
+			<div class="footer_light-inner">
+				<div class="footer_light-rights">2020 SALATIK - All Rights Reserved</div>
+				<div class="footer_light-counter">
+					<div class="footer_counter-item">Счетчик</div>
+					<div class="footer_counter-item">Счетчик</div>
+					<div class="footer_counter-item">Счетчик</div>
+					<div class="footer_counter-item">Счетчик</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="script/_libs.min.js"></script>
+<script src="script/main.js"></script>
+<script src="script/profile.js"></script>	
+
+</body>
+</html>

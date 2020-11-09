@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Boris Web">
+	<meta name="description" content="mobile first">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-capable" content="yes">
+	<meta name="MobileOptimized" content="width">
+	<meta name="HandheldFriendly" content="true">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+		
+	<title>SALATIK</title>
+
+	<link rel="stylesheet" href="style/style.min.css">
+</head>
+<body>
+<!-- == Sprites == -->
+<svg style="display: none;">
+	<symbol id="arrow" viewBox="0 0 11 6">
+		<g>
+			<path d="M10 1L5.5 5L1 1"></path>
+		</g>
+	</symbol>
+	<symbol id="search" viewBox="0 0 12 12">
+		<g>
+			<path d="M7.38945 7.71294C6.71137 8.31504 5.81863 8.68071 4.84047 8.68071C2.71941 8.68071 1 6.96131 1 4.84036C1 2.71941 2.71941 1 4.84047 1C6.96152 1 8.68093 2.71941 8.68093 4.84036C8.68093 5.81865 8.31512 6.71151 7.71282 7.38962C7.63939 7.41311 7.57032 7.45399 7.51206 7.51226C7.45381 7.5705 7.41294 7.63954 7.38945 7.71294ZM7.89123 8.59852C7.05868 9.27516 5.99693 9.68071 4.84047 9.68071C2.16715 9.68071 0 7.51361 0 4.84036C0 2.1671 2.16715 0 4.84047 0C7.51378 0 9.68093 2.1671 9.68093 4.84036C9.68093 5.99699 9.27524 7.05887 8.59839 7.89146L11.8495 11.1425C12.0448 11.3378 12.0448 11.6544 11.8495 11.8496C11.6543 12.0449 11.3377 12.0449 11.1424 11.8496L7.89123 8.59852Z"></path>
+		</g>
+	</symbol>
+	<symbol id="arrowSlider" viewBox="0 0 40 40">
+		<g>
+			<path d="M23.3333 29.1667L15 20L23.3333 10.8333"></path>
+		</g>
+	</symbol>
+	<symbol id="plus" viewBox="0 0 16 16" fill="none">
+		<g>
+			<path d="M7.99994 2V14"></path>
+			<path d="M14 8L2 8"></path>
+		</g>
+	</symbol>
+	<symbol id="minus" viewBox="0 0 16 4" fill="none">
+		<g>
+			<path d="M14 2L2 2"></path>
+		</g>
+	</symbol>
+	
+</svg>
+
+<!-- == Fixed button up == -->
+<button class="button_up" id="buttonUp" type="button">
+	<svg class="button_up-arrow">
+		<use xlink:href="#arrowSlider"></use>
+	</svg>
+</button>
+
+
+<!-- == Header == -->	
+<header class="header" id="header">
+	<div class="container">
+		<div class="header_inner">
+			<button class="burger" id="burger" type="button">
+				<div class="burger_line">Menu</div>
+			</button>
+			<a class="header_link" href="index.html">
+				<picture class="header_logo">
+					<source srcset="images/logo-tablet.png" media="(min-width: 768px) and (max-width: 1439.98px)">
+					<source srcset="images/logo-descktop.png" media="(min-width: 1440px)">
+					<img src="images/logo-mobile.png" alt="logo">
+				</picture>
+			</a>
+			<form class="header_form text text--small" id="headerForm">
+				<div class="header_form-wrap">
+					<img class="header_form-icon" src="images/icon-search.png" alt="search">
+				</div>
+				<input class="header_form-search" type="search">
+			</form>
+			<nav class="header_nav" id="headerNav">
+				<ul class="header_nav-list description description--large">
+					<li>Главная</li>
+					<li><a href="category.html">Рецепты</a></li>
+					<li><a href="#">О блоге</a></li>
+					<li><a href="#">Реклама</a></li>
+					<li><a href="contact.html">Контакты</a></li>
+				</ul>
+			</nav>
+			<div class="header_miniform">
+				<div class="header_miniform-wrap">
+					<a href="entry.html"><img src="images/icon-profile.png" alt="icon-profile" class="header_miniform-icon"></a>
+				</div>
+				<div class="header_miniform-wrap">
+					<a href="registry.html"><img src="images/icon-search.png" alt="icon-search" class="header_miniform-icon"></a>
+				</div>
+			</div>
+			<a href="entry.html" class="header_miniform-entry text text--small">Вход</a>
+			<a href="registry.html" class="header_miniform-registry text text--small">Регистрация</a>
+		</div>
+	</div>
+</header>
+
+<!-- == Nav == -->
+<nav class="menu" id="menu">
+	<div class="container">
+		<ul class="menu_list description" id="menuList">
+			<li class="menu_list-item">
+				<div class="menu_list-wrap">
+					<a href="#" target="_blank">Салаты</a>
+					<svg class="menu_list-icon">
+						<use xlink:href="#arrow"></use>
+					</svg>
+				</div>
+				<div class="menu_sublist decription description--small">
+					<ul class="menu_sublist-item">
+						<li><a href="#" target="_blank">Мясные</a></li>
+						<li><a href="#" target="_blank">Овощные</a></li>
+						<li><a href="#" target="_blank">Рыбные</a></li>
+						<li><a href="#" target="_blank">Морепродукты</a></li>
+						<li><a href="#" target="_blank">Фруктовые</a></li>
+					</ul>
+					<ul class="menu_sublist-item">
+						<li><a href="#" target="_blank">Ассорти</a></li>
+						<li><a href="#" target="_blank">Сладкие</a></li>
+						<li><a href="#" target="_blank">Постные</a></li>
+						<li><a href="#" target="_blank">Птица</a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="menu_list-item">
+				<div class="menu_list-wrap">
+					<a href="#" target="_blank">Бутерброды</a>
+					<svg class="menu_list-icon">
+						<use xlink:href="#arrow"></use>
+					</svg>
+				</div>
+				<div class="menu_sublist decription description--small">
+					<ul class="menu_sublist-item">
+						<li><a href="#" target="_blank">Овощи и зелень</a></li>
+						<li><a href="#" target="_blank">Грибные</a></li>
+						<li><a href="#" target="_blank">С сыром</a></li>
+						<li><a href="#" target="_blank">Рыба</a></li>
+						<li><a href="#" target="_blank">Морепродукты</a></li>
+					</ul>
+					<ul class="menu_sublist-item">
+						<li><a href="#" target="_blank">С колбасой</a></li>
+						<li><a href="#" target="_blank">Мясные</a></li>
+						<li><a href="#" target="_blank">Двойные сендвичи</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="#" target="_blank">Канапе</a></li>
+			<li><a href="#" target="_blank">Гренки</a></li>
+			<li><a href="#" target="_blank">Тосты</a></li>
+			<li><a href="#" target="_blank">Тартинки</a></li>
+			<li><a href="#" target="_blank">Закуски</a></li>
+			<li><a href="#" target="_blank">Заправки</a></li>
+		</ul>
+	</div> <!-- /.container -->
+</nav>
+
+<!-- == Intro == -->
+<section class="intro">
+	<div class="intro_slider" id="introSlider">
+		<div class="intro_photobox">
+			<picture>
+				<source srcset="images/intro-desctop.jpg" media="(min-width: 1440px)">
+				<source srcset="images/intro-tablet.jpg" media="(min-width: 568px) and (max-width: 1439.98px)">
+				<img class="intro_image" src="images/intro-mobile.jpg">
+			</picture>
+		</div>
+		<div class="intro_photobox">
+			<picture>
+				<source srcset="images/intro-desctop.jpg" media="(min-width: 1440px)">
+				<source srcset="images/intro-tablet.jpg" media="(min-width: 568px) and (max-width: 1439.98px)">
+				<img class="intro_image" src="images/intro-mobile.jpg">
+			</picture>
+		</div>
+		<div class="intro_photobox">
+			<picture>
+				<source srcset="images/intro-desctop.jpg" media="(min-width: 1440px)">
+				<source srcset="images/intro-tablet.jpg" media="(min-width: 568px) and (max-width: 1439.98px)">
+				<img class="intro_image" src="images/intro-mobile.jpg">
+			</picture>
+		</div>
+		<div class="intro_photobox">
+			<picture>
+				<source srcset="images/intro-desctop.jpg" media="(min-width: 1440px)">
+				<source srcset="images/intro-tablet.jpg" media="(min-width: 568px) and (max-width: 1439.98px)">
+				<img class="intro_image" src="images/intro-mobile.jpg">
+			</picture>
+		</div>
+	</div><!-- /.intro_slider -->
+	<div class="intro_inner">
+		<div class="container">
+			<h1 class="title title--h1">Салаты</h1>
+			<h2 class="title title--h2">на все случаи жизни</h2>
+		</div>
+	</div>
+</section>
+
+<!-- == Features == -->
+<section class="features" id="pointAppearing">
+	<h3 class="features_title title title--h3">Смотрите в этом блоге</h3>
+	<article class="features_article">
+		<div class="features_inner">
+			<a class="note" href="#">
+				<div class="features_inner-item">
+					<div class="features_inner-wrap">
+						<img class="features_inner-image" src="images/salad.svg" alt="feature">
+					</div>
+					<h4 class="features_inner-subtitle subtitle subtitle--h4">Лучшие новогодние салаты</h4>
+				</div>
+			</a>
+			<a class="note" href="#">
+				<div class="features_inner-item">
+					<div class="features_inner-wrap">
+						<img class="features_inner-image" src="images/scale.svg" alt="feature">
+					</div>
+					<h4 class="features_inner-subtitle subtitle subtitle--h4">Салаты для похудения</h4>
+				</div>
+			</a>
+			<a class="note" href="#">
+				<div class="features_inner-item">
+					<div class="features_inner-wrap">
+						<img class="features_inner-image" src="images/chef.svg" alt="feature">
+					</div>
+					<h4 class="features_inner-subtitle subtitle subtitle--h4">Кулинарные секреты</h4>
+				</div>
+			</a>
+			<a class="note" href="#">
+				<div class="features_inner-item">					
+					<div class="features_inner-wrap">
+						<img class="features_inner-image" src="images/book.svg" alt="feature">
+					</div>
+					<h4 class="features_inner-subtitle subtitle subtitle--h4">И много других полезных рецептов</h4>
+				</div>
+			</a>
+		</div> <!-- /.features_inner -->
+	</article>
+</section>
+
+<!-- == Recipes == -->
+<section class="recipes">
+	<div class="container">
+		<div class="recipes_inner">
+			<a href="anyrecipe.html">
+				<div class="recipes_item">
+					<div class="recipes_item-content">
+						<h5 class="recipes_item-title title title--h5">Салат с рукколой</h5>
+						<div class="recipes_item-text description description--small">
+							<p>Наслаждайся вкусным салатом каждый день</p>
+						</div>
+					</div>
+					<div class="recipes_item-wrap">
+						<picture>
+							<source srcset="images/salad-descktop.jpg" media="(min-width: 1440px)">
+							<source srcset="images/salad-tablet.jpg" media="(min-width: 768px)">
+							<img src="images/salad-mobile.jpg" alt="Salad" class="recipes_item-image">
+						</picture>
+					</div>
+				</div>
+			</a>
+			<a href="anyrecipe.html">
+				<div class="recipes_item">
+					<div class="recipes_item-content">
+						<h5 class="recipes_item-title title title--h5">Бутерброд с сыром</h5>
+						<div class="recipes_item-text description description--small">
+							<p>Приготовь себе и близким интересный перекус</p>
+						</div>
+					</div>
+					<div class="recipes_item-wrap">
+						<picture>
+							<source srcset="images/sandwich-descktop.jpg" media="(min-width: 1440px)">
+							<source srcset="images/sandwich-tablet.jpg" media="(min-width: 768px)">
+							<img src="images/sandwich-mobile.jpg" alt="Salad" class="recipes_item-image">
+						</picture>
+					</div>
+				</div>
+			</a>
+			<a href="anyrecipe.html">
+				<div class="recipes_item">
+					<div class="recipes_item-content">
+						<h5 class="recipes_item-title title title--h5">Салат с рукколой</h5>
+						<div class="recipes_item-text description description--small">
+							<p>Наслаждайся вкусным салатом каждый день</p>
+						</div>
+					</div>
+					<div class="recipes_item-wrap">
+						<picture>
+							<source srcset="images/salad-descktop.jpg" media="(min-width: 1440px)">
+							<source srcset="images/salad-tablet.jpg" media="(min-width: 768px)">
+							<img src="images/salad-mobile.jpg" alt="Salad" class="recipes_item-image">
+						</picture>
+					</div>
+				</div>
+			</a>
+			<a href="anyrecipe.html">
+				<div class="recipes_item">
+					<div class="recipes_item-content">
+						<h5 class="recipes_item-title title title--h5">Бутерброд с сыром</h5>
+						<div class="recipes_item-text description description--small">
+							<p>Приготовь себе и близким интересный перекус</p>
+						</div>
+					</div>
+					<div class="recipes_item-wrap">
+						<picture>
+							<source srcset="images/sandwich-descktop.jpg" media="(min-width: 1440px)">
+							<source srcset="images/sandwich-tablet.jpg" media="(min-width: 768px)">
+							<img src="images/sandwich-mobile.jpg" alt="Salad" class="recipes_item-image">
+						</picture>
+					</div>
+				</div>
+			</a>
+			<a href="anyrecipe.html">
+				<div class="recipes_item">
+					<div class="recipes_item-content">
+						<h5 class="recipes_item-title title title--h5">Салат с рукколой</h5>
+						<div class="recipes_item-text description description--small">
+							<p>Наслаждайся вкусным салатом каждый день</p>
+						</div>
+					</div>
+					<div class="recipes_item-wrap">
+						<picture>
+							<source srcset="images/salad-descktop.jpg" media="(min-width: 1440px)">
+							<source srcset="images/salad-tablet.jpg" media="(min-width: 768px)">
+							<img src="images/salad-mobile.jpg" alt="Salad" class="recipes_item-image">
+						</picture>
+					</div>
+				</div>
+			</a>
+			<a href="anyrecipe.html">
+				<div class="recipes_item">
+					<div class="recipes_item-content">
+						<h5 class="recipes_item-title title title--h5">Бутерброд с сыром</h5>
+						<div class="recipes_item-text description description--small">
+							<p>Приготовь себе и близким интересный перекус</p>
+						</div>
+					</div>
+					<div class="recipes_item-wrap">
+						<picture>
+							<source srcset="images/sandwich-descktop.jpg" media="(min-width: 1440px)">
+							<source srcset="images/sandwich-tablet.jpg" media="(min-width: 768px)">
+							<img src="images/sandwich-mobile.jpg" alt="Salad" class="recipes_item-image">
+						</picture>
+					</div>
+				</div>
+			</a>
+			<a href="anyrecipe.html">
+				<div class="recipes_item">
+					<div class="recipes_item-content">
+						<h5 class="recipes_item-title title title--h5">Салат с рукколой</h5>
+						<div class="recipes_item-text description description--small">
+							<p>Наслаждайся вкусным салатом каждый день</p>
+						</div>
+					</div>
+					<div class="recipes_item-wrap">
+						<picture>
+							<source srcset="images/salad-descktop.jpg" media="(min-width: 1440px)">
+							<source srcset="images/salad-tablet.jpg" media="(min-width: 768px)">
+							<img src="images/salad-mobile.jpg" alt="Salad" class="recipes_item-image">
+						</picture>
+					</div>
+				</div>
+			</a>
+			<a href="anyrecipe.html">
+				<div class="recipes_item">
+					<div class="recipes_item-content">
+						<h5 class="recipes_item-title title title--h5">Бутерброд с сыром</h5>
+						<div class="recipes_item-text description description--small">
+							<p>Приготовь себе и близким интересный перекус</p>
+						</div>
+					</div>
+					<div class="recipes_item-wrap">
+						<picture>
+							<source srcset="images/sandwich-descktop.jpg" media="(min-width: 1440px)">
+							<source srcset="images/sandwich-tablet.jpg" media="(min-width: 768px)">
+							<img src="images/sandwich-mobile.jpg" alt="Salad" class="recipes_item-image">
+						</picture>
+					</div>
+				</div>
+			</a>
+			<a href="anyrecipe.html">
+				<div class="recipes_item">
+					<div class="recipes_item-content">
+						<h5 class="recipes_item-title title title--h5">Салат с рукколой</h5>
+						<div class="recipes_item-text description description--small">
+							<p>Наслаждайся вкусным салатом каждый день</p>
+						</div>
+					</div>
+					<div class="recipes_item-wrap">
+						<picture>
+							<source srcset="images/salad-descktop.jpg" media="(min-width: 1440px)">
+							<source srcset="images/salad-tablet.jpg" media="(min-width: 768px)">
+							<img src="images/salad-mobile.jpg" alt="Salad" class="recipes_item-image">
+						</picture>
+					</div>
+				</div>
+			</a>
+		</div> <!-- /.recipes_inner -->
+	</div> <!-- /.container -->
+</section>
+
+<!-- == Ingredients == -->
+<section class="ingredients" id="ingredients">
+	<div class="container">
+		<div class="ingredients_inner">
+			<div class="ingredients_item">
+
+				<div class="ingredients_item-wrap">
+					<button class="ingredients_item-btn" type="button">
+						<h3 class="ingredients_item-title title title--h3">Овощи</h3>
+						<svg class="ingredients_item-icon">
+							<use xlink:href="#plus"></use>
+						</svg>
+					</button>
+					<div class="ingredients_item-text description description--small">
+						<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae recusandae quasi obcaecati in esse possimus velit, incidunt</p>
+					</div>
+				</div>
+
+				<div class="ingredients_item-wrap meat">
+					<button class="ingredients_item-btn" type="button">
+						<h3 class="ingredients_item-title title title--h3">Мясо</h3>
+						<svg class="ingredients_item-icon">
+							<use xlink:href="#plus"></use>
+						</svg>
+					</button>
+					<div class="ingredients_item-text description description--small">
+						<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae recusandae quasi obcaecati in esse possimus velit, incidunt</p>
+					</div>
+				</div>
+
+				<div class="ingredients_item-wrap">
+					<button class="ingredients_item-btn" type="button">
+						<h3 class="ingredients_item-title title title--h3">Фрукты</h3>
+						<svg class="ingredients_item-icon">
+							<use xlink:href="#plus"></use>
+						</svg>
+					</button>
+					<div class="ingredients_item-text description description--small">
+						<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae recusandae quasi obcaecati in esse possimus velit, incidunt</p>
+					</div>
+				</div>
+			</div><!-- /.ingredients_item -->
+			<div class="ingredients_wrap">
+				<picture>
+					<source srcset="images/ingredients-descktop.jpg" media="(min-width: 1440px)">
+					<img class="ingredients_image" src="images/ingredients-tablet.jpg" alt="Ingredients">
+				</picture>
+			</div>
+			<div class="ingredients_item">
+
+				<div class="ingredients_item-wrap herbal">
+					<button class="ingredients_item-btn" type="button">
+						<h3 class="ingredients_item-title title title--h3">Травы</h3>
+						<svg class="ingredients_item-icon">
+							<use xlink:href="#plus"></use>
+						</svg>
+					</button>
+					<div class="ingredients_item-text description description--small">
+						<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae recusandae quasi obcaecati in esse possimus velit, incidunt</p>
+					</div>
+				</div>
+
+				<div class="ingredients_item-wrap">
+					<button class="ingredients_item-btn" type="button">
+						<h3 class="ingredients_item-title title title--h3">Рыба</h3>
+						<svg class="ingredients_item-icon">
+							<use xlink:href="#plus"></use>
+						</svg>
+					</button>
+					<div class="ingredients_item-text description description--small">
+						<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae recusandae quasi obcaecati in esse possimus velit, incidunt</p>
+					</div>
+				</div>
+			</div> <!-- /.ingredients_item -->
+		</div> <!-- /.ingredients_inner -->
+	</div> <!-- /.container -->
+</section>
+
+<!-- == Author == -->
+<section class="author">
+	<div class="container">
+		<div class="author_inner">
+			<h3 class="author_title title title--h3">Об авторе</h3>
+			<div class="author_wrap">
+				<img class="author_image" src="https://via.placeholder.com/265x350?text=Author" alt="Author">
+			</div>
+			<h4 class="author_subtitle subtitle subtitle--h4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et consequuntur assumenda doloremque numquam corporis perferendis! Molestiae voluptate impedit quis laborum recusandae tempora voluptatibus ducimus, numquam nemo illum quia a quisquam!</h4>
+		</div>
+	</div>
+</section>
+
+<!-- == Works == -->
+<section class="works">
+	<div class="container">
+		<div class="works_inner">
+			<a href="#" class="link">
+				<div class="works_item">
+					<div class="works_wrap">
+						<picture>
+							<source srcset="images/works-descktop.jpg" media="(min-width: 1440px)">
+							<source srcset="images/works-tablet.jpg" media="(min-width: 768px)">
+							<img class="works_image" src="images/works-mobile.jpg" alt="works">
+						</picture>
+					</div>
+					<div class="works_description description">
+						<p>Описание</p>
+					</div>
+				</div>
+			</a>
+			<a href="#" class="link">
+				<div class="works_item">
+					<div class="works_wrap">
+						<picture>
+							<source srcset="images/works-descktop.jpg" media="(min-width: 1440px)">
+							<source srcset="images/works-tablet.jpg" media="(min-width: 768px)">
+							<img class="works_image" src="images/works-mobile.jpg" alt="works">
+						</picture>
+					</div>
+					<div class="works_description description">
+						<p>Описание</p>
+					</div>
+				</div>
+			</a>
+			<a href="#" class="link">
+				<div class="works_item">
+					<div class="works_wrap">
+						<picture>
+							<source srcset="images/works-descktop.jpg" media="(min-width: 1440px)">
+							<source srcset="images/works-tablet.jpg" media="(min-width: 768px)">
+							<img class="works_image" src="images/works-mobile.jpg" alt="works">
+						</picture>
+					</div>
+					<div class="works_description description">
+						<p>Описание</p>
+					</div>
+				</div>
+			</a>
+			<a href="#" class="link">
+				<div class="works_item">
+					<div class="works_wrap">
+						<picture>
+							<source srcset="images/works-descktop.jpg" media="(min-width: 1440px)">
+							<source srcset="images/works-tablet.jpg" media="(min-width: 768px)">
+							<img class="works_image" src="images/works-mobile.jpg" alt="works">
+						</picture>
+					</div>
+					<div class="works_description description">
+						<p>Описание</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+</section>
+
+<!-- == Footer == -->
+<footer class="footer">
+	<div class="footer_dark">
+		<div class="container">
+			<div class="footer_dark-inner">
+				<form class="footer_dark-form">
+					<div class="footer_form-title">
+						<p>Подписывайтесь на обновления и получайте новые рецепты каждый день!</p>
+					</div>
+					<input class="footer_form-input" type="text" placeholder="Введите ваш e-mail">
+					<input class="footer_form-submit" type="submit" value="Подписаться">
+					<div class="footer_form-wrap">
+						<input class="footer_form-checkbox" id="footerCheckbox" type="checkbox">
+						<label class="footer_form-label" for="footerCheckbox">Согласие на обработку персональных данных</label>
+					</div>
+				</form>
+				<div class="footer_dark-about">
+					<div class="footer_about-wrap">
+						<img class="footer_about-logo" src="images/logo-mobile.png" alt="logo">
+					</div>
+					<div class="footer_about-text">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dolor sapien, tincidunt rutrum fringilla nec, dictum eu ligula. Interdum et malesuada fames ac ante ipsum primis in</p>
+					</div>
+				</div>
+				<div class="footer_dark-menu">
+					<ul class="footer_menu-nav">
+						<li>Главная</li>
+						<li><a href="category.html">Рецепты</a></li>
+						<li><a href="#">О блоге</a></li>
+						<li><a href="#">Реклама</a></li>
+						<li><a href="contact.html">Контакты</a></li>
+					</ul>
+					<div class="footer_menu-social">
+						<div class="footer_menu-title">Мы в социальных сетях</div>
+						<div class="footer_menu-iconbox">
+							<a class="footer_menu-wrap" href="#" target="_blank">
+								<img class="footer_menu-icon" src="images/icon-vk.svg" alt="vk icon">
+							</a>
+							<a class="footer_menu-wrap" href="#" target="_blank">
+								<img class="footer_menu-icon" src="images/icon-facebook.svg" alt="facebook icon ">
+							</a>
+							<a class="footer_menu-wrap" href="#" target="_blank">
+								<img class="footer_menu-icon" src="images/icon-instagram.svg" alt="instagram icon">
+							</a>
+							<a class="footer_menu-wrap" href="#" target="_blank">
+								<img class="footer_menu-icon" src="images/icon-google-plus.svg" alt="google plus icon">
+							</a>
+							<a class="footer_menu-wrap" href="#" target="_blank">
+								<img class="footer_menu-icon" src="images/icon-whatsapp.svg" alt="whatsapp icon">
+							</a>
+							<a class="footer_menu-wrap" href="#" target="_blank">
+								<img class="footer_menu-icon" src="images/icon-viber.svg" alt="viber icon">
+							</a>
+							<a class="footer_menu-wrap" href="#" target="_blank">
+								<img class="footer_menu-icon" src="images/icon-telegram.svg" alt="telegram icon">
+							</a>
+							<a class="footer_menu-wrap" href="#" target="_blank">
+								<img class="footer_menu-icon" src="images/icon-odnoklassniki.svg" alt="odnoklassniki icon">
+							</a>
+						</div>
+					</div> <!-- /.footer_menu-social -->
+				</div> <!-- /.footer_dark-menu -->
+			</div> <!-- /.footer_dark-inner -->
+		</div> <!-- /.container -->
+	</div> <!-- /.footer_dark -->
+	<div class="footer_light">
+		<div class="container">
+			<div class="footer_light-inner">
+				<div class="footer_light-rights">2020 SALATIK - All Rights Reserved</div>
+				<div class="footer_light-counter">
+					<div class="footer_counter-item">Счетчик</div>
+					<div class="footer_counter-item">Счетчик</div>
+					<div class="footer_counter-item">Счетчик</div>
+					<div class="footer_counter-item">Счетчик</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="script/_libs.min.js"></script>
+<script src="script/main.js"></script>	
+
+</body>
+</html>

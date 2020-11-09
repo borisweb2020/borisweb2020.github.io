@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Boris Web">
+	<meta name="description" content="mobile first">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-capable" content="yes">
+	<meta name="MobileOptimized" content="width">
+	<meta name="HandheldFriendly" content="true">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+		
+	<title>SALATIK-Рецепт</title>
+
+	<link rel="stylesheet" href="style/style.min.css">
+</head>
+<body>
+<!-- == Sprites == -->
+<svg style="display: none;">
+	<symbol id="arrow" viewBox="0 0 11 6">
+		<g>
+			<path d="M10 1L5.5 5L1 1"></path>
+		</g>
+	</symbol>
+	<symbol id="arrowSlider" viewBox="0 0 40 40">
+		<g>
+			<path d="M23.3333 29.1667L15 20L23.3333 10.8333"></path>
+		</g>
+	</symbol>
+	<symbol id="calendar" viewBox="0 0 18 18">
+		<g clip-path="url(#clip0)">
+			<path d="M6.5027 9.93049C6.5027 9.70501 6.31566 9.52234 6.08487 9.52234H4.62683C4.39631 9.52234 4.20923 9.70501 4.20923 9.93049V11.356C4.20923 11.5818 4.39631 11.7646 4.62683 11.7646H6.08487C6.31566 11.7646 6.5027 11.5818 6.5027 11.356V9.93049Z"></path>
+			<path d="M10.1463 9.93049C10.1463 9.70501 9.9592 9.52234 9.72886 9.52234H8.27063C8.04011 9.52234 7.85303 9.70501 7.85303 9.93049V11.356C7.85303 11.5818 8.04011 11.7646 8.27063 11.7646H9.72886C9.9592 11.7646 10.1463 11.5818 10.1463 11.356V9.93049Z"></path>
+			<path d="M13.7903 9.93049C13.7903 9.70501 13.6032 9.52234 13.3727 9.52234H11.9147C11.6839 9.52234 11.4968 9.70501 11.4968 9.93049V11.356C11.4968 11.5818 11.6839 11.7646 11.9147 11.7646H13.3727C13.6032 11.7646 13.7903 11.5818 13.7903 11.356V9.93049Z"></path>
+			<path d="M6.5027 13.4939C6.5027 13.2681 6.31566 13.0856 6.08487 13.0856H4.62683C4.39631 13.0856 4.20923 13.2681 4.20923 13.4939V14.9192C4.20923 15.1449 4.39631 15.3276 4.62683 15.3276H6.08487C6.31566 15.3276 6.5027 15.1448 6.5027 14.9192V13.4939Z"></path>
+			<path d="M10.1463 13.4939C10.1463 13.2681 9.9592 13.0856 9.72886 13.0856H8.27063C8.04011 13.0856 7.85303 13.2681 7.85303 13.4939V14.9192C7.85303 15.1449 8.04011 15.3276 8.27063 15.3276H9.72886C9.9592 15.3276 10.1463 15.1448 10.1463 14.9192V13.4939Z"></path>
+			<path d="M13.7903 13.4939C13.7903 13.2681 13.6032 13.0856 13.3729 13.0856H11.9147C11.6839 13.0856 11.4968 13.2681 11.4968 13.4939V14.9192C11.4968 15.1449 11.6839 15.3276 11.9147 15.3276H13.3729C13.6032 15.3276 13.7903 15.1448 13.7903 14.9192V13.4939Z"></path>
+			<path d="M16.3976 2.00428V4.18167C16.3976 5.16583 15.5811 5.95892 14.5748 5.95892H13.4249C12.4185 5.95892 11.5912 5.16583 11.5912 4.18167V1.99646H6.40834V4.18167C6.40834 5.16583 5.58106 5.95892 4.57482 5.95892H3.42471C2.41842 5.95892 1.60197 5.16583 1.60197 4.18167V2.00428C0.722463 2.0302 -0.000244141 2.74183 -0.000244141 3.61651V16.3771C-0.000244141 17.2682 0.738415 18.0001 1.64975 18.0001H16.3498C17.2597 18.0001 17.9998 17.2667 17.9998 16.3771V3.61651C17.9998 2.74183 17.2771 2.0302 16.3976 2.00428ZM15.8635 15.5825C15.8635 15.9676 15.5442 16.28 15.1502 16.28H2.81792C2.42393 16.28 2.1046 15.9676 2.1046 15.5825V8.99116C2.1046 8.6059 2.42389 8.29347 2.81792 8.29347H15.1501C15.5441 8.29347 15.8635 8.6059 15.8635 8.99116L15.8635 15.5825Z"></path>
+			<path d="M3.42081 4.79156H4.55821C4.90344 4.79156 5.18336 4.51825 5.18336 4.18067V0.611109C5.18336 0.273493 4.90344 0 4.55821 0H3.42081C3.07554 0 2.79565 0.273493 2.79565 0.611109V4.18067C2.79565 4.51825 3.07554 4.79156 3.42081 4.79156Z"></path>
+			<path d="M13.4103 4.79156H14.5477C14.8927 4.79156 15.1726 4.51825 15.1726 4.18067V0.611109C15.1726 0.273493 14.8927 0 14.5477 0H13.4103C13.0651 0 12.7852 0.273493 12.7852 0.611109V4.18067C12.7852 4.51825 13.0651 4.79156 13.4103 4.79156Z"></path>
+		</g>
+		<defs>
+			<clipPath id="clip0">
+				<rect width="18" height="18" fill="white"></rect>
+			</clipPath>
+		</defs>
+	</symbol>
+	<symbol id="comment" viewBox="0 0 18 16">
+		<g>
+			<path d="M16.7946 3.31771C15.9911 2.29349 14.8996 1.48438 13.5202 0.890614C12.1408 0.296847 10.634 0 9.00002 0C7.36609 0 5.85935 0.296847 4.4799 0.890614C3.10045 1.48438 2.00896 2.29334 1.20537 3.31771C0.401744 4.34201 0 5.45828 0 6.66665C0 7.70828 0.302917 8.68427 0.908998 9.59397C1.51508 10.5037 2.34365 11.2677 3.3951 11.8857C3.32136 12.1634 3.23432 12.4273 3.13384 12.6775C3.03339 12.9274 2.94301 13.1323 2.86266 13.2921C2.78223 13.4517 2.67352 13.6289 2.53613 13.8232C2.39896 14.0177 2.29517 14.155 2.22484 14.2349C2.15458 14.3148 2.03908 14.4465 1.87826 14.6307C1.71766 14.8146 1.6138 14.9346 1.56697 14.9902C1.56018 14.9937 1.53344 15.0247 1.48658 15.0841C1.43975 15.143 1.41625 15.1723 1.41625 15.1723L1.35599 15.2661C1.32246 15.3179 1.3074 15.351 1.31071 15.3647C1.31408 15.3787 1.3074 15.4134 1.29065 15.4688C1.27387 15.5245 1.27559 15.5662 1.29565 15.594V15.6044C1.32246 15.7224 1.37597 15.818 1.45632 15.8909C1.53668 15.9636 1.62724 16 1.72758 16H1.77785C2.21323 15.9443 2.59488 15.8682 2.92296 15.7709C4.67748 15.3057 6.21772 14.4654 7.54355 13.25C8.04574 13.3055 8.53125 13.3333 8.99995 13.3333C10.6339 13.3333 12.1407 13.0365 13.5201 12.4425C14.8995 11.8487 15.991 11.0399 16.7946 10.0156C17.5982 8.99137 18 7.87498 18 6.66662C18 5.45843 17.5983 4.34201 16.7946 3.31771ZM15.6646 9.32302C14.9646 10.1423 14.0204 10.7935 12.8318 11.2761C11.6432 11.7585 10.3658 12 8.99977 12C8.59134 12 8.15611 11.9723 7.69406 11.9166L7.12151 11.8543L6.68958 12.2502C5.86604 13.0003 4.94518 13.594 3.92733 14.0315C4.23532 13.4691 4.4697 12.8718 4.63048 12.24L4.90166 11.2398L4.02781 10.7192C3.15727 10.205 2.48269 9.59568 2.00379 8.89074C1.52496 8.18602 1.28566 7.44453 1.28566 6.6668C1.28566 5.71536 1.63554 4.83 2.33528 4.01054C3.03522 3.19114 3.9793 2.54006 5.16796 2.05742C6.35662 1.57476 7.63383 1.33322 8.99998 1.33322C10.366 1.33322 11.6432 1.57465 12.8318 2.05728C14.0204 2.53995 14.9645 3.191 15.6645 4.01039C16.3643 4.82986 16.7142 5.71525 16.7142 6.66662C16.7142 7.61798 16.3643 8.50356 15.6646 9.32302Z"></path>
+		</g>
+	</symbol>
+	<symbol id="heart" viewBox="0 0 512 512">
+		<g>
+			<path d="M474.644,74.27C449.391,45.616,414.358,29.836,376,29.836c-53.948,0-88.103,32.22-107.255,59.25
+			c-4.969,7.014-9.196,14.047-12.745,20.665c-3.549-6.618-7.775-13.651-12.745-20.665c-19.152-27.03-53.307-59.25-107.255-59.25
+			c-38.358,0-73.391,15.781-98.645,44.435C13.267,101.605,0,138.213,0,177.351c0,42.603,16.633,82.228,52.345,124.7
+			c31.917,37.96,77.834,77.088,131.005,122.397c19.813,16.884,40.302,34.344,62.115,53.429l0.655,0.574
+			c2.828,2.476,6.354,3.713,9.88,3.713s7.052-1.238,9.88-3.713l0.655-0.574c21.813-19.085,42.302-36.544,62.118-53.431
+			c53.168-45.306,99.085-84.434,131.002-122.395C495.367,259.578,512,219.954,512,177.351
+			C512,138.213,498.733,101.605,474.644,74.27z M309.193,401.614c-17.08,14.554-34.658,29.533-53.193,45.646
+			c-18.534-16.111-36.113-31.091-53.196-45.648C98.745,312.939,30,254.358,30,177.351c0-31.83,10.605-61.394,29.862-83.245
+			C79.34,72.007,106.379,59.836,136,59.836c41.129,0,67.716,25.338,82.776,46.594c13.509,19.064,20.558,38.282,22.962,45.659
+			c2.011,6.175,7.768,10.354,14.262,10.354c6.494,0,12.251-4.179,14.262-10.354c2.404-7.377,9.453-26.595,22.962-45.66
+			c15.06-21.255,41.647-46.593,82.776-46.593c29.621,0,56.66,12.171,76.137,34.27C471.395,115.957,482,145.521,482,177.351
+			C482,254.358,413.255,312.939,309.193,401.614z"></path>
+		</g>
+	</symbol>
+	<symbol id="star" viewBox="0 0 18 17">
+		<g>
+			<path d="M8.04894 0.927049C8.3483 0.00573802 9.6517 0.00574017 9.95106 0.927051L11.2451 4.90983C11.379 5.32185 11.763 5.60081 12.1962 5.60081H16.3839C17.3527 5.60081 17.7554 6.84043 16.9717 7.40983L13.5838 9.87132C13.2333 10.126 13.0866 10.5773 13.2205 10.9894L14.5146 14.9721C14.8139 15.8934 13.7595 16.6596 12.9757 16.0902L9.58778 13.6287C9.2373 13.374 8.7627 13.374 8.41221 13.6287L5.02426 16.0902C4.24054 16.6596 3.18607 15.8934 3.48542 14.9721L4.7795 10.9894C4.91338 10.5773 4.76672 10.126 4.41623 9.87132L1.02827 7.40983C0.244561 6.84043 0.647338 5.60081 1.61606 5.60081H5.8038C6.23703 5.60081 6.62099 5.32185 6.75486 4.90983L8.04894 0.927049Z"></path>
+		</g>
+	</symbol>
+	<symbol id="user" viewBox="0 0 18 18">
+		<g>
+			<path d="M18 9C18 4.03756 13.9624 0 9 0C4.03756 0 0 4.03756 0 9C0 11.6211 1.12713 13.9837 2.92124 15.6299L2.91273 15.6374L3.20465 15.8835C3.22364 15.8996 3.24425 15.9127 3.26324 15.9284C3.41836 16.057 3.57905 16.1791 3.74269 16.2972C3.79571 16.3355 3.84873 16.3738 3.90273 16.4111C4.07749 16.5315 4.25684 16.6457 4.44011 16.7541C4.48004 16.7776 4.52029 16.8005 4.56055 16.8235C4.76116 16.9377 4.96604 17.0453 5.17582 17.1442C5.1912 17.1514 5.20691 17.1579 5.22229 17.1651C5.90596 17.4829 6.63578 17.7163 7.39898 17.854C7.41894 17.8576 7.43891 17.8612 7.4592 17.8648C7.69615 17.9057 7.93571 17.9385 8.17822 17.9604C8.20767 17.963 8.23713 17.9647 8.26691 17.9673C8.50844 17.9872 8.75258 18 9 18C9.24513 18 9.48698 17.9872 9.7272 17.9679C9.75764 17.9653 9.78807 17.9637 9.81851 17.9611C10.0591 17.9391 10.2967 17.9074 10.5313 17.8671C10.5516 17.8635 10.5722 17.8599 10.5925 17.856C11.3443 17.7212 12.0636 17.4931 12.7384 17.1835C12.7633 17.172 12.7885 17.1612 12.8134 17.1494C13.0153 17.0545 13.2127 16.9521 13.4061 16.8431C13.4542 16.8159 13.502 16.7884 13.5497 16.7603C13.7258 16.6565 13.8989 16.5482 14.0672 16.433C14.1277 16.3918 14.1869 16.3483 14.2468 16.3051C14.3905 16.2016 14.5316 16.0949 14.6687 15.9833C14.6991 15.9588 14.7319 15.9375 14.7616 15.9123L15.0611 15.6623L15.0523 15.6548C16.8621 14.0079 18 11.6345 18 9ZM0.654545 9C0.654545 4.39822 4.39822 0.654545 9 0.654545C13.6018 0.654545 17.3455 4.39822 17.3455 9C17.3455 11.4797 16.2573 13.7091 14.5345 15.2388C14.4383 15.1724 14.3414 15.1128 14.2423 15.0631L11.4712 13.6777C11.2225 13.5533 11.068 13.3033 11.068 13.0255V12.0577C11.1322 11.9785 11.1999 11.8888 11.27 11.7903C11.6287 11.2837 11.9163 10.7201 12.1261 10.1137C12.5408 9.91669 12.8085 9.50367 12.8085 9.03731V7.87713C12.8085 7.59338 12.7044 7.31815 12.5182 7.10182V5.57444C12.5352 5.40425 12.5954 4.446 11.9019 3.65531C11.2988 2.96673 10.3225 2.61818 9 2.61818C7.67749 2.61818 6.70124 2.96673 6.09807 3.65498C5.40458 4.44567 5.4648 5.40458 5.48182 5.57411V7.10149C5.29593 7.31782 5.19153 7.59305 5.19153 7.8768V9.03698C5.19153 9.39731 5.3532 9.73342 5.63007 9.96022C5.89516 10.9987 6.44073 11.7848 6.64233 12.0512V12.9983C6.64233 13.2653 6.49669 13.5108 6.26204 13.6391L3.67429 15.0506C3.59182 15.0955 3.51 15.1478 3.42818 15.2064C1.72669 13.6774 0.654545 11.4617 0.654545 9Z"></path>
+		</g>
+	</symbol>
+	<symbol id="view" viewBox="0 0 23 13">
+		<g>
+			<path d="M22.6048 5.97851C22.5584 5.91712 21.444 4.45789 19.5334 2.99278C16.9804 1.03489 14.2025 0 11.4999 0C8.79749 0 6.01954 1.03489 3.4664 2.99278C1.55589 4.45784 0.441476 5.91712 0.395002 5.97851L0 6.49997L0.395052 7.02149C0.441526 7.08288 1.55594 8.54216 3.46645 10.0073C6.01959 11.9651 8.79755 13 11.5 13C14.2025 13 16.9804 11.9651 19.5334 10.0073C21.444 8.54216 22.5584 7.08288 22.6048 7.02149L23 6.49997L22.6048 5.97851ZM11.4999 11.0536C9.09446 11.0536 7.13743 9.01086 7.13743 6.49997C7.13743 6.10659 7.18546 5.72471 7.27574 5.36034L6.27975 5.18538C6.18217 5.60714 6.13041 6.04736 6.13041 6.49997C6.13041 8.12187 6.79414 9.58483 7.85261 10.6092C6.49007 10.0839 5.33145 9.34664 4.457 8.67991C3.37366 7.85399 2.56175 7.01865 2.09887 6.49997C2.56195 5.98114 3.37376 5.14591 4.457 4.32004C5.33145 3.65331 6.49012 2.9161 7.85261 2.39069L8.52077 3.17683C9.3011 2.41413 10.3491 1.94638 11.4999 1.94638C13.9054 1.94638 15.8624 3.98909 15.8624 6.49997C15.8624 9.01086 13.9054 11.0536 11.4999 11.0536ZM18.5428 8.67991C17.6683 9.34664 16.5097 10.0839 15.1472 10.6092C16.2057 9.58488 16.8694 8.12192 16.8694 6.49992C16.8694 4.87792 16.2057 3.41501 15.1472 2.39064C16.5098 2.91604 17.6683 3.65325 18.5428 4.31998C19.6262 5.14591 20.4381 5.98124 20.901 6.49987C20.4379 7.01881 19.6261 7.85409 18.5428 8.67991Z"></path>
+			<path d="M8.72376 5.61422C8.64189 5.8943 8.59753 6.1914 8.59753 6.49943C8.59753 8.17252 9.89694 9.5289 11.4999 9.5289C13.1027 9.5289 14.4021 8.17257 14.4021 6.49943C14.4021 4.8263 13.1027 3.46997 11.4999 3.46997C10.7191 3.46997 10.0109 3.79235 9.48925 4.31582L10.9208 6.00015L8.72376 5.61422Z"></path>
+		</g>
+	</symbol>
+	
+</svg>
+
+<!-- == Fixed button up == -->
+<button class="button_up" id="buttonUp" type="button">
+	<svg class="button_up-arrow">
+		<use xlink:href="#arrowSlider"></use>
+	</svg>
+</button>
+
+
+<!-- == Header == -->	
+<header class="header" id="header">
+	<div class="container">
+		<div class="header_inner">
+			<button class="burger" id="burger" type="button">
+				<div class="burger_line">Menu</div>
+			</button>
+			<a class="header_link" href="index.html">
+				<picture class="header_logo">
+					<source srcset="images/logo-tablet.png" media="(min-width: 768px) and (max-width: 1439.98px)">
+					<source srcset="images/logo-descktop.png" media="(min-width: 1440px)">
+					<img src="images/logo-mobile.png" alt="logo">
+				</picture>
+			</a>
+			<form class="header_form text text--small" id="headerForm">
+				<div class="header_form-wrap">
+					<img class="header_form-icon" src="images/icon-search.png" alt="search">
+				</div>
+				<input class="header_form-search" type="search">
+			</form>
+			<nav class="header_nav" id="headerNav">
+				<ul class="header_nav-list description description--large">
+					<li><a href="index.html">Главная</a></li>
+					<li><a href="category.html">Рецепты</a></li>
+					<li><a href="#">О блоге</a></li>
+					<li><a href="#">Реклама</a></li>
+					<li><a href="contact.html">Контакты</a></li>
+				</ul>
+			</nav>
+			<div class="header_miniform">
+				<div class="header_miniform-wrap">
+					<a href="entry.html"><img src="images/icon-profile.png" alt="icon-profile" class="header_miniform-icon"></a>
+				</div>
+				<div class="header_miniform-wrap">
+					<a href="registry.html"><img src="images/icon-search.png" alt="icon-search" class="header_miniform-icon"></a>
+				</div>
+			</div>
+			<a href="entry.html" class="header_miniform-entry text text--small">Вход</a>
+			<a href="registry.html" class="header_miniform-registry text text--small">Регистрация</a>
+		</div>
+	</div>
+</header>
+
+<!-- == Nav == -->
+<nav class="menu" id="menu">
+	<div class="container">
+		<ul class="menu_list description" id="menuList">
+			<li class="menu_list-item">
+				<div class="menu_list-wrap">
+					<a href="#" target="_blank">Салаты</a>
+					<svg class="menu_list-icon">
+						<use xlink:href="#arrow"></use>
+					</svg>
+				</div>
+				<div class="menu_sublist decription description--small">
+					<ul class="menu_sublist-item">
+						<li><a href="#" target="_blank">Мясные</a></li>
+						<li><a href="#" target="_blank">Овощные</a></li>
+						<li><a href="#" target="_blank">Рыбные</a></li>
+						<li><a href="#" target="_blank">Морепродукты</a></li>
+						<li><a href="#" target="_blank">Фруктовые</a></li>
+					</ul>
+					<ul class="menu_sublist-item">
+						<li><a href="#" target="_blank">Ассорти</a></li>
+						<li><a href="#" target="_blank">Сладкие</a></li>
+						<li><a href="#" target="_blank">Постные</a></li>
+						<li><a href="#" target="_blank">Птица</a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="menu_list-item">
+				<div class="menu_list-wrap">
+					<a href="#" target="_blank">Бутерброды</a>
+					<svg class="menu_list-icon">
+						<use xlink:href="#arrow"></use>
+					</svg>
+				</div>
+				<div class="menu_sublist decription description--small">
+					<ul class="menu_sublist-item">
+						<li><a href="#" target="_blank">Овощи и зелень</a></li>
+						<li><a href="#" target="_blank">Грибные</a></li>
+						<li><a href="#" target="_blank">С сыром</a></li>
+						<li><a href="#" target="_blank">Рыба</a></li>
+						<li><a href="#" target="_blank">Морепродукты</a></li>
+					</ul>
+					<ul class="menu_sublist-item">
+						<li><a href="#" target="_blank">С колбасой</a></li>
+						<li><a href="#" target="_blank">Мясные</a></li>
+						<li><a href="#" target="_blank">Двойные сендвичи</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="#" target="_blank">Канапе</a></li>
+			<li><a href="#" target="_blank">Гренки</a></li>
+			<li><a href="#" target="_blank">Тосты</a></li>
+			<li><a href="#" target="_blank">Тартинки</a></li>
+			<li><a href="#" target="_blank">Закуски</a></li>
+			<li><a href="#" target="_blank">Заправки</a></li>
+		</ul>
+	</div> <!-- /.container -->
+</nav>
+
+
+<div class="container">
+	<main class="main" id="pointAppearing">
+		<section class="anyrecipe">
+			<nav class="anyrecipe_nav">
+				<ul class="anyrecipe_nav-list">
+					<li class="anyrecipe_nav-link">
+						<a href="index.html">Главная</a>
+						<span>>></span>
+					</li>
+					<li class="anyrecipe_nav-link">
+						<a href="category.html">Рецепты</a>
+						<span>>></span>
+					</li>
+					<li class="anyrecipe_nav-link">Салат с руколлой</li>
+				</ul>
+			</nav>
+
+			<header class="anyrecipe_header">
+				<picture class="anyrecipe_image">
+					<source srcset="images/salad-recipe-tablet.jpg" media="(min-width: 768px) and (max-width: 1439.98px)">
+					<source srcset="images/salad-recipe-descktop.jpg" media="(min-width: 1440px)">
+					<img class="anyrecipe_image-img" src="images/salad-recipe-mobile.jpg" alt="Salad">
+				</picture>
+				<div class="anyrecipe_meta">
+					<div class="anyrecipe_meta-item">
+						<a href="#" class="anyrecipe_meta-user">
+							<svg class="anyrecipe_user-image">
+								<use xlink:href="#user"></use>
+							</svg>
+							<span class="anyrecipe_user-value">Никнейм</span>
+						</a>
+						<a href="#" class="anyrecipe_meta-calendar">
+							<svg class="anyrecipe_calendar-image">
+								<use xlink:href="#calendar"></use>
+							</svg>
+							<span class="anyrecipe_calendar-value">14.09.2020</span>
+						</a>
+						<a href="#" class="anyrecipe_meta-comment">
+							<svg class="anyrecipe_comment-image">
+								<use xlink:href="#comment"></use>
+							</svg>
+							<span class="anyrecipe_comment-value">10</span>
+						</a>
+						<a href="#" class="anyrecipe_meta-view">
+							<svg class="anyrecipe_view-image">
+								<use xlink:href="#view"></use>
+							</svg>
+							<span class="anyrecipe_view-value">100</span>
+						</a>
+					</div>
+					<div class="anyrecipe_meta-item">
+						<div class="anyrecipe_meta-starbox">
+							<svg class="anyrecipe_starbox-star rating">
+								<use xlink:href="#star"></use>
+							</svg>
+							<svg class="anyrecipe_starbox-star rating">
+								<use xlink:href="#star"></use>
+							</svg>
+							<svg class="anyrecipe_starbox-star rating">
+								<use xlink:href="#star"></use>
+							</svg>
+							<svg class="anyrecipe_starbox-star rating">
+								<use xlink:href="#star"></use>
+							</svg>
+							<svg class="anyrecipe_starbox-star">
+								<use xlink:href="#star"></use>
+							</svg>
+						</div>
+						<div class="anyrecipe_meta-bookmark">
+							<svg class="anyrecipe_bookmark-heart">
+								<use xlink:href="#heart"></use>
+							</svg>
+							<div class="anyrecipe_bookmark-subtitle">В закладки</div>
+						</div>
+					</div>
+				</div> <!-- /.anyrecipe_meta -->
+			</header>
+
+			<div class="anyrecipe_intro">
+				<h3 class="anyrecipe_intro-title title">Салат с руколлой</h3>
+				<div class="anyrecipe_intro-meta">
+					<img class="anyrecipe_intro-time" src="images/icon-time.png" alt="time">
+					<span class="anyrecipe_intro-value">20 мин.</span>
+				</div>
+			</div>
+
+			<div class="anyrecipe_description description description--large">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dolor sapien, tincidunt rutrum fringilla nec, dictum eu ligula. Interdum et malesuada fames ac ante ipsum primis in</p>
+			</div>
+
+			<div class="anyrecipe_compound">
+				<div class="anyrecipe_compound-item">
+					<div class="anyrecipe_compound-title">
+						<div class="anyrecipe_compound-wrap">
+							<img class="anyrecipe_compound-image" src="images/icon-salad-ingredients.png" alt="Ingredients">
+						</div>
+						<div class="anyrecipe_compound-text">Ингредиенты</div>
+					</div>
+					<div class="anyrecipe_compound-list">
+						<div class="anyrecipe_compound-row">
+							<div>Руколла</div>
+							<div></div>
+							<div>100 г</div>
+						</div>
+						<div class="anyrecipe_compound-row">
+							<div>Томаты черри</div>
+							<div></div>
+							<div>50 г</div>
+						</div>
+						<div class="anyrecipe_compound-row">
+							<div>Оливковое масло</div>
+							<div></div>
+							<div>2 ст. л</div>
+						</div>
+						<div class="anyrecipe_compound-row">
+							<div>Болгарский перец</div>
+							<div></div>
+							<div>1 шт</div>
+						</div>
+						<div class="anyrecipe_compound-row">
+							<div>Сыр рикотта</div>
+							<div></div>
+							<div>50 г</div>
+						</div>
+					</div>
+				</div> <!-- /.anyrecipe_compound-item -->
+
+				<div class="anyrecipe_compound-item">
+					<div class="anyrecipe_compound-title">
+						<div class="anyrecipe_compound-text">Калорийность</div>
+					</div>
+					<div class="anyrecipe_compound-list">
+						<div class="anyrecipe_compound-row">
+							<div>Белки</div>
+							<div></div>
+							<div>10 г</div>
+						</div>
+						<div class="anyrecipe_compound-row">
+							<div>Жиры</div>
+							<div></div>
+							<div>15 г</div>
+						</div>
+						<div class="anyrecipe_compound-row">
+							<div>Углеводы</div>
+							<div></div>
+							<div>30 г</div>
+						</div>
+						<div class="anyrecipe_compound-row">
+							<div>Калории</div>
+							<div></div>
+							<div>300 Ккал</div>
+						</div>
+					</div>
+				</div> <!-- /.anyrecipe_compound-item -->
+			</div> <!-- /.anyrecipe_compound -->
+
+			<div class="anyrecipe_stage">
+				<div class="anyrecipe_stage-subtitle">Этапы приготовления:</div>
+				<div class="anyrecipe_stage-inner">
+					<div class="anyrecipe_stage-item">
+						<div class="anyrecipe_stage-wrap">
+							<img class="anyrecipe_stage-image" src="images/salad-recipe-tablet.jpg" alt="Stage">
+						</div>
+						<div class="anyrecipe_stage-content">
+							<p><b>1.</b> Нарезать томаты черри...</p>
+						</div>
+					</div>
+					<div class="anyrecipe_stage-item">
+						<div class="anyrecipe_stage-wrap">
+							<img class="anyrecipe_stage-image" src="images/salad-recipe-tablet.jpg" alt="Stage">
+						</div>
+						<div class="anyrecipe_stage-content">
+							<p><b>2.</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dolor sapien, tincidunt rutrum fringilla nec, dictum eu ligula. Interdum et malesuada fames ac ante ipsum primis i</p>
+						</div>
+					</div>
+					<div class="anyrecipe_stage-item">
+						<div class="anyrecipe_stage-wrap">
+							<img class="anyrecipe_stage-image" src="images/salad-recipe-tablet.jpg" alt="Stage">
+						</div>
+						<div class="anyrecipe_stage-content">
+							<p><b>3.</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dolor sapien, tincidunt rutrum fringilla nec, dictum eu ligula. Interdum et malesuada fames ac ante ipsum primis i</p>
+						</div>
+					</div>
+				</div>
+				<div class="categories_banner">
+					<img class="categories_banner-image" src="https://via.placeholder.com/728x90/ffffff/c4c4c4?text=For+ad+banner+728x90" alt="Banner">
+				</div>
+			</div> <!-- /.anyrecipe_stage-->
+
+			<div class="anyrecipe_social">
+				<div class="anyrecipe_social-networks">
+					<h6 class="anyrecipe_social-subtitle">Поделиться в социальных сетях</h6>
+					<div class="footer_menu-iconbox">
+						<a class="footer_menu-wrap" href="#" target="_blank">
+							<img class="footer_menu-icon" src="images/icon-vk.svg" alt="vk icon">
+						</a>
+						<a class="footer_menu-wrap" href="#" target="_blank">
+							<img class="footer_menu-icon" src="images/icon-facebook.svg" alt="facebook icon ">
+						</a>
+						<a class="footer_menu-wrap" href="#" target="_blank">
+							<img class="footer_menu-icon" src="images/icon-instagram.svg" alt="instagram icon">
+						</a>
+						<a class="footer_menu-wrap" href="#" target="_blank">
+							<img class="footer_menu-icon" src="images/icon-google-plus.svg" alt="google plus icon">
+						</a>
+						<a class="footer_menu-wrap" href="#" target="_blank">
+							<img class="footer_menu-icon" src="images/icon-whatsapp.svg" alt="whatsapp icon">
+						</a>
+						<a class="footer_menu-wrap" href="#" target="_blank">
+							<img class="footer_menu-icon" src="images/icon-viber.svg" alt="viber icon">
+						</a>
+						<a class="footer_menu-wrap" href="#" target="_blank">
+							<img class="footer_menu-icon" src="images/icon-telegram.svg" alt="telegram icon">
+						</a>
+						<a class="footer_menu-wrap" href="#" target="_blank">
+							<img class="footer_menu-icon" src="images/icon-odnoklassniki.svg" alt="odnoklassniki icon">
+						</a>
+					</div>
+				</div>
+				<div class="anyrecipe_social-meta">
+					<h6 class="anyrecipe_social-subtitle">Оценить рецепт</h6>
+					<div class="anyrecipe_social-starbox link">
+						<svg class="anyrecipe_social-star">
+							<use xlink:href="#star"></use>
+						</svg>
+						<svg class="anyrecipe_social-star">
+							<use xlink:href="#star"></use>
+						</svg>
+						<svg class="anyrecipe_social-star">
+							<use xlink:href="#star"></use>
+						</svg>
+						<svg class="anyrecipe_social-star">
+							<use xlink:href="#star"></use>
+						</svg>
+						<svg class="anyrecipe_social-star">
+							<use xlink:href="#star"></use>
+						</svg>
+					</div>
+				</div>
+			</div> <!-- /.anyrecipe_social-->
+
+			<div class="anyrecipe_similar">
+				<h4 class="anyrecipe_similar-subtitle">Похожие рецепты</h4>
+				<div class="anyrecipe_similar-inner">
+					
+					<div class="profile_recipe-item">
+						<div class="profile_recipe-content">
+							<h5 class="profile_recipe-title title">Бутерброд с сыром c ujdzlbyjq fdf</h5>
+							<div class="profile_recipe-description">
+								Приготовь себе и близким интересный перекус Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum dolorum, cum blanditiis maxime optio, possimus quasi commodi reprehenderit. Iste fugit tenetur veniam quibusdam, expedita nam quisquam maxime animi tempora minus.
+							</div>
+							<div class="profile_recipe-meta">
+								<div class="meta">
+									<a class="meta_like" href="#">
+										<img class="meta_like-image" src="images/icon-like.png" alt="Like">
+										<span class="meta_like-value">100</span>
+									</a>
+									<a class="meta_comment" href="#">
+										<img class="meta_comment-image" src="images/icon-comment.png" alt="Comments">
+										<span class="meta_comment-value">10</span>
+									</a>
+									<a class="meta_view" href="#">
+										<img class="meta_view-image" src="images/icon-view.png" alt="View">
+										<span class="meta_view-value">100</span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="profile_recipe-wrap">
+							<img class="profile_recipe-image" src="images/sandwich-descktop.jpg" alt="Recipe Photo">
+						</div>
+					</div>
+					<div class="profile_recipe-item">
+						<div class="profile_recipe-content">
+							<h5 class="profile_recipe-title title">Салат с рукколой</h5>
+							<div class="profile_recipe-description">
+								Приготовь себе и близким интересный перекус
+							</div>
+							<div class="profile_recipe-meta">
+								<div class="meta">
+									<a class="meta_like" href="#">
+										<img class="meta_like-image" src="images/icon-like.png" alt="Like">
+										<span class="meta_like-value">100</span>
+									</a>
+									<a class="meta_comment" href="#">
+										<img class="meta_comment-image" src="images/icon-comment.png" alt="Comments">
+										<span class="meta_comment-value">10</span>
+									</a>
+									<a class="meta_view" href="#">
+										<img class="meta_view-image" src="images/icon-view.png" alt="View">
+										<span class="meta_view-value">10</span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="profile_recipe-wrap">
+							<img class="profile_recipe-image" src="images/salad-descktop.jpg" alt="Recipe Photo">
+						</div>
+					</div>
+					<div class="profile_recipe-item">
+						<div class="profile_recipe-content">
+							<h5 class="profile_recipe-title title">Бутерброд с сыром</h5>
+							<div class="profile_recipe-description">
+								Приготовь себе и близким интересный перекус
+							</div>
+							<div class="profile_recipe-meta">
+								<div class="meta">
+									<a class="meta_like" href="#">
+										<img class="meta_like-image" src="images/icon-like.png" alt="Like">
+										<span class="meta_like-value">100</span>
+									</a>
+									<a class="meta_comment" href="#">
+										<img class="meta_comment-image" src="images/icon-comment.png" alt="Comments">
+										<span class="meta_comment-value">10</span>
+									</a>
+									<a class="meta_view" href="#">
+										<img class="meta_view-image" src="images/icon-view.png" alt="View">
+										<span class="meta_view-value">200</span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="profile_recipe-wrap">
+							<img class="profile_recipe-image" src="images/sandwich-descktop.jpg" alt="Recipe Photo">
+						</div>
+					</div>
+					<div class="profile_recipe-item">
+						<div class="profile_recipe-content">
+							<h5 class="profile_recipe-title title">Салат с рукколой</h5>
+							<div class="profile_recipe-description">
+								Приготовь себе и близким интересный перекус
+							</div>
+							<div class="profile_recipe-meta">
+								<div class="meta">
+									<a class="meta_like" href="#">
+										<img class="meta_like-image" src="images/icon-like.png" alt="Like">
+										<span class="meta_like-value">100</span>
+									</a>
+									<a class="meta_comment" href="#">
+										<img class="meta_comment-image" src="images/icon-comment.png" alt="Comments">
+										<span class="meta_comment-value">10</span>
+									</a>
+									<a class="meta_view" href="#">
+										<img class="meta_view-image" src="images/icon-view.png" alt="View">
+										<span class="meta_view-value">100</span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="profile_recipe-wrap">
+							<img class="profile_recipe-image" src="images/salad-descktop.jpg" alt="Recipe Photo">
+						</div>
+					</div>
+
+				</div> <!-- /.anyrecipe_similar-inner-->
+			</div> <!-- /.anyrecipe_similar-->
+
+			<div class="anyrecipe_comment">
+				<h4 class="anyrecipe_comment-subtitle">Добавить комментарий</h4>
+				<form class="anyrecipe_comment-form">
+					<input class="anyrecipe_comment-name" type="text" placeholder="Имя или никнейм">
+					<input class="anyrecipe_comment-mail" type="text" placeholder="Введите ваш e-mail">
+					<textarea class="anyrecipe_comment-textarea" placeholder="Введите ваш комментарий"></textarea>
+					<div class="anyrecipe_comment-buttonbox">
+						<div class="anyrecipe_comment-circlebox">
+							<div class="anyrecipe_comment-row">
+								<div class="anyrecipe_comment-circle"></div>
+								<div class="anyrecipe_comment-circle"></div>
+								<div class="anyrecipe_comment-circle"></div>
+								<div class="anyrecipe_comment-circle"></div>
+								<div class="anyrecipe_comment-circle"></div>
+								<div class="anyrecipe_comment-circle"></div>
+								<div class="anyrecipe_comment-circle"></div>
+								<div class="anyrecipe_comment-circle"></div>
+							</div>
+							<div class="anyrecipe_comment-row">
+								<div class="anyrecipe_comment-circle"></div>
+								<div class="anyrecipe_comment-circle"></div>
+								<div class="anyrecipe_comment-circle"></div>
+								<div class="anyrecipe_comment-circle"></div>
+								<div class="anyrecipe_comment-circle"></div>
+								<div class="anyrecipe_comment-circle"></div>
+								<div class="anyrecipe_comment-circle"></div>
+								<div class="anyrecipe_comment-circle"></div>
+							</div>
+						</div>
+						<input class="anyrecipe_comment-submit" type="submit">
+					</div>
+					<div class="anyrecipe_comment-wrap">
+						<input class="anyrecipe_comment-checkbox" id="anyrecipeCheckbox" type="checkbox">
+						<label for="anyrecipeCheckbox">Согласие на обработку персональных данных</label>
+					</div>
+				</form>
+			</div> <!-- /.anyrecipe_comment-->
+
+			<div class="anyrecipe_commentbox">
+				<div class="anyrecipe_commentbox-item">
+					<div class="anyrecipe_commentbox-main">
+						<div class="anyrecipe_commentbox-wrap">
+							<span class="note">for user photo</span>
+						</div>
+						<form class="anyrecipe_commentbox-form">
+							<div class="anyrecipe_commentbox-header">
+								<span class="anyrecipe_commentbox-name">Админ</span>
+								<time class="anyrecipe_commentbox-time" datetime="2020-09-23">23.09.20</time>
+								<button class="anyrecipe_commentbox-submit">Ответить</button>
+							</div>
+							<div class="anyrecipe_commentbox-text">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed excepturi doloribus impedit molestiae illo ut dicta inventore, pariatur, nihil. Cumque, magni quasi aut accusantium tempora illo ad officiis numquam nobis.</p>
+							</div>
+						</form>
+					</div>
+					<div class="anyrecipe_commentbox-answer">
+						<div class="anyrecipe_commentbox-wrap">
+							<span class="note">for user photo</span>
+						</div>
+						<form class="anyrecipe_commentbox-form">
+							<div class="anyrecipe_commentbox-header">
+								<span class="anyrecipe_commentbox-name">Админ</span>
+								<time class="anyrecipe_commentbox-time" datetime="2020-09-23">23.09.20</time>
+								<button class="anyrecipe_commentbox-submit">Ответить</button>
+							</div>
+							<div class="anyrecipe_commentbox-text">
+								<p>rem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dolor sapien, tincidunt rutrum fringilla nec, dictum eu ligula. Interdum et malesuada fames ac ante ipsum primis</p>
+							</div>
+						</form>
+					</div>
+				</div> <!-- /.anyrecipe_commentbox-item-->
+			</div> <!-- /.anyrecipe_commentbox-->
+
+
+			<div class="categories_buttonbox">
+				<a class="categories_button" href="#">
+					<svg class="categories_arrow-left">
+						<use xlink:href="#arrowSlider"></use>
+					</svg>
+				</a>
+				<a class="categories_button active" href="#">
+					<span class="categories_button-number">1</span>
+				</a>
+				<a class="categories_button" href="#">
+					<span class="categories_button-number">2</span>
+				</a>
+				<a class="categories_button" href="#">
+					<span class="categories_button-number">3</span>
+				</a>
+				<a class="categories_button" href="#">
+					<svg class="categories_arrow-right next">
+						<use xlink:href="#arrowSlider"></use>
+					</svg>
+				</a>
+			</div>
+			
+		</section>
+		<aside class="aside">
+			<form class="aside_form">
+				<div class="aside_form-description">Подпишись на обновления</div>
+				<input class="aside_form-input" type="text" placeholder="Введите ваш e-mail">
+				<input class="aside_form-submit" type="submit" value="Подписаться">
+			</form>
+			<section class="aside_recipes">
+				<div class="aside_recipes-title">Популярные рецепты</div>
+				<div class="aside_recipes-inner">
+					<div class="aside_recipes-item">
+						<div class="aside_recipes-content">
+							<div class="aside_content-title">Бутерброд с сыром</div>
+							<div class="aside_content-count">
+								<a class="aside_content-like" href="#">
+									<img class="aside_like-image" src="images/icon-like.png" alt="time">
+									<span class="aside_like-value">100</span>
+								</a>
+								<a class="aside_content-comment" href="#">
+									<img class="aside_comment-image" src="images/icon-comment.png" alt="time">
+									<span class="aside_comment-value">10</span>
+								</a>
+								<a class="aside_content-view" href="#">
+									<img class="aside_view-image" src="images/icon-view.png" alt="time">
+									<span class="aside_view-value">10</span>
+								</a>
+							</div>
+						</div>
+						<div class="aside_recipes-wrap">
+							<img class="aside_recipes-image" src="images/aside-sandwich.png" alt="recipes">
+						</div>
+					</div>
+					<div class="aside_recipes-item">
+						<div class="aside_recipes-content">
+							<div class="aside_content-title">Бутерброд с сыром</div>
+							<div class="aside_content-count">
+								<a class="aside_content-like" href="#">
+									<img class="aside_like-image" src="images/icon-like.png" alt="time">
+									<span class="aside_like-value">100</span>
+								</a>
+								<a class="aside_content-comment" href="#">
+									<img class="aside_comment-image" src="images/icon-comment.png" alt="time">
+									<span class="aside_comment-value">10</span>
+								</a>
+								<a class="aside_content-view" href="#">
+									<img class="aside_view-image" src="images/icon-view.png" alt="time">
+									<span class="aside_view-value">10</span>
+								</a>
+							</div>
+						</div>
+						<div class="aside_recipes-wrap">
+							<img class="aside_recipes-image" src="images/aside-sandwich.png" alt="recipes">
+						</div>
+					</div>
+					<div class="aside_recipes-item">
+						<div class="aside_recipes-content">
+							<div class="aside_content-title">Бутерброд с сыром</div>
+							<div class="aside_content-count">
+								<a class="aside_content-like" href="#">
+									<img class="aside_like-image" src="images/icon-like.png" alt="time">
+									<span class="aside_like-value">100</span>
+								</a>
+								<a class="aside_content-comment" href="#">
+									<img class="aside_comment-image" src="images/icon-comment.png" alt="time">
+									<span class="aside_comment-value">10</span>
+								</a>
+								<a class="aside_content-view" href="#">
+									<img class="aside_view-image" src="images/icon-view.png" alt="time">
+									<span class="aside_view-value">10</span>
+								</a>
+							</div>
+						</div>
+						<div class="aside_recipes-wrap">
+							<img class="aside_recipes-image" src="images/aside-sandwich.png" alt="recipes">
+						</div>
+					</div>
+				</div> <!-- /.aside_recipes-inner -->
+			</section> <!-- /.aside_recipes -->
+			<section class="aside_ad">
+				<div class="aside_ad-title">Реклама</div>
+				<div class="aside_ad-inner">
+					<div class="aside_ad-item">
+						<p class="aside_ad-note">Блок с рекламой</p>
+					</div>
+				</div>
+			</section>
+			<section class="aside_addition">
+				<div class="aside_addition-title">Дополнительный блок</div>
+				<div class="aside_addition-inner"></div>
+			</section>
+		</aside>
+	</main>
+</div> <!-- /.container -->
+
+
+<!-- == Footer == -->
+<footer class="footer">
+	<div class="footer_dark">
+		<div class="container">
+			<div class="footer_dark-inner">
+				<form class="footer_dark-form">
+					<div class="footer_form-title">
+						<p>Подписывайтесь на обновления и получайте новые рецепты каждый день!</p>
+					</div>
+					<input class="footer_form-input" type="text" placeholder="Введите ваш e-mail">
+					<input class="footer_form-submit" type="submit" value="Подписаться">
+					<div class="footer_form-wrap">
+						<input class="footer_form-checkbox" id="footerCheckbox" type="checkbox">
+						<label class="footer_form-label" for="footerCheckbox">Согласие на обработку персональных данных</label>
+					</div>
+				</form>
+				<div class="footer_dark-about">
+					<div class="footer_about-wrap">
+						<img class="footer_about-logo" src="images/logo-mobile.png" alt="logo">
+					</div>
+					<div class="footer_about-text">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dolor sapien, tincidunt rutrum fringilla nec, dictum eu ligula. Interdum et malesuada fames ac ante ipsum primis in</p>
+					</div>
+				</div>
+				<div class="footer_dark-menu">
+					<ul class="footer_menu-nav">
+						<li><a href="index.html">Главная</a></li>
+						<li><a href="category.html">Рецепты</a></li>
+						<li><a href="#">О блоге</a></li>
+						<li><a href="#">Реклама</a></li>
+						<li><a href="contact.html">Контакты</a></li>
+					</ul>
+					<div class="footer_menu-social">
+						<div class="footer_menu-title">Мы в социальных сетях</div>
+						<div class="footer_menu-iconbox">
+							<a class="footer_menu-wrap" href="#" target="_blank">
+								<img class="footer_menu-icon" src="images/icon-vk.svg" alt="vk icon">
+							</a>
+							<a class="footer_menu-wrap" href="#" target="_blank">
+								<img class="footer_menu-icon" src="images/icon-facebook.svg" alt="facebook icon ">
+							</a>
+							<a class="footer_menu-wrap" href="#" target="_blank">
+								<img class="footer_menu-icon" src="images/icon-instagram.svg" alt="instagram icon">
+							</a>
+							<a class="footer_menu-wrap" href="#" target="_blank">
+								<img class="footer_menu-icon" src="images/icon-google-plus.svg" alt="google plus icon">
+							</a>
+							<a class="footer_menu-wrap" href="#" target="_blank">
+								<img class="footer_menu-icon" src="images/icon-whatsapp.svg" alt="whatsapp icon">
+							</a>
+							<a class="footer_menu-wrap" href="#" target="_blank">
+								<img class="footer_menu-icon" src="images/icon-viber.svg" alt="viber icon">
+							</a>
+							<a class="footer_menu-wrap" href="#" target="_blank">
+								<img class="footer_menu-icon" src="images/icon-telegram.svg" alt="telegram icon">
+							</a>
+							<a class="footer_menu-wrap" href="#" target="_blank">
+								<img class="footer_menu-icon" src="images/icon-odnoklassniki.svg" alt="odnoklassniki icon">
+							</a>
+						</div>
+					</div> <!-- /.footer_menu-social -->
+				</div> <!-- /.footer_dark-menu -->
+			</div> <!-- /.footer_dark-inner -->
+		</div> <!-- /.container -->
+	</div> <!-- /.footer_dark -->
+	<div class="footer_light">
+		<div class="container">
+			<div class="footer_light-inner">
+				<div class="footer_light-rights">2020 SALATIK - All Rights Reserved</div>
+				<div class="footer_light-counter">
+					<div class="footer_counter-item">Счетчик</div>
+					<div class="footer_counter-item">Счетчик</div>
+					<div class="footer_counter-item">Счетчик</div>
+					<div class="footer_counter-item">Счетчик</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="script/_libs.min.js"></script>
+<script src="script/main.js"></script>	
+
+</body>
+</html>

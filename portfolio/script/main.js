@@ -5,7 +5,7 @@ let $photoSlider = $('#photoSlider'),
 	$aboutSlider = $('#aboutSlider');
 
 $photoSlider.slick({
-	infinite: true,
+	infinite: false,
 	slidesToShow: 1,
 	slidesToScroll: 1,
 	fade: true,
@@ -14,7 +14,7 @@ $photoSlider.slick({
 });
 
 $aboutSlider.slick({
-	infinite: true,
+	infinite: false,
 	slidesToShow: 1,
 	slidesToScroll: 1,
 	fade: true,

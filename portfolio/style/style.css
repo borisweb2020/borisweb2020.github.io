@@ -640,7 +640,6 @@ body {
   .intro_represent {
     font-family: 'MyriadPro', sans-serif;
     font-size: 2.3333rem;
-    font-weight: 900;
     color: #fff;
     text-align: center;
     text-transform: uppercase;
@@ -730,19 +729,34 @@ body {
 @media (max-width: 769px) {
   .intro_represent {
     font-size: 2rem;
-    width: 680px; }
+    width: 672px; }
   .intro_logo {
     width: 70%; }
   @-webkit-keyframes typing {
     0% {
       width: 0px; }
     100% {
-      width: 680px; } }
+      width: 672px; } }
   @keyframes typing {
     0% {
       width: 0px; }
     100% {
-      width: 680px; } } }
+      width: 672px; } } }
+
+@media (max-width: 668px) {
+  .intro_represent {
+    letter-spacing: 3px;
+    width: 638px; }
+  @-webkit-keyframes typing {
+    0% {
+      width: 0px; }
+    100% {
+      width: 638px; } }
+  @keyframes typing {
+    0% {
+      width: 0px; }
+    100% {
+      width: 638px; } } }
 
 @media (max-width: 641px) {
   .intro_represent {

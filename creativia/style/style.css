@@ -618,7 +618,7 @@ body {
     .header_link:after {
       bottom: -23px; }
     .header_link:hover {
-      color: #fff; }
+      color: #ff035f; }
       .header_link:hover:before, .header_link:hover:after {
         display: block; }
   .header_burger {

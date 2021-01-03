@@ -5,16 +5,6 @@
 	<meta name="author" content="Boris Web">
 	<meta name="description" content="This page has been created like a portfolio page presenting developer skills in HTML, CSS, jQuery">
 
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-69GX2F37KJ"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', 'G-69GX2F37KJ');
-	</script>
-
 	<!-- Favicons-->
 	<link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
@@ -32,7 +22,7 @@
 
 	<title>Creativia</title>
 
-	<link rel="stylesheet" href="style/style.css">
+	<link rel="stylesheet" href="style/style.min.css">
 	
 </head>
 <body>
@@ -258,19 +248,22 @@
 					<div class="about_wrap about_wrap--center">
 						<img src="img/about/active-1.jpg" alt="photo" class="about_photo">
 					</div>
-					<svg class="about_hexagon about_hexagon--center">
-						<use xlink:href="#hexagon"></use>
-					</svg>
+					
 					<div class="about_wrap about_wrap--right">
 						<img src="img/about/active-2.jpg" alt="photo" class="about_photo">
 					</div>
-					<svg class="about_hexagon about_hexagon--right">
-						<use xlink:href="#hexagon"></use>
-					</svg>
+					
 					<div class="about_wrap about_wrap--left">
 						<img src="img/about/active-3.jpg" alt="photo" class="about_photo">
 					</div>
-					<svg class="about_hexagon about_hexagon--left">
+					<svg class="about_hexagon-clip">
+						<defs>
+							<clipPath id="hex" clipPathUnits="objectBoundingBox">
+								<polygon points="0.25 0, 0.75 0, 1 0.5, 0.75 1, 0.25 1, 0 0.5"></polygon>
+							</clipPath>
+						</defs>
+					</svg>
+					<svg class="about_hexagon-center">
 						<use xlink:href="#hexagon"></use>
 					</svg>
 				</div><!--/.about_creativia #aboutSlider -->
@@ -1067,11 +1060,14 @@
 	<div class="container">
 		<h2 class="contact_title">find us <span class="color">here</span></h2>
 		<div class="contact_description">
-			<p>Lorem ipsum dolor sit amet, consectetur <span class="color">adipisicing elit.</span> Repudiandae numquam, soluta explicabo molestiae voluptatibus dolore ratione itaque nesciunt reiciendis est qui dicta, tempore quae aliquid atque eos doloribus veritatis ducimus.</p>
+			<p>Lorem ipsum dolor <span class="color">sit amet</span> consectetur adipisicing elit. Culpa quia natus dicta nam labore commodi id optio delectus aut ea aliquam, possimus ipsam magnam reprehenderit enim hic libero dolor minus.</p>
 		</div>
 	</div>
 	<div class="contact_wrapper">
-	    <iframe class="contact_map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20684.33703030028!2d-122.04682153100822!3d36.9674147890722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808e441b7c36d549%3A0x52ca104b2ad7f985!2z0KHQsNC90YLQsC3QmtGA0YPQtywg0JrQsNC70LjRhNC-0YDQvdC40Y8sINCh0KjQkA!5e0!3m2!1sru!2sru!4v1590049533009!5m2!1sru!2sru"></iframe>
+	    
+		<div id="map" class="contact_map">
+			
+		</div>
 
 	    <div class="contact_inner">
 	    	<div class="contact_address">
@@ -1095,6 +1091,7 @@
 	    </div>
 
 	</div>
+
 </section>
 
 <!-- ** Footer ** -->
@@ -1114,6 +1111,268 @@
 <script src="script/libs.min.js"></script>
 
 <script src="script/main.js"></script>
+
+<script>
+	function initMap() {
+
+		let position = {lat: 55.758, lng: 36.0};
+
+		let option = {
+			center: position,
+			zoom: 10,
+			styles: [
+  {
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#121925"
+      }
+    ]
+  },
+  {
+    "elementType": "labels.icon",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#d6d7d9"
+      }
+    ]
+  },
+  {
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "color": "#212121"
+      },
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#ffffff"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.country",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#ffffff"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.land_parcel",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.locality",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#d6d7d9"
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "labels.text",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#d6d7d9"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.business",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#121925"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#d6d7d9"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "color": "#1b1b1b"
+      },
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#4e535b"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "labels.icon",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#d6d7d9"
+      }
+    ]
+  },
+  {
+    "featureType": "road.arterial",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#4e535b"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#4e535b"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway.controlled_access",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#4e535b"
+      }
+    ]
+  },
+  {
+    "featureType": "road.local",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#d9d7d9"
+      }
+    ]
+  },
+  {
+    "featureType": "transit",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "transit",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#757575"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#121925"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#ffffff"
+      }
+    ]
+  }
+],
+		};
+
+		let myMap = new google.maps.Map(document.getElementById('map'), option);
+
+		let marker = new google.maps.Marker({
+
+		    position: position,
+		    map: myMap,
+		    title: "Ты навел на меня",
+		    // icon: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png"
+	  });
+
+		let info = new google.maps.InfoWindow({
+
+			content: "<h3>Это мое место</h3><p>Простое описание места</p>"
+		});
+
+		marker.addListener("click", function(){
+
+			info.open(myMap, marker);
+		});
+	}
+</script>
+
+<script defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRrqZntEFM6epzaZlrXmmOVhhu8Y1bBUc&callback=initMap">
+</script>
 	
 </body>
 </html>

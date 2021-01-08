@@ -165,5 +165,20 @@ $scroll.on('click', function(event) {
 });
 
 
+// ===== Scroll down
+
+const $introButton = $('#introButton');
+const $nav         = $('#nav');
+
+$introButton.on('click', function(){
+
+	let elementPos = $nav.offset().top;
+
+	$('html, body').animate({
+		scrollTop: elementPos
+	}, 800, 'linear');
+});
+
+
 	
 });

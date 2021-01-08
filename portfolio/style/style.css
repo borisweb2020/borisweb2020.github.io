@@ -576,7 +576,10 @@ body {
   z-index: 100;
   background-color: rgba(29, 153, 206, 0.5);
   border-radius: 50%;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s; }
   .scroll_arrow {
     width: 80%;
     height: 60%;
@@ -588,6 +591,10 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
+  .scroll:hover {
+    background-color: #1D99CE;
+    -webkit-box-shadow: 0 0 5px #1D99CE, 0 0 25px #1D99CE;
+            box-shadow: 0 0 5px #1D99CE, 0 0 25px #1D99CE; }
 
 @media (max-width: 1025px) {
   html, body {
@@ -653,19 +660,19 @@ body {
     text-transform: uppercase;
     letter-spacing: 5px;
     width: 945px;
-    margin: 0 auto;
+    margin: 0 auto 20%;
     border-right: 4px solid;
     border-right-color: white;
     white-space: nowrap;
     overflow: hidden;
     -webkit-animation-name: typing, blink;
             animation-name: typing, blink;
-    -webkit-animation-duration: 7s, .8s;
-            animation-duration: 7s, .8s;
+    -webkit-animation-duration: 5s, .7s;
+            animation-duration: 5s, .7s;
     -webkit-animation-timing-function: steps(30), ease-in-out;
             animation-timing-function: steps(30), ease-in-out;
-    -webkit-animation-delay: 0s, 7s;
-            animation-delay: 0s, 7s;
+    -webkit-animation-delay: 0s, 5s;
+            animation-delay: 0s, 5s;
     -webkit-animation-iteration-count: 1, infinite;
             animation-iteration-count: 1, infinite; }
   .intro_logo {
@@ -674,6 +681,68 @@ body {
   .intro_icon {
     width: 100%;
     height: auto; }
+  .intro_button {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s; }
+    .intro_button:hover {
+      background-color: #f6f7fA;
+      -webkit-box-shadow: 0 0 5px #f6f7fA, 0 0 25px #f6f7fA, 0 0 50px #f6f7fA, 0 0 200px #f6f7fA;
+              box-shadow: 0 0 5px #f6f7fA, 0 0 25px #f6f7fA, 0 0 50px #f6f7fA, 0 0 200px #f6f7fA; }
+    .intro_button:hover > .intro_arrow {
+      fill: rgba(0, 0, 0, 0.35); }
+    .intro_button > div {
+      position: absolute; }
+    .intro_button > div:nth-child(1) {
+      width: 100%;
+      height: 3px;
+      top: 0;
+      left: -100%;
+      background: -webkit-gradient(linear, left top, right top, from(transparent), to(#f6f7fA));
+      background: -o-linear-gradient(left, transparent, #f6f7fA);
+      background: linear-gradient(90deg, transparent, #f6f7fA);
+      -webkit-animation: topDiv 1s linear infinite;
+              animation: topDiv 1s linear infinite; }
+    .intro_button > div:nth-child(2) {
+      width: 3px;
+      height: 100%;
+      top: -100%;
+      right: 0;
+      background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#f6f7fA));
+      background: -o-linear-gradient(top, transparent, #f6f7fA);
+      background: linear-gradient(180deg, transparent, #f6f7fA);
+      -webkit-animation: rightDiv 1s linear .25s infinite;
+              animation: rightDiv 1s linear .25s infinite; }
+    .intro_button > div:nth-child(3) {
+      width: 100%;
+      height: 3px;
+      bottom: 0;
+      right: -100%;
+      background: -webkit-gradient(linear, right top, left top, from(transparent), to(#f6f7fA));
+      background: -o-linear-gradient(right, transparent, #f6f7fA);
+      background: linear-gradient(270deg, transparent, #f6f7fA);
+      -webkit-animation: bottomDiv 1s linear .50s infinite;
+              animation: bottomDiv 1s linear .50s infinite; }
+    .intro_button > div:nth-child(4) {
+      width: 3px;
+      height: 100%;
+      top: 100%;
+      left: 0;
+      background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(#f6f7fA));
+      background: -o-linear-gradient(bottom, transparent, #f6f7fA);
+      background: linear-gradient(0deg, transparent, #f6f7fA);
+      -webkit-animation: leftDiv 1s linear .75s infinite;
+              animation: leftDiv 1s linear .75s infinite; }
+  .intro_arrow {
+    width: 50%;
+    height: 70%;
+    fill: #f6f7fA; }
 
 @-webkit-keyframes typing {
   0% {
@@ -698,6 +767,54 @@ body {
     border-right-color: rgba(255, 255, 255, 0); }
   100% {
     border-right-color: white; } }
+
+@-webkit-keyframes topDiv {
+  0% {
+    left: -100%; }
+  50%, 100% {
+    left: 100%; } }
+
+@keyframes topDiv {
+  0% {
+    left: -100%; }
+  50%, 100% {
+    left: 100%; } }
+
+@-webkit-keyframes rightDiv {
+  0% {
+    top: -100%; }
+  50%, 100% {
+    top: 100%; } }
+
+@keyframes rightDiv {
+  0% {
+    top: -100%; }
+  50%, 100% {
+    top: 100%; } }
+
+@-webkit-keyframes bottomDiv {
+  0% {
+    right: -100%; }
+  50%, 100% {
+    right: 100%; } }
+
+@keyframes bottomDiv {
+  0% {
+    right: -100%; }
+  50%, 100% {
+    right: 100%; } }
+
+@-webkit-keyframes leftDiv {
+  0% {
+    top: 100%; }
+  50%, 100% {
+    top: -100%; } }
+
+@keyframes leftDiv {
+  0% {
+    top: 100%; }
+  50%, 100% {
+    top: -100%; } }
 
 @media (min-width: 2000px) {
   .intro_represent {
@@ -740,6 +857,8 @@ body {
     width: 672px; }
   .intro_logo {
     width: 70%; }
+  .intro_button {
+    display: none; }
   @-webkit-keyframes typing {
     0% {
       width: 0px; }

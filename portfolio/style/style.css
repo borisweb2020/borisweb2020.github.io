@@ -667,12 +667,12 @@ body {
     overflow: hidden;
     -webkit-animation-name: typing, blink;
             animation-name: typing, blink;
-    -webkit-animation-duration: 5s, .7s;
-            animation-duration: 5s, .7s;
+    -webkit-animation-duration: 3s, .7s;
+            animation-duration: 3s, .7s;
     -webkit-animation-timing-function: steps(30), ease-in-out;
             animation-timing-function: steps(30), ease-in-out;
-    -webkit-animation-delay: 0s, 5s;
-            animation-delay: 0s, 5s;
+    -webkit-animation-delay: 0s, 3s;
+            animation-delay: 0s, 3s;
     -webkit-animation-iteration-count: 1, infinite;
             animation-iteration-count: 1, infinite; }
   .intro_logo {

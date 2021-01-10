@@ -667,12 +667,12 @@ body {
     overflow: hidden;
     -webkit-animation-name: typing, blink;
             animation-name: typing, blink;
-    -webkit-animation-duration: 3s, .7s;
-            animation-duration: 3s, .7s;
+    -webkit-animation-duration: 5s, .7s;
+            animation-duration: 5s, .7s;
     -webkit-animation-timing-function: steps(30), ease-in-out;
             animation-timing-function: steps(30), ease-in-out;
-    -webkit-animation-delay: 0s, 3s;
-            animation-delay: 0s, 3s;
+    -webkit-animation-delay: 0s, 5s;
+            animation-delay: 0s, 5s;
     -webkit-animation-iteration-count: 1, infinite;
             animation-iteration-count: 1, infinite; }
   .intro_logo {
@@ -690,16 +690,25 @@ body {
     cursor: pointer;
     -webkit-transition: .5s;
     -o-transition: .5s;
-    transition: .5s; }
+    transition: .5s;
+    -webkit-animation-name: buttonAppearing;
+            animation-name: buttonAppearing;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-delay: 5s;
+            animation-delay: 5s;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both; }
     .intro_button:hover {
       background-color: #f6f7fA;
       -webkit-box-shadow: 0 0 5px #f6f7fA, 0 0 25px #f6f7fA, 0 0 50px #f6f7fA, 0 0 200px #f6f7fA;
               box-shadow: 0 0 5px #f6f7fA, 0 0 25px #f6f7fA, 0 0 50px #f6f7fA, 0 0 200px #f6f7fA; }
     .intro_button:hover > .intro_arrow {
       fill: rgba(0, 0, 0, 0.35); }
-    .intro_button > div {
-      position: absolute; }
-    .intro_button > div:nth-child(1) {
+    .intro_button > span {
+      position: absolute;
+      display: block; }
+    .intro_button > span:nth-child(1) {
       width: 100%;
       height: 3px;
       top: 0;
@@ -709,7 +718,7 @@ body {
       background: linear-gradient(90deg, transparent, #f6f7fA);
       -webkit-animation: topDiv 1s linear infinite;
               animation: topDiv 1s linear infinite; }
-    .intro_button > div:nth-child(2) {
+    .intro_button > span:nth-child(2) {
       width: 3px;
       height: 100%;
       top: -100%;
@@ -719,7 +728,7 @@ body {
       background: linear-gradient(180deg, transparent, #f6f7fA);
       -webkit-animation: rightDiv 1s linear .25s infinite;
               animation: rightDiv 1s linear .25s infinite; }
-    .intro_button > div:nth-child(3) {
+    .intro_button > span:nth-child(3) {
       width: 100%;
       height: 3px;
       bottom: 0;
@@ -729,7 +738,7 @@ body {
       background: linear-gradient(270deg, transparent, #f6f7fA);
       -webkit-animation: bottomDiv 1s linear .50s infinite;
               animation: bottomDiv 1s linear .50s infinite; }
-    .intro_button > div:nth-child(4) {
+    .intro_button > span:nth-child(4) {
       width: 3px;
       height: 100%;
       top: 100%;
@@ -767,6 +776,26 @@ body {
     border-right-color: rgba(255, 255, 255, 0); }
   100% {
     border-right-color: white; } }
+
+@-webkit-keyframes buttonAppearing {
+  0% {
+    -webkit-transform: translateY(-300px) translateX(400px);
+            transform: translateY(-300px) translateX(400px);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateY(0) translateX(0);
+            transform: translateY(0) translateX(0);
+    opacity: 1; } }
+
+@keyframes buttonAppearing {
+  0% {
+    -webkit-transform: translateY(-300px) translateX(400px);
+            transform: translateY(-300px) translateX(400px);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateY(0) translateX(0);
+            transform: translateY(0) translateX(0);
+    opacity: 1; } }
 
 @-webkit-keyframes topDiv {
   0% {

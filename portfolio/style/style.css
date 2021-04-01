@@ -1599,13 +1599,27 @@ body {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: distribute;
-        justify-content: space-around; }
+        justify-content: space-around;
+    position: relative; }
   .portfolio_imgbox {
     width: 45%;
     max-width: 42rem;
     overflow: hidden;
     position: relative;
     padding-bottom: 73%; }
+  .portfolio_imgbox-designer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+            transform: translate3d(-50%, -50%, 0);
+    width: 50%;
+    max-width: 42rem;
+    overflow: hidden;
+    padding-bottom: 60%;
+    -webkit-box-shadow: 0px 0px 15px 15px rgba(25, 25, 25, 0.7);
+            box-shadow: 0px 0px 15px 15px rgba(25, 25, 25, 0.7); }
   .portfolio_img {
     width: 100%;
     position: absolute;
